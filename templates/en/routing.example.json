@@ -1,0 +1,197 @@
+{
+  "schema": 1,
+  "version": 1,
+  "updated_at": "2099-01-01T00:00:00Z",
+  "updated_by": "user",
+  "purpose": "Illustrative supervisor/reviewer routing. Adapt to your own domains; no routing engine is included.",
+  "layers": {
+    "executor": "Project session; routing does not replace writers or move canonical files.",
+    "coordinator": "Prioritize, assign, follow blockers, track tasks, gather evidence.",
+    "reviewer": "Independent read-only verification; coordinator_review is not user_confirmed."
+  },
+  "precedence": [
+    "task_overrides",
+    "project_rules",
+    "keyword_rules",
+    "default_domain"
+  ],
+  "hub_projects": [
+    "P-EXAMPLE-HUB"
+  ],
+  "coordinators": {
+    "A": {
+      "provider": "claude",
+      "station": "S-EXAMPLE-A",
+      "available": true,
+      "unavailable_until": null,
+      "max_working": 8
+    },
+    "B": {
+      "provider": "codex",
+      "station": "S-EXAMPLE-B",
+      "available": true,
+      "unavailable_until": null,
+      "max_working": 8
+    }
+  },
+  "domains": {
+    "triage": {
+      "label": "Intake and portfolio triage",
+      "primary": "B",
+      "reviewer": "A"
+    },
+    "web_sites": {
+      "label": "Websites and frontends",
+      "primary": "A",
+      "reviewer": "B"
+    },
+    "research": {
+      "label": "Research and comparisons",
+      "primary": "B",
+      "reviewer": "A"
+    },
+    "infra_ops": {
+      "label": "Orca operations, recovery and assistant maintenance",
+      "primary": "A",
+      "reviewer": "B"
+    }
+  },
+  "default_domain": "triage",
+  "recovery_domain": "infra_ops",
+  "project_rules": {
+    "P-EXAMPLE-WEB-A": "web_sites",
+    "P-EXAMPLE-RES-B": "research"
+  },
+  "keyword_rules": [
+    {
+      "domain": "web_sites",
+      "any": [
+        "website",
+        "homepage",
+        "frontend"
+      ]
+    },
+    {
+      "domain": "research",
+      "any": [
+        "research",
+        "comparison",
+        "survey"
+      ]
+    },
+    {
+      "domain": "infra_ops",
+      "any": [
+        "Orca",
+        "board",
+        "reconnect"
+      ]
+    }
+  ],
+  "task_overrides": {
+    "T-EXAMPLE0001": {
+      "domain": "research",
+      "reason": "Under Website A, but this task is competitor research.",
+      "set_by": "user",
+      "set_at": "2099-01-01T00:00:00Z"
+    }
+  },
+  "balance_warn_ratio": 2.5,
+  "terminal_policy": {
+    "read": "Both coordinators may read terminal list/show/read.",
+    "task_input": "Only the domain primary or user sends project work; change routing first otherwise.",
+    "recovery": "Operations primary verifies idle/failure, preserves evidence, resumes original UUID/model/effort/permissions, records handle and informs supervisor.",
+    "never": [
+      "Interrupt the other coordinator",
+      "Two writers for one session UUID",
+      "Submit another terminal user draft",
+      "Change global configuration or restart Orca without user direction"
+    ]
+  },
+  "handoff_protocol": [
+    "Store artifacts in private receipts/topic-date; recipient reads before takeover.",
+    "Request review with exact path/hash; record actual independent coordinator_review.",
+    "Version routing changes and record changelog.",
+    "Use canonical routing; unresolved conflicts go to triage/user.",
+    "No evidence: stay working and request it. With evidence: review.",
+    "Notify rule changes only while recipient idle with empty input; request acknowledgement."
+  ],
+  "external_actions": "External messages, submissions, payment, public sharing and accounts require specific user authorization. Applicable existing authorization persists.",
+  "dispatch_policy": {
+    "announce": "First line: Decision: <1-5> <method> | <target> | <reason>. User may override.",
+    "options": {
+      "1": {
+        "label": "Direct answer",
+        "when": "Quick read-only question; no project edits",
+        "who": "Coordinator"
+      },
+      "2": {
+        "label": "Existing session",
+        "when": "Appropriate healthy idle project session",
+        "who": "Session via domain supervisor"
+      },
+      "3": {
+        "label": "New project session",
+        "when": "No suitable session, busy existing writer or independent scope",
+        "who": "New session, never duplicate same UUID writer"
+      },
+      "4": {
+        "label": "New worktree",
+        "when": "Git code changes require isolation",
+        "who": "Agent-first worktree creation"
+      },
+      "5": {
+        "label": "New project",
+        "when": "New topic fits no existing project",
+        "who": "New project plus project_rules registration"
+      }
+    },
+    "self_execute_only": [
+      "Quick read-only answer",
+      "System work in own supervised domain",
+      "Explicit user instruction to do it yourself"
+    ],
+    "dispatch_message_must_include": [
+      "Original request and acceptance criteria",
+      "Read/write scope and exclusions",
+      "Terminal/agent permission, concurrency and spending limits",
+      "Required self-test evidence",
+      "Report own station after delivery"
+    ],
+    "review_dispatch_template": {
+      "applies_to": "All review/check/verification assignments",
+      "requirements": [
+        "Read-only; do not edit reviewed material",
+        "Bind target to SHA-256 or commit",
+        "Findings include location, severity, evidence and recommendation",
+        "Say no issues found when appropriate; no quota",
+        "Supervisor verifies sample findings before user report"
+      ]
+    }
+  },
+  "data_boundary_policy": {
+    "private_local_only": [
+      "Applications and accounts",
+      "Grades, identity and personal data",
+      "Insurance and financial information",
+      "Credentials and keys",
+      "Unreleased products and private conversations"
+    ],
+    "rule": "Do not send these to additional model APIs. Existing approved subscriptions remain permitted; those may still be cloud services.",
+    "check": "Classify data before dispatch and specify allowed providers."
+  },
+  "model_policy": {
+    "note": "Models/effort depend on your environment; check installed CLI help.",
+    "routine_batch": "<routine-model>",
+    "critical_delivery": "<primary-model> + <higher-reasoning-effort>",
+    "not_auto_switch": "Do not silently switch existing sessions."
+  },
+  "changelog": [
+    {
+      "version": 1,
+      "at": "2099-01-01T00:00:00Z",
+      "by": "user",
+      "change": "Initial illustrative configuration"
+    }
+  ]
+}

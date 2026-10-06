@@ -1,0 +1,15 @@
+name: Validate handbook
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate sources and locale parity
+        run: python3 scripts/validate.py
+      - name: Test safe workspace creation
+        run: python3 -m unittest discover -s tests -v

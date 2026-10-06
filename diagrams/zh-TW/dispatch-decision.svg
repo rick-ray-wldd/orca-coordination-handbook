@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 600" width="760" height="600" role="img" aria-label="派工判斷流程 ①–⑤" font-family="'PingFang TC','Heiti TC','Noto Sans CJK TC','Microsoft JhengHei',sans-serif">
+<title>派工判斷流程 ①–⑤</title>
+<defs><marker id="ah-dispatch-decision" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#34495e"/></marker></defs>
+<rect x="0" y="0" width="760" height="600" fill="#ffffff"/>
+<rect x="280" y="12" width="200" height="46" rx="10" fill="#fdebd0" stroke="#b9770e" stroke-width="2"/>
+<text x="380.0" y="39.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">User 請求</text>
+<polygon points="380,72.0 530.0,110 380,148.0 230.0,110" fill="#fffbe6" stroke="#b7950b" stroke-width="2"/>
+<text x="380" y="106" text-anchor="middle" font-size="13" fill="#1b2631">幾分鐘內可完成的</text>
+<text x="380" y="124" text-anchor="middle" font-size="13" fill="#1b2631">唯讀問答？</text>
+<line x1="380" y1="58" x2="380" y2="72" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)"/>
+<rect x="590" y="86" width="150" height="48" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2"/>
+<text x="665.0" y="114.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">① 總控直接回答</text>
+<line x1="530" y1="110" x2="590" y2="110" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)"/>
+<text x="552" y="102" font-size="12" fill="#34495e">是</text>
+<polygon points="380,182.0 530.0,220 380,258.0 230.0,220" fill="#fffbe6" stroke="#b7950b" stroke-width="2"/>
+<text x="380" y="225" text-anchor="middle" font-size="13" fill="#1b2631">現有專案對應得上？</text>
+<line x1="380" y1="148" x2="380" y2="182" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)"/>
+<text x="388" y="170" font-size="12" fill="#34495e">否</text>
+<rect x="590" y="196" width="150" height="48" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2"/>
+<text x="665.0" y="214.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">⑤ 開新專案</text>
+<text x="665.0" y="234.9" text-anchor="middle" font-size="12" fill="#1b2631">並登記領域</text>
+<line x1="530" y1="220" x2="590" y2="220" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)"/>
+<text x="552" y="212" font-size="12" fill="#34495e">否</text>
+<polygon points="380,292.0 530.0,330 380,368.0 230.0,330" fill="#fffbe6" stroke="#b7950b" stroke-width="2"/>
+<text x="380" y="326" text-anchor="middle" font-size="13" fill="#1b2631">要改 git 程式碼</text>
+<text x="380" y="344" text-anchor="middle" font-size="13" fill="#1b2631">且需要隔離？</text>
+<line x1="380" y1="258" x2="380" y2="292" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)"/>
+<text x="388" y="280" font-size="12" fill="#34495e">是</text>
+<rect x="590" y="306" width="150" height="48" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2"/>
+<text x="665.0" y="334.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">④ 開新 worktree</text>
+<line x1="530" y1="330" x2="590" y2="330" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)"/>
+<text x="552" y="322" font-size="12" fill="#34495e">是</text>
+<polygon points="380,402.0 530.0,440 380,478.0 230.0,440" fill="#fffbe6" stroke="#b7950b" stroke-width="2"/>
+<text x="380" y="436" text-anchor="middle" font-size="13" fill="#1b2631">有健康、閒置、</text>
+<text x="380" y="454" text-anchor="middle" font-size="13" fill="#1b2631">負責此類的聊天室？</text>
+<line x1="380" y1="368" x2="380" y2="402" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)"/>
+<text x="388" y="390" font-size="12" fill="#34495e">否</text>
+<rect x="590" y="416" width="150" height="48" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2"/>
+<text x="665.0" y="444.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">② 派給既有聊天室</text>
+<line x1="530" y1="440" x2="590" y2="440" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)"/>
+<text x="552" y="432" font-size="12" fill="#34495e">是</text>
+<rect x="280" y="506" width="200" height="48" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2"/>
+<text x="380.0" y="534.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">③ 原專案開新聊天室</text>
+<line x1="380" y1="478" x2="380" y2="506" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)"/>
+<text x="388" y="496" font-size="12" fill="#34495e">否</text>
+<rect x="20" y="160" width="200" height="250" rx="10" fill="#ffffff" stroke="#5d6d7e" stroke-width="2"/>
+<text x="120.0" y="229.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">每次都要</text>
+<text x="120.0" y="249.9" text-anchor="middle" font-size="12" fill="#1b2631">第一行宣告判斷</text>
+<text x="120.0" y="269.9" text-anchor="middle" font-size="12" fill="#1b2631">記錄到派工紀錄</text>
+<text x="120.0" y="289.9" text-anchor="middle" font-size="12" fill="#1b2631">派工訊息含五項</text>
+<text x="120.0" y="309.9" text-anchor="middle" font-size="12" fill="#1b2631">只由該領域督導派送</text>
+<text x="120.0" y="329.9" text-anchor="middle" font-size="12" fill="#1b2631">送前確認輸入框空</text>
+<text x="120.0" y="349.9" text-anchor="middle" font-size="12" fill="#1b2631">User 可直接改判</text>
+<text x="380" y="586" font-size="12" text-anchor="middle" fill="#c0392b" font-weight="700">總控只能親自做：①・自己領域的系統工作・User 明說「你自己做」</text>
+</svg>

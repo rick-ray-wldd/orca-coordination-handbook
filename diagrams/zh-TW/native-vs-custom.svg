@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" role="img" aria-label="原生 Orca、代理 CLI、自製助理層與文件規約的分層" font-family="'PingFang TC','Heiti TC','Noto Sans CJK TC','Microsoft JhengHei',sans-serif">
+<title>原生 Orca、代理 CLI、自製助理層與文件規約的分層</title>
+<defs><marker id="ah-native-vs-custom" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#34495e"/></marker></defs>
+<rect x="0" y="0" width="760" height="360" fill="#ffffff"/>
+<rect x="30" y="20" width="560" height="66" rx="10" fill="#f4ecf7" stroke="#6c3483" stroke-width="2"/>
+<text x="310.0" y="47.8" text-anchor="middle" font-size="15" fill="#1b2631" font-weight="700">文件規約（本包附模板）</text>
+<text x="310.0" y="68.8" text-anchor="middle" font-size="13" fill="#1b2631">AGENTS／CONTRACT／routing 範例・派工／回報／交接／審查／決策格式</text>
+<text x="610" y="58" font-size="14" text-anchor="start" fill="#1b2631" font-weight="700">〔規約〕</text>
+<rect x="30" y="102" width="560" height="66" rx="10" fill="#fef9e7" stroke="#9a7d0a" stroke-width="2"/>
+<text x="310.0" y="129.8" text-anchor="middle" font-size="15" fill="#1b2631" font-weight="700">自製助理層（參考部署；本包未附）</text>
+<text x="310.0" y="150.8" text-anchor="middle" font-size="13" fill="#1b2631">站台回報・任務・路由與派工建議・看板同步・巡檢</text>
+<text x="610" y="140" font-size="14" text-anchor="start" fill="#1b2631" font-weight="700">〔程式・自製〕</text>
+<rect x="30" y="184" width="560" height="66" rx="10" fill="#ffffff" stroke="#5d6d7e" stroke-width="2"/>
+<text x="310.0" y="211.8" text-anchor="middle" font-size="15" fill="#1b2631" font-weight="700">代理 CLI（Claude Code／Codex CLI）</text>
+<text x="310.0" y="232.8" text-anchor="middle" font-size="13" fill="#1b2631">對話與 session UUID・resume・權限模式・模型選擇</text>
+<text x="610" y="222" font-size="14" text-anchor="start" fill="#1b2631" font-weight="700">〔程式・原生〕</text>
+<rect x="30" y="266" width="560" height="66" rx="10" fill="#e8f6f3" stroke="#117a65" stroke-width="2"/>
+<text x="310.0" y="293.8" text-anchor="middle" font-size="15" fill="#1b2631" font-weight="700">Orca 原生</text>
+<text x="310.0" y="314.8" text-anchor="middle" font-size="13" fill="#1b2631">worktree・terminal・看板與 comment・orchestration・automations</text>
+<text x="610" y="304" font-size="14" text-anchor="start" fill="#1b2631" font-weight="700">〔程式・原生〕</text>
+<text x="380" y="352" font-size="12" text-anchor="middle" fill="#34495e">上層呼叫下層；只採用最上層的文件規約，也能跑起大部分流程</text>
+</svg>

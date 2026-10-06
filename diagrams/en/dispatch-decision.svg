@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 600" width="760" height="600" role="img" aria-label="Five dispatch decisions" font-family="Arial, Helvetica, sans-serif">
+<title>Five dispatch decisions</title>
+<defs><marker id="ah-dispatch-decision" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#34495e" /></marker></defs>
+<rect x="0" y="0" width="760" height="600" fill="#ffffff" />
+<rect x="280" y="12" width="200" height="46" rx="10" fill="#fdebd0" stroke="#b9770e" stroke-width="2" />
+<text x="380.0" y="39.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">User request</text>
+<polygon points="380,72.0 530.0,110 380,148.0 230.0,110" fill="#fffbe6" stroke="#b7950b" stroke-width="2" />
+<text x="380" y="106" text-anchor="middle" font-size="13.0" fill="#1b2631">Quick read-only</text>
+<text x="380" y="124" text-anchor="middle" font-size="13.0" fill="#1b2631">question?</text>
+<line x1="380" y1="58" x2="380" y2="72" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)" />
+<rect x="590" y="86" width="150" height="48" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2" />
+<text x="665.0" y="114.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">1 Direct answer</text>
+<line x1="530" y1="110" x2="590" y2="110" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)" />
+<text x="552" y="102" font-size="12.0" fill="#34495e">Yes</text>
+<polygon points="380,182.0 530.0,220 380,258.0 230.0,220" fill="#fffbe6" stroke="#b7950b" stroke-width="2" />
+<text x="380" y="225" text-anchor="middle" font-size="13.0" fill="#1b2631">Existing project fits?</text>
+<line x1="380" y1="148" x2="380" y2="182" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)" />
+<text x="388" y="170" font-size="12.0" fill="#34495e">No</text>
+<rect x="590" y="196" width="150" height="48" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2" />
+<text x="665.0" y="214.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">5 New project</text>
+<text x="665.0" y="234.9" text-anchor="middle" font-size="12.0" fill="#1b2631">Register domain</text>
+<line x1="530" y1="220" x2="590" y2="220" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)" />
+<text x="552" y="212" font-size="12.0" fill="#34495e">No</text>
+<polygon points="380,292.0 530.0,330 380,368.0 230.0,330" fill="#fffbe6" stroke="#b7950b" stroke-width="2" />
+<text x="380" y="326" text-anchor="middle" font-size="13.0" fill="#1b2631">Git code change</text>
+<text x="380" y="344" text-anchor="middle" font-size="13.0" fill="#1b2631">needs isolation?</text>
+<line x1="380" y1="258" x2="380" y2="292" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)" />
+<text x="388" y="280" font-size="12.0" fill="#34495e">Yes</text>
+<rect x="590" y="306" width="150" height="48" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2" />
+<text x="665.0" y="334.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">4 New worktree</text>
+<line x1="530" y1="330" x2="590" y2="330" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)" />
+<text x="552" y="322" font-size="12.0" fill="#34495e">Yes</text>
+<polygon points="380,402.0 530.0,440 380,478.0 230.0,440" fill="#fffbe6" stroke="#b7950b" stroke-width="2" />
+<text x="380" y="436" text-anchor="middle" font-size="13.0" fill="#1b2631">Suitable, healthy</text>
+<text x="380" y="454" text-anchor="middle" font-size="13.0" fill="#1b2631">idle session?</text>
+<line x1="380" y1="368" x2="380" y2="402" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)" />
+<text x="388" y="390" font-size="12.0" fill="#34495e">No</text>
+<rect x="590" y="416" width="150" height="48" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2" />
+<text x="665.0" y="444.9" text-anchor="middle" font-size="13.5" fill="#1b2631" font-weight="700">2 Existing session</text>
+<line x1="530" y1="440" x2="590" y2="440" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)" />
+<text x="552" y="432" font-size="12.0" fill="#34495e">Yes</text>
+<rect x="280" y="506" width="200" height="48" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2" />
+<text x="380.0" y="534.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">3 New project session</text>
+<line x1="380" y1="478" x2="380" y2="506" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-dispatch-decision)" />
+<text x="388" y="496" font-size="12.0" fill="#34495e">No</text>
+<rect x="20" y="160" width="200" height="250" rx="10" fill="#ffffff" stroke="#5d6d7e" stroke-width="2" />
+<text x="120.0" y="229.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">Every time</text>
+<text x="120.0" y="249.9" text-anchor="middle" font-size="12.0" fill="#1b2631">Announce first</text>
+<text x="120.0" y="269.9" text-anchor="middle" font-size="12.0" fill="#1b2631">Log decision</text>
+<text x="120.0" y="289.9" text-anchor="middle" font-size="12.0" fill="#1b2631">Five dispatch fields</text>
+<text x="120.0" y="309.9" text-anchor="middle" font-size="12.0" fill="#1b2631">Domain supervisor sends</text>
+<text x="120.0" y="329.9" text-anchor="middle" font-size="12.0" fill="#1b2631">Verify empty input</text>
+<text x="120.0" y="349.9" text-anchor="middle" font-size="12.0" fill="#1b2631">User may override</text>
+<text x="380" y="586" font-size="12.0" text-anchor="middle" fill="#c0392b" font-weight="700">Direct work: quick Q&amp;A / own-domain system work / explicit user instruction</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-label="Routing precedence: first match wins" font-family="Arial, Helvetica, sans-serif">
+<title>Routing precedence: first match wins</title>
+<defs><marker id="ah-routing-precedence" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#34495e" /></marker></defs>
+<rect x="0" y="0" width="760" height="300" fill="#ffffff" />
+<rect x="20" y="40" width="165" height="70" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="102.5" y="69.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">1 Task override</text>
+<text x="102.5" y="89.9" text-anchor="middle" font-size="12.0" fill="#1b2631">task_overrides</text>
+<line x1="185" y1="75" x2="205" y2="75" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-routing-precedence)" />
+<rect x="205" y="40" width="165" height="70" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="287.5" y="69.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">2 Project rule</text>
+<text x="287.5" y="89.9" text-anchor="middle" font-size="12.0" fill="#1b2631">project_rules</text>
+<line x1="370" y1="75" x2="390" y2="75" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-routing-precedence)" />
+<rect x="390" y="40" width="165" height="70" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="472.5" y="69.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">3 Keyword rule</text>
+<text x="472.5" y="89.9" text-anchor="middle" font-size="11.8" fill="#1b2631">keyword_rules (ordered)</text>
+<line x1="555" y1="75" x2="575" y2="75" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-routing-precedence)" />
+<rect x="575" y="40" width="165" height="70" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="657.5" y="69.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">4 Default domain</text>
+<text x="657.5" y="89.9" text-anchor="middle" font-size="12.0" fill="#1b2631">default_domain</text>
+<text x="380" y="26" font-size="12.0" text-anchor="middle" fill="#34495e">Continue only if no match</text>
+<rect x="150" y="160" width="460" height="60" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2" />
+<text x="380.0" y="184.9" text-anchor="middle" font-size="14.0" fill="#1b2631" font-weight="700">Domain → primary supervisor + independent reviewer</text>
+<text x="380.0" y="204.9" text-anchor="middle" font-size="12.0" fill="#1b2631">Primary unavailable → reviewer acts as supervisor</text>
+<line x1="380" y1="110" x2="380" y2="160" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-routing-precedence)" />
+<text x="380" y="252" font-size="12.0" text-anchor="middle" fill="#34495e">Routing changes supervision and input ownership, not the writer or task owner</text>
+<text x="380" y="276" font-size="12.0" text-anchor="middle" fill="#34495e">Updates: lock / backup / version / changelog / validation</text>
+</svg>

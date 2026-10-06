@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" role="img" aria-label="Written rules, private assistant layer, agent CLI and Orca" font-family="Arial, Helvetica, sans-serif">
+<title>Written rules, private assistant layer, agent CLI and Orca</title>
+<defs><marker id="ah-native-vs-custom" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#34495e" /></marker></defs>
+<rect x="0" y="0" width="760" height="360" fill="#ffffff" />
+<rect x="30" y="20" width="560" height="66" rx="10" fill="#f4ecf7" stroke="#6c3483" stroke-width="2" />
+<text x="310.0" y="47.8" text-anchor="middle" font-size="15.0" fill="#1b2631" font-weight="700">Written rules (templates included)</text>
+<text x="310.0" y="68.8" text-anchor="middle" font-size="12.8" fill="#1b2631">AGENTS / CONTRACT / routing / dispatch / report / handoff / review / decision</text>
+<text x="610" y="58" font-size="14.0" text-anchor="start" fill="#1b2631" font-weight="700">Convention</text>
+<rect x="30" y="102" width="560" height="66" rx="10" fill="#fef9e7" stroke="#9a7d0a" stroke-width="2" />
+<text x="310.0" y="129.8" text-anchor="middle" font-size="15.0" fill="#1b2631" font-weight="700">Private assistant layer (not included)</text>
+<text x="310.0" y="150.8" text-anchor="middle" font-size="13.0" fill="#1b2631">Reports / task store / routing / board sync / inspection</text>
+<text x="610" y="140" font-size="14.0" text-anchor="start" fill="#1b2631" font-weight="700">Custom code</text>
+<rect x="30" y="184" width="560" height="66" rx="10" fill="#ffffff" stroke="#5d6d7e" stroke-width="2" />
+<text x="310.0" y="211.8" text-anchor="middle" font-size="15.0" fill="#1b2631" font-weight="700">Agent CLIs (Claude Code / Codex CLI)</text>
+<text x="310.0" y="232.8" text-anchor="middle" font-size="13.0" fill="#1b2631">Conversations / UUID / resume / permissions / model selection</text>
+<text x="610" y="222" font-size="14.0" text-anchor="start" fill="#1b2631" font-weight="700">Native code</text>
+<rect x="30" y="266" width="560" height="66" rx="10" fill="#e8f6f3" stroke="#117a65" stroke-width="2" />
+<text x="310.0" y="293.8" text-anchor="middle" font-size="15.0" fill="#1b2631" font-weight="700">Orca</text>
+<text x="310.0" y="314.8" text-anchor="middle" font-size="13.0" fill="#1b2631">Worktrees / terminals / board / orchestration / automations</text>
+<text x="610" y="304" font-size="14.0" text-anchor="start" fill="#1b2631" font-weight="700">Native code</text>
+<text x="380" y="352" font-size="12.0" text-anchor="middle" fill="#34495e">Higher layers use lower layers. The document workflow works on its own.</text>
+</svg>

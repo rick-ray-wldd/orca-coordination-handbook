@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-label="路由優先序：先中先贏" font-family="'PingFang TC','Heiti TC','Noto Sans CJK TC','Microsoft JhengHei',sans-serif">
+<title>路由優先序：先中先贏</title>
+<defs><marker id="ah-routing-precedence" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#34495e"/></marker></defs>
+<rect x="0" y="0" width="760" height="300" fill="#ffffff"/>
+<rect x="20" y="40" width="165" height="70" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2"/>
+<text x="102.5" y="69.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">1 逐任務指定</text>
+<text x="102.5" y="89.9" text-anchor="middle" font-size="12" fill="#1b2631">task_overrides</text>
+<line x1="185" y1="75" x2="205" y2="75" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-routing-precedence)"/>
+<rect x="205" y="40" width="165" height="70" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2"/>
+<text x="287.5" y="69.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">2 專案規則</text>
+<text x="287.5" y="89.9" text-anchor="middle" font-size="12" fill="#1b2631">project_rules</text>
+<line x1="370" y1="75" x2="390" y2="75" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-routing-precedence)"/>
+<rect x="390" y="40" width="165" height="70" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2"/>
+<text x="472.5" y="69.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">3 關鍵字規則</text>
+<text x="472.5" y="89.9" text-anchor="middle" font-size="12" fill="#1b2631">keyword_rules（依序）</text>
+<line x1="555" y1="75" x2="575" y2="75" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-routing-precedence)"/>
+<rect x="575" y="40" width="165" height="70" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2"/>
+<text x="657.5" y="69.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">4 預設領域</text>
+<text x="657.5" y="89.9" text-anchor="middle" font-size="12" fill="#1b2631">default_domain</text>
+<text x="380" y="26" font-size="12" text-anchor="middle" fill="#34495e">沒命中才往右走</text>
+<rect x="150" y="160" width="460" height="60" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2"/>
+<text x="380.0" y="184.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">得到領域 → primary（督導）與 reviewer（核對）</text>
+<text x="380.0" y="204.9" text-anchor="middle" font-size="12" fill="#1b2631">primary 不可用且未到期 → 由 reviewer 代理督導</text>
+<line x1="380" y1="110" x2="380" y2="160" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-routing-precedence)"/>
+<text x="380" y="252" font-size="12" text-anchor="middle" fill="#34495e">路由只決定督導、核對與誰可送輸入；不改變執行者、不改寫任務 owner</text>
+<text x="380" y="276" font-size="12" text-anchor="middle" fill="#34495e">分工調整寫入時：加鎖・備份・版本號＋1・changelog・驗證失敗拒寫</text>
+</svg>

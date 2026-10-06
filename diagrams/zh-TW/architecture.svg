@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" width="760" height="560" role="img" aria-label="雙總控架構：User、總控、領域、writer、reviewer、驗收與外部動作" font-family="'PingFang TC','Heiti TC','Noto Sans CJK TC','Microsoft JhengHei',sans-serif">
+<title>雙總控架構：User、總控、領域、writer、reviewer、驗收與外部動作</title>
+<defs><marker id="ah-architecture" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#34495e"/></marker></defs>
+<rect x="0" y="0" width="760" height="560" fill="#ffffff"/>
+<rect x="290" y="16" width="180" height="54" rx="10" fill="#fdebd0" stroke="#b9770e" stroke-width="2"/>
+<text x="380.0" y="37.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">User</text>
+<text x="380.0" y="57.9" text-anchor="middle" font-size="12" fill="#1b2631">提需求・決定・驗收・授權</text>
+<rect x="90" y="120" width="220" height="60" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2"/>
+<text x="200.0" y="144.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">總控 A</text>
+<text x="200.0" y="164.9" text-anchor="middle" font-size="12" fill="#1b2631">督導自己的領域</text>
+<rect x="450" y="120" width="220" height="60" rx="10" fill="#dbe8ff" stroke="#2f5fb3" stroke-width="2"/>
+<text x="560.0" y="144.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">總控 B</text>
+<text x="560.0" y="164.9" text-anchor="middle" font-size="12" fill="#1b2631">督導自己的領域</text>
+<line x1="340" y1="70" x2="230" y2="120" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-architecture)"/>
+<line x1="420" y1="70" x2="530" y2="120" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-architecture)"/>
+<line x1="310" y1="150" x2="450" y2="150" stroke="#34495e" stroke-width="1.8" stroke-dasharray="5 4" marker-start="url(#ah-architecture)" marker-end="url(#ah-architecture)"/>
+<text x="342" y="142" font-size="12" fill="#34495e">互為核對者</text>
+<rect x="30" y="230" width="160" height="54" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2"/>
+<text x="110.0" y="252.1" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">領域 web_sites</text>
+<text x="110.0" y="271.1" text-anchor="middle" font-size="11" fill="#1b2631">A 督導／B 核對</text>
+<rect x="210" y="230" width="160" height="54" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2"/>
+<text x="290.0" y="252.1" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">領域 infra_ops</text>
+<text x="290.0" y="271.1" text-anchor="middle" font-size="11" fill="#1b2631">A 督導／B 核對</text>
+<rect x="390" y="230" width="160" height="54" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2"/>
+<text x="470.0" y="252.1" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">領域 research</text>
+<text x="470.0" y="271.1" text-anchor="middle" font-size="11" fill="#1b2631">B 督導／A 核對</text>
+<rect x="570" y="230" width="160" height="54" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2"/>
+<text x="650.0" y="252.1" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">領域 triage</text>
+<text x="650.0" y="271.1" text-anchor="middle" font-size="11" fill="#1b2631">B 督導／A 核對</text>
+<line x1="170" y1="180" x2="110" y2="230" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-architecture)"/>
+<line x1="230" y1="180" x2="290" y2="230" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-architecture)"/>
+<line x1="530" y1="180" x2="470" y2="230" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-architecture)"/>
+<line x1="590" y1="180" x2="650" y2="230" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-architecture)"/>
+<text x="380" y="312" font-size="12" text-anchor="middle" fill="#34495e">路由表決定「誰督導、誰核對、誰可送輸入」；不改變執行者</text>
+<rect x="30" y="340" width="200" height="70" rx="10" fill="#e3f5e1" stroke="#2e7d32" stroke-width="2"/>
+<text x="130.0" y="359.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">單一 writer</text>
+<text x="130.0" y="379.9" text-anchor="middle" font-size="12" fill="#1b2631">範圍內製作＋自測證據</text>
+<text x="130.0" y="399.9" text-anchor="middle" font-size="12" fill="#1b2631">狀態 → review</text>
+<rect x="280" y="340" width="200" height="70" rx="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+<text x="380.0" y="359.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">獨立 reviewer</text>
+<text x="380.0" y="379.9" text-anchor="middle" font-size="12" fill="#1b2631">只讀・綁版本 hash</text>
+<text x="380.0" y="399.9" text-anchor="middle" font-size="12" fill="#1b2631">結構化問題＋嚴重度</text>
+<rect x="530" y="340" width="200" height="70" rx="10" fill="#fdebd0" stroke="#b9770e" stroke-width="2"/>
+<text x="630.0" y="359.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">User 驗收</text>
+<text x="630.0" y="379.9" text-anchor="middle" font-size="12" fill="#1b2631">user_confirmed</text>
+<text x="630.0" y="399.9" text-anchor="middle" font-size="12" fill="#1b2631">（不得代填）</text>
+<line x1="230" y1="375" x2="280" y2="375" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-architecture)"/>
+<text x="236" y="368" font-size="12" fill="#34495e">交付</text>
+<line x1="480" y1="375" x2="530" y2="375" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-architecture)"/>
+<text x="486" y="368" font-size="12" fill="#34495e">報告</text>
+<rect x="400" y="460" width="330" height="70" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+<text x="565.0" y="479.9" text-anchor="middle" font-size="14" fill="#1b2631" font-weight="700">外部動作關卡</text>
+<text x="565.0" y="499.9" text-anchor="middle" font-size="12" fill="#1b2631">寄信・送件・付款・公開・建帳・不可回復刪除</text>
+<text x="565.0" y="519.9" text-anchor="middle" font-size="12" fill="#1b2631">需 User 對「該次動作」明確授權</text>
+<line x1="630" y1="410" x2="600" y2="460" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-architecture)"/>
+<text x="622" y="440" font-size="12" fill="#34495e">逐次授權</text>
+<rect x="30" y="460" width="340" height="70" rx="10" fill="#ffffff" stroke="#5d6d7e" stroke-width="2"/>
+<text x="200.0" y="480.6" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">問題交回原 writer 修改</text>
+<text x="200.0" y="499.6" text-anchor="middle" font-size="11" fill="#1b2631">版本變了 → 對新 hash 重審</text>
+<text x="200.0" y="518.5" text-anchor="middle" font-size="11" fill="#1b2631">不另開第二個 writer</text>
+<line x1="330" y1="410" x2="250" y2="460" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-architecture)"/>
+<text x="292" y="440" font-size="12" fill="#34495e">高嚴重度問題</text>
+</svg>

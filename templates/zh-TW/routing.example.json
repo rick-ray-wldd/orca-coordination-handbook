@@ -1,0 +1,197 @@
+{
+  "schema": 1,
+  "version": 1,
+  "updated_at": "2099-01-01T00:00:00Z",
+  "updated_by": "user",
+  "purpose": "決定每件事由哪位總控督導、誰核對、誰可以對該專案聊天室送輸入。範例資料，請改成自己的領域。",
+  "layers": {
+    "executor": "實際做事的專案聊天室；路由不改變執行者，也不搬動專案的 canonical 檔案。",
+    "coordinator": "督導總控：排序、派工、追蹤阻塞、更新任務、驗收前整理證據。",
+    "reviewer": "核對總控：重要交付獨立只讀核對，記為 coordinator_review；不能代替 user_confirmed。"
+  },
+  "precedence": [
+    "task_overrides",
+    "project_rules",
+    "keyword_rules",
+    "default_domain"
+  ],
+  "hub_projects": [
+    "P-EXAMPLE-HUB"
+  ],
+  "coordinators": {
+    "A": {
+      "provider": "claude",
+      "station": "S-EXAMPLE-A",
+      "available": true,
+      "unavailable_until": null,
+      "max_working": 8
+    },
+    "B": {
+      "provider": "codex",
+      "station": "S-EXAMPLE-B",
+      "available": true,
+      "unavailable_until": null,
+      "max_working": 8
+    }
+  },
+  "domains": {
+    "triage": {
+      "label": "盤點、排序與未分類收件",
+      "primary": "B",
+      "reviewer": "A"
+    },
+    "web_sites": {
+      "label": "網站與前端",
+      "primary": "A",
+      "reviewer": "B"
+    },
+    "research": {
+      "label": "研究與比較報告",
+      "primary": "B",
+      "reviewer": "A"
+    },
+    "infra_ops": {
+      "label": "Orca 維運、聊天室恢復、助理系統與看板",
+      "primary": "A",
+      "reviewer": "B"
+    }
+  },
+  "default_domain": "triage",
+  "recovery_domain": "infra_ops",
+  "project_rules": {
+    "P-EXAMPLE-WEB-A": "web_sites",
+    "P-EXAMPLE-RES-B": "research"
+  },
+  "keyword_rules": [
+    {
+      "domain": "web_sites",
+      "any": [
+        "網站",
+        "首頁",
+        "前端"
+      ]
+    },
+    {
+      "domain": "research",
+      "any": [
+        "研究",
+        "比較",
+        "調查"
+      ]
+    },
+    {
+      "domain": "infra_ops",
+      "any": [
+        "Orca",
+        "看板",
+        "斷線"
+      ]
+    }
+  ],
+  "task_overrides": {
+    "T-EXAMPLE0001": {
+      "domain": "research",
+      "reason": "雖掛在網站A 專案，但實質是競品研究",
+      "set_by": "user",
+      "set_at": "2099-01-01T00:00:00Z"
+    }
+  },
+  "balance_warn_ratio": 2.5,
+  "terminal_policy": {
+    "read": "兩位總控都可唯讀 terminal list/show/read。",
+    "task_input": "只有該領域 primary（或 User）可以對該專案聊天室送任務／回覆；另一位要送，先改路由。",
+    "recovery": "斷線恢復由 recovery_domain 的 primary 執行：只在閒置或失效時、先存畫面、只用原 session UUID、保留原模型／推理強度／權限、留證據、通知該領域 primary。",
+    "never": [
+      "打斷另一位總控自己的聊天室",
+      "同一 session UUID 同時兩個 writer",
+      "替任何聊天室送出尚未送出的草稿",
+      "修改全域設定或重啟整個 Orca（只能建議）"
+    ]
+  },
+  "handoff_protocol": [
+    "跨總控交接：產物放 receipts/<主題>-<日期>/，任務 evidence 指向它；接手方讀檔後才接手。",
+    "需要核對：在 next 寫「請 <reviewer> 核對 <路徑>（sha256=...）」；核對後記 coordinator_review。",
+    "分工變更用工具或明確的版本號修改，留 changelog。",
+    "衝突以路由結果為準；仍有疑義排入 triage 交給 User。",
+    "交付必附自測證據；沒有證據保持 working 並索取，有 evidence 才轉 review。",
+    "規則更新後，在對方閒置且輸入框為空時送「請重讀規則＋變更摘要」並等待確認。"
+  ],
+  "external_actions": "寄信、送件、付款、公開分享、建立帳號：無論路由到誰，都需 User 對該次動作的明確授權。",
+  "dispatch_policy": {
+    "announce": "動手前先回一行：「判斷：<編號> <處理方式>｜<對象>｜<理由一句>」。User 可直接改判。",
+    "options": {
+      "1": {
+        "label": "總控直接回答",
+        "when": "幾分鐘內能完成的唯讀問答，不寫入任何專案檔案",
+        "who": "總控本人"
+      },
+      "2": {
+        "label": "派給既有聊天室",
+        "when": "屬於某專案，且有健康、閒置、負責此類工作的聊天室",
+        "who": "該聊天室（由該領域督導派送）"
+      },
+      "3": {
+        "label": "在原專案開新聊天室",
+        "when": "沒有合適聊天室、既有聊天室忙碌，或需要並行",
+        "who": "同專案新聊天室；同一 session UUID 不得兩個 writer"
+      },
+      "4": {
+        "label": "開新 worktree",
+        "when": "需要修改 git repo 程式碼且要隔離",
+        "who": "新 worktree 的代理（orca worktree create --agent ...）"
+      },
+      "5": {
+        "label": "開新專案",
+        "when": "全新主題，現有專案對應不上",
+        "who": "新專案，並登記 project_rules"
+      }
+    },
+    "self_execute_only": [
+      "選項 1 的快速唯讀問答",
+      "總控自己督導領域內的系統工作",
+      "User 明確說「你自己做」的事"
+    ],
+    "dispatch_message_must_include": [
+      "User 原始需求與成功條件",
+      "可讀／可寫範圍與禁止事項（送件、付款、寄信、公開分享、建帳）",
+      "能否開新終端／啟動其他代理、最大併發數、額度上限",
+      "交付要附自測證據",
+      "完成後回報自己的站台"
+    ],
+    "review_dispatch_template": {
+      "applies_to": "所有審查、檢查、找問題、核對類派工",
+      "requirements": [
+        "只讀：不得修改被審查的檔案或資料",
+        "綁定版本：寫明被審查產物的 sha256 或 commit",
+        "結構化回報：每個問題含位置、嚴重度（高／中／低）、證據、建議",
+        "沒有找到問題時直接說明，不湊數",
+        "督導抽樣覆核後才轉交 User；不以條數評品質"
+      ]
+    }
+  },
+  "data_boundary_policy": {
+    "private_local_only": [
+      "申請文件與帳號",
+      "成績、證件、個資",
+      "保險與財務",
+      "帳號密碼與金鑰",
+      "未公開的產品資料與私人對話紀錄"
+    ],
+    "rule": "上述資料不得交給會把資料送出本機的第三方模型 API；既有訂閱的代理照常使用。",
+    "check": "派工前檢查資料類別；派工訊息註明允許的模型範圍。"
+  },
+  "model_policy": {
+    "note": "模型與推理強度是各自環境的設定；以下為佔位字，請依你的 CLI --help 核實。",
+    "routine_batch": "<例行模型>",
+    "critical_delivery": "<主力模型> + <較高推理強度>",
+    "not_auto_switch": "不自動切換既有聊天室的模型。"
+  },
+  "changelog": [
+    {
+      "version": 1,
+      "at": "2099-01-01T00:00:00Z",
+      "by": "user",
+      "change": "初版範例"
+    }
+  ]
+}

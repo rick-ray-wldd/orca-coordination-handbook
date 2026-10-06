@@ -1,0 +1,17 @@
+{
+  "default": "en",
+  "locales": {
+    "en": {
+      "label": "English",
+      "docs": "docs/en",
+      "templates": "templates/en",
+      "diagrams": "diagrams/en"
+    },
+    "zh-TW": {
+      "label": "繁體中文",
+      "docs": "docs/zh-TW",
+      "templates": "templates/zh-TW",
+      "diagrams": "diagrams/zh-TW"
+    }
+  }
+}
