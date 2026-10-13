@@ -18,9 +18,10 @@
 | **report（站台回報）** | 某站台對自己進度的一列自報：狀態、摘要、下一步、證據、阻塞 | 自製 | 每站一列，帶 revision | 〔程式・自製〕 |
 | **task（助理任務）** | 總控登記的待辦，跨回合追蹤；有狀態、下一步、優先序、期限、證據、審查者 | 自製 | `T-EXAMPLE0001` | 〔程式・自製〕 |
 | **orchestration Task** | Orca 原生的「一份工作」，可設相依、可被派出 | Orca 原生 | 由 `orca orchestration task-create` 回傳 | 〔程式・原生〕 |
-| **Run** | Orca 原生的 orchestration 命名空間與總控收件匣 | Orca 原生 | 由 `orca orchestration run-create` 回傳，例如 `run_EXAMPLE` | 〔程式・原生〕 |
+| **Run** | Orca 原生的 orchestration 命名空間與總控收件匣；一位總控同一時間只綁一個 Run | Orca 原生 | 由 `orca orchestration run-create` 回傳，例如 `run_EXAMPLE` | 〔程式・原生〕；每位總控一個長駐 Run 是〔規約〕 |
 | **Dispatch** | Orca 原生：某個 Task 的「一次具權威的嘗試」 | Orca 原生 | 由 `worker-start` 或 `dispatch` 回傳 | 〔程式・原生〕 |
 | **派工（動作）** | 把一件事交給某個聊天室去做的行為，不一定建立 Dispatch | 一般用語 | — | 〔規約〕 |
+| **delivery（投遞）** | 交給收件者的一批 mailbox 訊息；沒 ack 就一直重播 | Orca 原生 | `check` 回傳的 `deliveryId` | 〔程式・原生〕 |
 | **send receipt（送出回執）** | Orca `terminal send` 回傳的結果，含 `accepted` 與階段（`input_accepted`、`turn_started`） | Orca 原生 | 回傳 JSON | 〔程式・原生〕 |
 | **receipts 資料夾（收據）** | 參考部署放交付證據、交接說明、測試輸出的資料夾 | 自製慣例 | `HUB_ROOT/receipts/<主題>-<日期>/` | 〔規約〕 |
 | **domain（領域）** | 路由表中的一類事務，決定督導與核對總控 | 自製 | `web_sites`、`research` | 〔程式・自製〕 |
@@ -32,7 +33,7 @@
 - **助理任務**（自製）：給 User 和總控看的待辦清單。生命週期見第 6 章。
 - **orchestration Task**（Orca 原生）：Orca 用來追蹤「受監督的派工」的物件。一旦用原生的 `worker-start` 派出，Orca 會管理 Dispatch、心跳、`worker_done` 等。
 
-參考部署平常的派工，多數是「總控直接對既有聊天室送一段派工訊息」（用 `orca terminal send` 或 `orca orchestration send`），再用自製的助理任務追蹤；並沒有每件事都建立原生 orchestration Task。完整的原生監督迴圈（`worker-start` → `check --wait` → `worker_done`）是可用的，但參考部署是否全面採用〔未知〕。
+2026-10 初以前，參考部署常用 `orca terminal send` 派工，只用自製的助理任務追蹤。2026-10 起，每一次派 writer 都在總控的長駐 Run 底下用原生 `worker-start`，帳本的 evidence 附上回傳的 `run:`、`task:`、`dispatch:` ID 與 worker 的報告路徑〔規約；見第 14 章〕。選項 ① 的快速問答仍然不建立原生 Task。兩邊的紀錄沒有程式自動綁定。
 
 ### 「receipt」也有兩種
 

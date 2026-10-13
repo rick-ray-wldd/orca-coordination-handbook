@@ -14,8 +14,8 @@
 
 | Understand | Put into practice | Adapt |
 |---|---|---|
-| 12 chapters + capability appendix | 13 templates per language | Four-domain starter routing |
-| Six diagrams per language | Safe private-workspace initializer | Document-first adoption path |
+| 14 chapters + capability appendix | 13 templates per language | Four-domain starter routing |
+| Eight diagrams per language | Safe private-workspace initializer | Document-first adoption path |
 | Complete English and Traditional Chinese editions | Offline HTML and printable PDF in releases | Translation and contribution guide |
 
 The handbook separates **Orca-native features**, **private reference automation**, **written conventions**, and **unknowns**. It does not pretend a prompt rule is a security boundary.
@@ -54,12 +54,15 @@ The destination must be new. The helper refuses existing destinations and destin
 
 Declare the choice → identify the domain supervisor → assign one writer with explicit scope → require evidence → review a fixed version → record acceptance separately from external actions.
 
+**2026-10 update:** writers run as supervised Orca workers under one resident Run per coordinator; rule changes travel by mailbox; hard safety boundaries and stricter “don't sound finished” acceptance rules; and an optional client message intake gateway. A desktop agent product for non-sensitive work is documented as under evaluation only.
+
 ## Read by goal
 
 - **Understand the architecture:** [2. Roles](docs/en/02-architecture.md), [3. Identities](docs/en/03-concepts.md).
 - **Assign work consistently:** [4. Dispatch/routing](docs/en/04-dispatch-routing.md), [5. Scope/permissions](docs/en/05-writer-scope-permissions.md).
 - **Track real completion:** [6. Evidence/review](docs/en/06-lifecycle-review.md), [7. Operations](docs/en/07-operations.md).
 - **Adopt it:** [8. Getting started](docs/en/08-adoption.md), [9. Worked examples](docs/en/09-examples.md), [10. Templates](docs/en/10-templates-guide.md).
+- **Go further:** [14. Native orchestration](docs/en/14-native-orchestration.md) (one resident Run per coordinator, supervised workers, mailbox rule sync), [15. Client intake gateway](docs/en/15-client-intake-gateway.md) (allowlist, tool-less replies, preview-only edits).
 - **Maintain it:** [11. Troubleshooting](docs/en/11-troubleshooting.md), [12. Privacy](docs/en/12-pre-share-checklist.md), [Capability matrix](docs/en/13-capability-matrix.md).
 
 ## Repository layout
@@ -67,7 +70,7 @@ Declare the choice → identify the domain supervisor → assign one writer with
 ```text
 docs/{en,zh-TW}/       Full handbook; stable matching chapter filenames
 templates/{en,zh-TW}/  Copy-ready rules, routing, dispatch, review and handoff
-diagrams/{en,zh-TW}/   Six accessible SVG diagrams per edition
+diagrams/{en,zh-TW}/   Eight accessible SVG diagrams per edition
 scripts/               Initializer, validation, offline build and packaging
 tests/                 Safe-copy behavior tests
 locales.json           Default language and locale directories

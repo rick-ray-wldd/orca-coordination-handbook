@@ -4,7 +4,7 @@
 
 This handbook describes a **personal, two-coordinator workflow** in Orca. A user appoints two AI coding-agent sessions as coordinators. They route requests to project agents, collect evidence, and ask the other coordinator to review important work. User acceptance and authorization for external actions remain separate records.
 
-The workflow comes from a working personal deployment. It has been rewritten and anonymized. “Website A” and “Research B” are fictional examples. Public repository links identify this publication; private projects, accounts, machine paths, conversations and operational IDs are not included.
+The workflow comes from a working personal deployment. The 2026-10 edition reflects its latest changes: supervised native workers with one resident Run per coordinator (chapter 14), rule synchronization by mailbox, hard safety boundaries (§5.7), stricter acceptance language (§6.9) and a client message intake gateway (chapter 15). It has been rewritten and anonymized. “Website A” and “Research B” are fictional examples. Public repository links identify this publication; private projects, accounts, machine paths, conversations and operational IDs are not included.
 
 ## 1.1 Included and excluded
 
@@ -47,8 +47,12 @@ A convention is not enforcement. If an agent forgets a written rule, the system 
 | Understand IDs and terms | Chapter 3 |
 | Start today | Chapter 8 and the templates |
 | Follow worked examples | Chapter 9 |
+| Run supervised workers in Orca | Chapter 14 |
+| Take client requests through a messaging gateway | Chapter 15 |
 | Diagnose problems | Chapter 11 |
 | Share your own adaptation | Chapter 12 |
+
+Number 13 belongs to Appendix A (capability matrix), which keeps its original filename so existing links stay valid; the offline reader prints it after chapter 15.
 
 ## 1.5 Terms used throughout
 

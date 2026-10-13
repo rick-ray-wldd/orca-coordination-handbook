@@ -75,7 +75,7 @@ For isolated code changes:
 orca worktree create --name <task-name> --no-parent --agent codex --prompt "<dispatch>" --json
 ```
 
-For supervised work, read the installed orchestration guide and use its Run/worker/check/settlement lifecycle. A simple ownership handoff and a supervised worker are different workflows. Native automations can schedule work, but this repository does not configure them or establish their suitability for your inspection requirements [Unknown].
+For supervised work, read the installed orchestration guide and use its Run/worker/check/settlement lifecycle. Keep one resident Run per coordinator and one Task per case, acknowledge every delivery, and require `worker_done --report-path` (chapter 14). A simple ownership handoff and a supervised worker are different workflows. Native automations can schedule work, but this repository does not configure them or establish their suitability for your inspection requirements [Unknown].
 
 ## Stage 3: Optional custom assistant layer
 
@@ -107,4 +107,6 @@ Weekly, audit unclassified work, overload, imbalance and expired overrides. Mont
 - [ ] Evidence precedes review; review precedes accepted completion.
 - [ ] User confirmation and external authorization recorded truthfully.
 - [ ] Recovery has one operator and the original UUID.
+- [ ] One resident Run per coordinator; deliveries acknowledged; worker reports linked in the ledger.
+- [ ] Secrets only in the keychain or stdin; no card entry, account creation or permission bypass by agents.
 - [ ] Active sessions fit this machine's measured capacity.

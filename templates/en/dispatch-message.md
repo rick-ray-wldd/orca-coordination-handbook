@@ -27,6 +27,11 @@ Spending: <existing subscription only; no new spending>
 Required evidence: test commands/results; file paths and SHA-256 or commit;
 <screenshots / rendered pages / read-back results>.
 
+If started as a supervised worker: heartbeat every 5 minutes; ask questions with
+`orca orchestration ask`; send worker_done exactly once with taskId and dispatchId,
+--report-path <HUB_ROOT/receipts/topic-date/report.md> and --files-modified <csv>
+when files changed. worker_done is not acceptance.
+
 After delivery:
 1. Write a short Orca workspace comment.
 2. Report only your station using station-report, state review.

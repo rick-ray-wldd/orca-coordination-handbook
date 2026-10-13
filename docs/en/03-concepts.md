@@ -18,9 +18,10 @@ Do not treat a workspace as a reporter, or an assistant task as an Orca orchestr
 | Report | One station's state, summary, next action, evidence and blockers | One row per station with revision [Custom] |
 | Assistant task | Cross-turn to-do with priority, deadline, evidence and reviewer | `T-EXAMPLE0001` [Custom] |
 | Orchestration Task | Orca's unit of supervised work, with possible dependencies | Returned by task creation [Native] |
-| Run | Durable orchestration namespace and coordinator inbox | `run_EXAMPLE` [Native] |
+| Run | Durable orchestration namespace and coordinator inbox; a coordinator is bound to one Run at a time | `run_EXAMPLE` [Native]; one resident Run per coordinator [Convention] |
 | Dispatch | One authoritative attempt at an orchestration Task | Returned by worker start/dispatch [Native] |
 | Dispatching work | The act of assigning work; need not create a Dispatch object | General workflow term [Convention] |
+| Delivery | One batch of mailbox messages handed to a consumer; replays until acknowledged | `deliveryId` from `check` [Native] |
 | Send receipt | Result of terminal input, including acceptance and submission stages | JSON with `input_accepted`, `turn_started` [Native] |
 | Receipts directory | Local evidence, test output and handoff records | `HUB_ROOT/receipts/<topic>-<date>/` [Convention] |
 | Domain | Routing category choosing supervisor and reviewer | For example `web_sites`, `research` [Custom] |
@@ -29,7 +30,7 @@ Do not treat a workspace as a reporter, or an assistant task as an Orca orchestr
 
 An **assistant task** is the user's tracking record. An **orchestration Task** tracks a supervised Orca worker attempt. Native `worker-start` manages Dispatch authority, heartbeat and `worker_done` obligations.
 
-The reference frequently assigns work through `terminal send` or an orchestration message, then tracks it in the custom task list. It does not establish a native Task for every request. Native supervised operation is available; universal adoption in that deployment is [Unknown].
+Until early 2026-10 the reference often assigned work with `terminal send` and tracked it only in the custom task list. Since 2026-10 every writer dispatch uses native `worker-start` under the coordinator's resident Run, and the ledger evidence cites the returned `run:`, `task:` and `dispatch:` IDs plus the worker's report path [Convention; see chapter 14]. Quick option-1 answers still create no native Task. Nothing binds the two records automatically.
 
 `accepted: true` means input was accepted, not that a turn began. Look for `turn_started` or use `--wait-submit` [Native]. The local `receipts/` directory is simply a place to store evidence [Convention].
 

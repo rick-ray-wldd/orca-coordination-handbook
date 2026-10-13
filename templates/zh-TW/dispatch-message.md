@@ -31,6 +31,10 @@
 - 產物路徑與 SHA-256（或 commit）
 - <截圖／逐頁渲染／回讀結果>
 
+【若以受監督 worker 啟動】每 5 分鐘送 heartbeat；有問題用 orca orchestration ask 問；
+worker_done 只送一次，帶 taskId 與 dispatchId、--report-path <HUB_ROOT/receipts/<主題>-<日期>/report.md>，
+有改檔再加 --files-modified <逗號分隔清單>。worker_done 不等於驗收。
+
 【完成後】
 1. 寫卡片 comment：orca worktree set --worktree active --comment "<一句話>" --json
 2. 用 station-report 格式回報自己的站台，狀態 review

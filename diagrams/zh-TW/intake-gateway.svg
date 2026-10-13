@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 416" width="760" height="416" role="img" aria-label="客戶訊息入口架構" font-family="Arial, Helvetica, sans-serif">
+<title>客戶訊息入口架構</title>
+<defs><marker id="ah-intake" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#34495e" /></marker></defs>
+<rect x="0" y="0" width="760" height="416" fill="#ffffff" />
+<text x="20" y="24" font-size="11" text-anchor="start" fill="#5d6d7e" font-weight="700">先確認身份，才輪到模型</text>
+<rect x="20" y="32" width="160" height="60" rx="10" fill="#e8f1fb" stroke="#1f618d" stroke-width="2" />
+<text x="100.0" y="58.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">客戶訊息</text>
+<text x="100.0" y="75.0" text-anchor="middle" font-size="11" fill="#1b2631">官方商業帳號</text>
+<line x1="180" y1="62" x2="206" y2="62" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="206" y="32" width="160" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="286.0" y="58.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">驗簽＋allowlist</text>
+<text x="286.0" y="75.0" text-anchor="middle" font-size="11" fill="#1b2631">不得 allow-all</text>
+<line x1="366" y1="62" x2="392" y2="62" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="392" y="32" width="160" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="472.0" y="58.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">客戶 registry</text>
+<text x="472.0" y="75.0" text-anchor="middle" font-size="11" fill="#1b2631">伺服器端綁定</text>
+<line x1="552" y1="62" x2="578" y2="62" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="578" y="32" width="160" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="658.0" y="58.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">收件＋收據</text>
+<text x="658.0" y="75.0" text-anchor="middle" font-size="11" fill="#1b2631">持久化、去重</text>
+<line x1="658" y1="92" x2="658" y2="118" stroke="#34495e" stroke-width="1.8" />
+<line x1="100" y1="118" x2="658" y2="118" stroke="#34495e" stroke-width="1.8" />
+<line x1="100.0" y1="118" x2="100.0" y2="146" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="20" y="148" width="160" height="60" rx="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" />
+<text x="100.0" y="174.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">範圍受限的提議</text>
+<text x="100.0" y="191.0" text-anchor="middle" font-size="11" fill="#1b2631">選用，只限一個欄位</text>
+<line x1="286.0" y1="118" x2="286.0" y2="146" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="206" y="148" width="160" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="286.0" y="174.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">回覆模型</text>
+<text x="286.0" y="191.0" text-anchor="middle" font-size="11" fill="#1b2631">零工具＋guard</text>
+<line x1="472.0" y1="118" x2="472.0" y2="146" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="392" y="148" width="160" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="472.0" y="174.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">私人審查</text>
+<text x="472.0" y="191.0" text-anchor="middle" font-size="11" fill="#1b2631">給 User 的頻道</text>
+<line x1="658.0" y1="118" x2="658.0" y2="146" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="578" y="148" width="160" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="658.0" y="174.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">通知總控</text>
+<text x="658.0" y="191.0" text-anchor="middle" font-size="11" fill="#1b2631">orca send＝排入</text>
+<text x="112" y="252" font-size="11" text-anchor="start" fill="#5d6d7e" font-weight="700">只出預覽；一切對外動作由 USER 授權</text>
+<line x1="100" y1="208" x2="100" y2="262" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="20" y="264" width="160" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="100.0" y="290.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">建置預覽</text>
+<text x="100.0" y="307.0" text-anchor="middle" font-size="11" fill="#1b2631">預設 dry_run</text>
+<line x1="180" y1="294" x2="206" y2="294" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="206" y="264" width="160" height="60" rx="10" fill="#e3f5e1" stroke="#2e7d32" stroke-width="2" />
+<text x="286.0" y="290.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">User 審查</text>
+<text x="286.0" y="307.0" text-anchor="middle" font-size="11" fill="#1b2631">明確核准</text>
+<line x1="366" y1="294" x2="392" y2="294" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="392" y="264" width="160" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="472.0" y="290.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">上線＋回覆</text>
+<text x="472.0" y="307.0" text-anchor="middle" font-size="11" fill="#1b2631">另一個人工步驟</text>
+<line x1="552" y1="294" x2="578" y2="294" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-intake)" />
+<rect x="578" y="264" width="160" height="60" rx="10" fill="#ffffff" stroke="#5d6d7e" stroke-width="2" />
+<text x="658.0" y="290.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">收據</text>
+<text x="658.0" y="307.0" text-anchor="middle" font-size="11" fill="#1b2631">hash、commit、QA</text>
+<text x="380" y="356" font-size="12" text-anchor="middle" fill="#34495e">客戶的話是意向，不是授權。gateway 沒有任何 push、merge 或上正式站的路徑。</text>
+<text x="380" y="378" font-size="12" text-anchor="middle" fill="#34495e">guard：不露內部用語；沒有收據就不說完成、價格或時間。</text>
+<text x="380" y="400" font-size="12" text-anchor="middle" fill="#34495e">離線測試 mock 所有傳輸，並斷言 EXTERNAL_SENDS=0。</text>
+</svg>

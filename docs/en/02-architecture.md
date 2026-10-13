@@ -52,5 +52,9 @@ Orca's public artifact publishing is separately disabled by default and can be e
 | Private assistant layer | Contract acknowledgement, station reports, task database, router, board sync, inspections | No; interfaces are explained |
 | Written conventions | Agent rules, dispatch, review and handoff formats | Yes, in `templates/` |
 | Adoption utilities | Safe template copying and handbook build/check scripts | Yes; they do not run your agents |
+| Client intake gateway (optional) | Allowlisted messaging intake, tool-less replies, preview-only proposals, private review channel (chapter 15) | No; architecture only |
+| External agent products under evaluation | Desktop agents considered for non-sensitive work only (§5.8) | No; not in production |
+
+Since 2026-10 the reference dispatches writers as native supervised workers: each coordinator keeps one resident Run and each case is a Task inside it (chapter 14). The private ledger still records what the user asked for and whether it was accepted; Orca records who is executing and whether that attempt settled.
 
 Start with the document workflow. Add private automation only when it solves a concrete tracking problem.

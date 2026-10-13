@@ -97,3 +97,15 @@ Important submissions and releases should receive independent review. The refere
 | Task done + coordinator_review | Coordinator checked evidence | User accepted |
 | Task done + user_confirmed | User accepted | A separate external action happened |
 | Board completed | Human or explicitly authorized move | Automatic verification; reference sync never moves cards into completed |
+
+## 6.9 Sounding finished is worse than being wrong
+
+A wrong result that is labeled honestly gets caught in review. A result that *sounds* finished without evidence skips review and reaches the user as fact. The reference therefore treats premature completion language as the more dangerous failure [Convention]:
+
+1. **No evidence, no done.** `review` and `done` need a readable path and result; “should work” or “looks fine” is not evidence.
+2. **Say the weakest true thing.** Use “prepared”, “sent”, “receipt received” and “accepted” only for what actually happened (§6.3). A draft is not a submission; enqueue is not read; `worker_done` is not acceptance.
+3. **Missing sources show unknown.** If a source is unreadable, a station has not reported, a report is stale or Orca is unreachable, the summary says unknown or stale, never complete (§3.4).
+4. **Report what was not checked.** A delivery lists skipped steps and untested environments next to the evidence.
+5. **Never invent confirmation.** `user_confirmed` requires the user's actual words, time and channel.
+
+Client-facing replies apply the same rule through an output guard (§15.5).

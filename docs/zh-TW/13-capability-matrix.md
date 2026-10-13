@@ -55,11 +55,23 @@
 | 42 | 審查只讀、結構化、標嚴重度、無問題直說 | 規約 | |
 | 43 | 審查綁定產物 hash | 規約 | 無程式強制 |
 | 44 | `user_confirmed` 不得代填 | 規約 | 程式只檢查欄位存在 |
-| 45 | 規則更新後通知另一位總控重讀 | 規約 | |
+| 45 | 規則更新後通知另一位總控重讀 | 規約＋原生 mailbox | 持久 status 訊息與閒置提醒；確認回覆是規約 |
 | 46 | 不開無限輪詢 | 規約 | |
 | 47 | 開工前先讀巡檢摘要 | 規約 | |
 | 48 | 站台身份只做歸屬檢查（工作區、代理種類），不是防冒用的身份驗證 | 程式・自製（限制） | 實作讀過 |
 | 49 | 背景同步加 `--ensure-rules` 時寫入／更新已登記工作區的規則入口檔（先備份） | 程式・自製 | 排程命令與實作核實 |
 | 50 | 「尚未交叉核對」提醒只涵蓋一個指定領域、最高優先序、waiting_user／review 狀態 | 程式・自製 | 路由設定與實作核實；其他領域靠規約 |
 | 51 | evidence 只檢查欄位非空，不驗證內容 | 程式・自製（限制） | 實作讀過 |
-| 52 | 助理任務與原生 Run／Task／Dispatch 的對應 | 規約（無程式綁定，缺口） | 需人工寫回 ID 與收據 |
+| 52 | 助理任務與原生 Run／Task／Dispatch 的對應 | 規約（無程式綁定，缺口） | evidence 附報告路徑與 run／task／dispatch ID；沒有程式綁定 |
+| 53 | 一位總控只綁一個 Run；換綁會 fence 未 ack 的投遞 | 程式・原生 | 原始碼 `db/runs/run-binding.ts`、`db/messages/role-mailbox-delivery.ts` |
+| 54 | mailbox 至少投遞一次；未 ack 的一批會重播 | 程式・原生 | `check --ack`；原始碼 `role-mailbox-delivery.ts` |
+| 55 | 只在收件窗格閒置時打一行提醒 | 程式・原生 | 原始碼 `mailbox-pointer-delivery.ts`；沒綁 Run 時的行為未知 |
+| 56 | `worker-start` 觀察到這一輪開始才回 ready | 程式・原生 | 否則回 `start_unknown`；原始碼 `worker-start-readiness-settlement.ts` |
+| 57 | `worker_done` 附報告路徑／改動檔案；release 保存 transcript；`worker-read` | 程式・原生 | send help；原始碼 `worker-terminal-archive.ts` |
+| 58 | 現行模型的 heartbeat 過期自動警告 | 程式・原生（缺口） | 只存在已退役的舊迴圈；參考部署用 30 分鐘檢查清單 |
+| 59 | 每位總控一個長駐 Run、每案一個 Task | 規約 | 參考部署 2026-10 起的規則 |
+| 60 | 秘密只經 keychain 或 stdin；不代填卡號、不建帳號、不繞過權限 | 規約 | 代理仍可能被誤用；憑證要放在它拿不到的地方 |
+| 61 | 客戶訊息入口：驗簽＋allowlist 身份、零工具回覆、唯一只出預覽的提議工具 | 程式・自製 | 私人實作；離線測試斷言對外送出為零；未隨附 |
+| 62 | 外部桌面代理（「dots」）只做非敏感工作 | 未知 | 評估中；尚未試辦；未上線 |
+
+第 53–58 項另外對照同版 tag 的 Orca 開源原始碼（MIT）核對；路徑相對於該 repo。發布工具（`init_workspace.py`、驗證、文件建置與 release 打包）不在這 62 項之內，它們隨本 repo 附帶並有測試，但不實作私人助理層。

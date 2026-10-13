@@ -2,7 +2,7 @@
 
 [English](../en/13-capability-matrix.md) | [繁體中文](../zh-TW/13-capability-matrix.md) | [Home](../../README.md)
 
-The source edition checked native behavior against Orca CLI 1.4.220 help and installed `orca-cli` / `orchestration` guides. Private capabilities were checked against implementation, included tests and scheduler configuration without reading secrets. **That private code is not included.** Conventions are documented rules, not enforcement. Unknown means unverified or version-dependent.
+The source edition checked native behavior against Orca CLI 1.4.220 help and installed `orca-cli` / `orchestration` guides. Rows 53-58 were also checked against the MIT-licensed Orca source at the same version tag; paths are relative to that repository. Private capabilities were checked against implementation, included tests and scheduler configuration without reading secrets. **That private code is not included.** Conventions are documented rules, not enforcement. Unknown means unverified or version-dependent.
 
 | # | Capability | Classification | Evidence / limitation |
 |---|---|---|---|
@@ -50,13 +50,23 @@ The source edition checked native behavior against Orca CLI 1.4.220 help and ins
 | 42 | Read-only, structured, severity-based review | Convention | Say when no issues were found |
 | 43 | Artifact hash bound to review | Convention | No private program enforcement |
 | 44 | Never invent user_confirmed | Convention | Program checks field, not truth |
-| 45 | Notify other coordinator after rule changes | Convention | Not automatic |
+| 45 | Notify other coordinator after rule changes | Convention + native mailbox | Durable status message and idle pointer; acknowledgement is a convention |
 | 46 | No endless polling | Convention | Bounded, purposeful checks |
 | 47 | Read latest inspection first | Convention | Reduce duplicate collection |
 | 48 | Station attribution is not spoof-proof authentication | Custom limitation | Workspace/provider checks only |
 | 49 | ensure-rules can write rule adapters in registered workspaces | Custom | Backs up before updating |
 | 50 | Missing cross-review alert is domain/priority/state specific | Custom | Applications, P1, waiting_user/review only |
 | 51 | Evidence validation checks nonempty field, not contents | Custom limitation | Reviewer still evaluates evidence |
-| 52 | Assistant task ↔ native Run/Task/Dispatch binding | Convention / gap | Record real returned IDs and receipts manually |
+| 52 | Assistant task ↔ native Run/Task/Dispatch binding | Convention / gap | Evidence cites report path and run/task/dispatch IDs; no program binding |
+| 53 | Coordinator bound to one Run; rebinding fences unacknowledged deliveries | Native | Source `db/runs/run-binding.ts`, `db/messages/role-mailbox-delivery.ts` |
+| 54 | At-least-once mailbox delivery; unacknowledged batch replays | Native | `check --ack`; source `role-mailbox-delivery.ts` |
+| 55 | Idle-only mailbox pointer typed into the recipient pane | Native | Source `mailbox-pointer-delivery.ts`; behavior without a bound Run is unknown |
+| 56 | `worker-start` ready only after an observed turn start | Native | Otherwise `start_unknown`; source `worker-start-readiness-settlement.ts` |
+| 57 | `worker_done` report path/files; release archives transcript; `worker-read` | Native | Send help; source `worker-terminal-archive.ts` |
+| 58 | Automatic stale-heartbeat warning in the current model | Native gap | Only in the retired loop; reference uses a 30-minute checklist |
+| 59 | One resident Run per coordinator, one Task per case | Convention | Reference rule since 2026-10 |
+| 60 | Secrets only via keychain or stdin; no card entry, account creation or permission bypass | Convention | Agents can still be misused; keep credentials out of reach |
+| 61 | Intake gateway: signed allowlisted identity, zero-tool replies, one preview-only proposal tool | Custom | Private; offline suite asserts zero external sends; not shipped |
+| 62 | External desktop agent (“dots”) for non-sensitive work | Unknown | Under evaluation; pilot not started; not in production |
 
-Publication utilities (`init_workspace.py`, validation, document building and release packaging) are separate from these 52 reference-deployment capabilities. They are included and tested in this repository; they do not implement the private assistant layer.
+Publication utilities (`init_workspace.py`, validation, document building and release packaging) are separate from these 62 reference-deployment capabilities. They are included and tested in this repository; they do not implement the private assistant layer.

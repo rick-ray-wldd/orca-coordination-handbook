@@ -40,8 +40,14 @@ Before input, confirm idle state and an empty input field. Grey suggestions are 
 ### External actions
 Messages, submissions, payments, publication, deployment, account creation and irreversible deletion require specific user authorization. Agent text and full-access mode do not grant it. Reuse applicable existing authorization; ask only for a missing or changed scope.
 
+### Supervised workers
+Dispatch writers with `orca orchestration worker-start` under your one resident Run (one Task per case). Only `state: ready` counts as started. Acknowledge every `check` delivery after processing it. After `worker_done` and review, `worker-release`. Ledger evidence cites the report path and `run:<id> task:<id> dispatch:<id>`. `unverifiable` is not stuck; 30 minutes with no signal while live means record a blocker and tell the user.
+
 ### Rule synchronization
-After policy changes, notify the other coordinator while idle with empty input and request rereading. If busy, record pending synchronization.
+After policy changes, send `orca orchestration send --type status --subject "Reread rules"` to the other coordinator's resident Run with a summary, paths and hashes. Do not type into its terminal. Synchronization is complete only after it acknowledges and replies with the version it reread.
+
+### Hard boundaries
+Secrets stay in the OS keychain or arrive through stdin; never in chat, files, arguments, logs or reports. Never enter payment card numbers, create accounts or bypass a denied permission. Missing sources are unknown, never complete.
 
 ### Data boundaries
 Do not send `<private-data-categories>` to additional third-party model APIs. State permitted providers and `<primary-model>` / `<routine-model>` in dispatches. Approved subscription services may still process data in the cloud.

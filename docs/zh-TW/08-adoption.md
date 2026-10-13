@@ -82,7 +82,7 @@ python3 scripts/init_workspace.py --dest ../my-assistant --language zh-TW
    orca worktree create --name <任務名> --no-parent --agent codex --prompt "<派工訊息>" --json
    ```
 
-4. **需要監督、等結果的多工作者任務**，改用原生 orchestration 監督迴圈（`run-create`、`worker-start`、`check --wait`、`worker_done`、`gate-create` 決策關卡）。細節請讀你自己版本的 `orca skills get orchestration`。
+4. **需要監督、等結果的多工作者任務**，改用原生 orchestration 監督迴圈（`run-create`、`worker-start`、`check --wait`、`worker_done`、`gate-create` 決策關卡）。每位總控保持一個長駐 Run、每案一個 Task，每批投遞都要 ack，並要求 `worker_done --report-path`（第 14 章）。細節請讀你自己版本的 `orca skills get orchestration`。
 
 5. **定時工作**：Orca 有原生排程（`orca automations create --trigger <preset|cron|rrule> ...`），可用來做唯讀巡檢。參考部署用的是作業系統排程＋自製腳本，兩種方式本手冊都沒有替你設定〔未知：原生 automations 是否適合你的巡檢需求〕。
 
@@ -124,4 +124,6 @@ python3 scripts/init_workspace.py --dest ../my-assistant --language zh-TW
 - [ ] `user_confirmed` 只在 User 真的確認時記錄
 - [ ] 對外動作都有 User 對該次的明確授權
 - [ ] 恢復斷線只由一位負責，只用原 UUID
+- [ ] 每位總控一個長駐 Run；投遞都有 ack；worker 報告連回帳本
+- [ ] 秘密只放 keychain 或 stdin；代理不代填卡號、不建帳號、不繞過權限
 - [ ] 同時活躍的聊天室數量在你的機器負荷內

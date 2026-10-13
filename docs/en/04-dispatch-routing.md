@@ -94,6 +94,8 @@ Use `templates/en/dispatch-message.md` [Convention]:
 4. Required self-test evidence.
 5. Report only the executor's own station after delivery.
 
+In the 2026-10 reference, options 2-5 deliver this message as the `--spec` of a native supervised worker, and part 5 also requires `worker_done` with `--report-path` (and `--files-modified` when files changed) [Convention; chapter 14]. Only the domain supervisor starts that worker.
+
 Review work uses the separate review templates in chapter 6.
 
 ## 4.7 Record the decision
@@ -104,7 +106,7 @@ Conceptual private CLI example (not shipped):
 <routing-CLI> triage --text "<request>" --record --decision <1-5> --target <handle-or-path> --by <A-or-B>
 ```
 
-Without that tool, append time, request summary, decision, target and deciding coordinator to private `receipts/dispatch-log.md`. Make it possible to audit later.
+Without that tool, append time, request summary, decision, target and deciding coordinator to private `receipts/dispatch-log.md`. Make it possible to audit later. The reference writes JSON lines; its daily read-only inspection counts decisions and names action requests a coordinator handled itself [Custom].
 
 ## 4.8 Change assignments as data
 

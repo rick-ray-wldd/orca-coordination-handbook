@@ -61,3 +61,17 @@ A practical convention is to use a cheaper configured model for routine read-onl
 | External action | Only explicit scoped authorization | No as reviewer | Applicable user authorization | Same | Yes |
 
 An authorized writer may perform the **specific** external action named in its dispatch. Other external actions remain out of scope.
+
+## 5.7 Hard safety boundaries
+
+These hold in every domain and no dispatch can relax them [Convention]:
+
+- **Secrets stay in the OS keychain or arrive through stdin.** The user creates tokens personally and stores them in the system keychain; a program reads them into process memory at run time. Never paste a secret into chat, files, command arguments, shell history, reports, configs or logs, and never read `.env` or credential stores to “check” them.
+- **Agents never fill in payment card numbers** or complete a purchase. They may prepare a comparison or draft; the user pays.
+- **Agents never create accounts** or register for services on the user's behalf. Sign-up, login and consent steps are the user's, and a supervised worker waits on them (§14.6).
+- **Do not bypass the permission layer.** If a tool call is denied, a permission classifier blocks an action or `worker-start` is not `ready`, stop and report. Do not retry through a different tool, an invisible sub-agent, a shell trick or a changed setting.
+- **Publishing in one place is not publishing everywhere.** An authorization to push one repository does not cover messages, issues, releases or settings.
+
+## 5.8 External agent products under evaluation
+
+The reference is evaluating a desktop agent product (“dots”) as a helper for **non-sensitive work only**, such as monitoring public information or reminders that contain no personal data [Convention]. It is **not in production**: the pilot waits on a written evaluation and the user's decision. Applications, accounts, grades, identity documents, insurance and unreleased product data are excluded regardless of the outcome. Treat any similar tool the same way: evaluation first, a data boundary in writing, and no access to the private categories in §5.4.

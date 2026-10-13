@@ -13,7 +13,7 @@ These were verified in one deployment. **They are examples, not recommended univ
 | Service | Frequency | Behavior | Writes [Custom] |
 |---|---|---|---|
 | Collector and board sync | Every 60 seconds | Read workspace/terminal lists, reports and source timestamps; regenerate projections; update changed cards | Own database, summaries, board, and backed-up rule-entry adapters in registered workspaces; project status sources remain read-only |
-| Inspection | Three fixed times daily | Collect waiting-user, blockers, deadlines, stale reports, failed-session hints, dispatch statistics; summarize | Private latest report, inspection task, one configured notification; model has no tools and a budget; code-only fallback |
+| Inspection | Three fixed times daily | Read-only. Collect waiting-user, blockers, deadlines, stale reports, failed-session hints, dispatch statistics; summarize | Private latest report, inspection task, one configured notification; model has no tools and a budget; code-only fallback |
 | Machine health | Every 30 minutes | Swap, pipe capacity, disk, AI-related processes and Codex session count | Notify only on threshold breach; suppress identical warnings for three hours |
 
 Reference thresholds:
@@ -76,7 +76,7 @@ If a coordinator is unavailable, record availability and the expected return; ro
 
 ## 7.6 Synchronize rule changes
 
-Running sessions do not automatically reread their instruction files. Notify the other coordinator when idle and with an empty input field; include a short change summary and request acknowledgement. If busy or holding a draft, record pending synchronization. On contract changes, stations obtain the new hash through `brief` and `join` it after reading; the old hash cannot authorize a new report in the reference [Custom].
+Running sessions do not automatically reread their instruction files. Since 2026-10 the reference sends a durable `status` message to the other coordinator's resident Run instead of typing into its terminal. Orca shows an idle-only pointer, never interrupts a busy pane and does not repeat itself [Native]; synchronization counts only after the recipient acknowledges and replies with the version it reread [Convention]. Details and command: §14.7. On contract changes, stations obtain the new hash through `brief` and `join` it after reading; the old hash cannot authorize a new report in the reference [Custom].
 
 ## 7.7 Existing capabilities and gaps
 
@@ -91,10 +91,11 @@ Running sessions do not automatically reread their instruction files. Notify the
 | Only supervisor sends input | Gap | Native terminal input does not enforce domain routing |
 | One writer for a session | Gap for plain input | Native Dispatch authority applies only to the native supervised lifecycle |
 | Artifact-hash-bound review | Gap | Template/convention, not enforced |
-| Rule-change notification | Gap | Manual |
+| Rule-change notification | Partial | Native durable mailbox and idle pointer; acknowledgement is a convention (§14.7) |
 | Sharing privacy audit | Partial in this publication | Generic validator plus local private scan; no universal automatic personal-data detection |
 | All progress on mobile | Unknown | Interface not verified; reference used a text summary |
 | Missing intake | Gap | Chat-only requests can be forgotten; plain terminal input bypasses registration |
-| Assistant task ↔ native Run/Task/Dispatch | Gap | No automatic one-to-one binding; record IDs manually |
+| Assistant task ↔ native Run/Task/Dispatch | Partial | Evidence cites report path and run/task/dispatch IDs by convention; no program binding (§14.8) |
+| Stale worker heartbeat alert | Partial | Native alert exists only in the retired loop; reference uses a 30-minute checklist (§14.5) |
 | Unaccepted assignments, missing owners, overdue decisions | Partial | General stale/waiting/blocker lists exist, not comprehensive detectors for each category |
 | “Subscription” means “data stays local” | False | Existing agents may use cloud services |

@@ -28,7 +28,8 @@ def slug(name):return re.sub(r'[^a-z0-9]+','-',name.lower()).strip('-')
 
 
 def build_html(locale,config,locales,out):
-    docs=sorted((ROOT/config['docs']).glob('*.md'))
+    # The capability matrix keeps its stable filename but is printed last, as Appendix A.
+    docs=sorted((ROOT/config['docs']).glob('*.md'),key=lambda p:(p.stem.endswith('capability-matrix'),p.name))
     templates=sorted((ROOT/config['templates']).iterdir())
     chinese=locale=='zh-TW'
     title='Orca 個人雙總控工作流程手冊' if chinese else 'Orca Coordination Handbook'

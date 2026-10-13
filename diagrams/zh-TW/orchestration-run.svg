@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" width="760" height="410" role="img" aria-label="長駐 Run 生命週期與帳本連結" font-family="Arial, Helvetica, sans-serif">
+<title>長駐 Run 生命週期與帳本連結</title>
+<defs><marker id="ah-orch" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#34495e" /></marker></defs>
+<rect x="0" y="0" width="760" height="410" fill="#ffffff" />
+<text x="20" y="24" font-size="11" text-anchor="start" fill="#5d6d7e" font-weight="700">一位總控・一個長駐 RUN・每案一個 TASK</text>
+<rect x="20" y="32" width="150" height="60" rx="10" fill="#e8f1fb" stroke="#1f618d" stroke-width="2" />
+<text x="95.0" y="58.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">總控</text>
+<text x="95.0" y="75.0" text-anchor="middle" font-size="11" fill="#1b2631">一個終端</text>
+<line x1="170" y1="62" x2="198" y2="62" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-orch)" />
+<rect x="200" y="32" width="190" height="60" rx="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" />
+<text x="295.0" y="58.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">長駐 Run</text>
+<text x="295.0" y="75.0" text-anchor="middle" font-size="11" fill="#1b2631">每位總控每天一個</text>
+<line x1="390" y1="52" x2="418" y2="40" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-orch)" />
+<line x1="390" y1="72" x2="418" y2="92" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-orch)" />
+<rect x="420" y="16" width="150" height="44" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="495.0" y="43.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">Task：案子 1</text>
+<rect x="420" y="70" width="150" height="44" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="495.0" y="97.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">Task：案子 2</text>
+<line x1="570" y1="38" x2="598" y2="58" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-orch)" />
+<rect x="600" y="32" width="140" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="670.0" y="58.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">Worker</text>
+<text x="670.0" y="75.0" text-anchor="middle" font-size="11" fill="#1b2631">Dispatch＝一次嘗試</text>
+<text x="20" y="146" font-size="11" text-anchor="start" fill="#5d6d7e" font-weight="700">受監督的生命週期</text>
+<rect x="20" y="156" width="132" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="86.0" y="182.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">worker-start</text>
+<text x="86.0" y="199.0" text-anchor="middle" font-size="11" fill="#1b2631">ready＝看到這輪開始</text>
+<line x1="152" y1="186" x2="167" y2="186" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-orch)" />
+<rect x="167" y="156" width="132" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="233.0" y="182.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">heartbeat／ask</text>
+<text x="233.0" y="199.0" text-anchor="middle" font-size="11" fill="#1b2631">每 5 分鐘</text>
+<line x1="299" y1="186" x2="314" y2="186" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-orch)" />
+<rect x="314" y="156" width="132" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="380.0" y="182.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">worker_done</text>
+<text x="380.0" y="199.0" text-anchor="middle" font-size="11" fill="#1b2631">附報告路徑</text>
+<line x1="446" y1="186" x2="461" y2="186" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-orch)" />
+<rect x="461" y="156" width="132" height="60" rx="10" fill="#eef2f7" stroke="#5d6d7e" stroke-width="2" />
+<text x="527.0" y="182.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">check --wait</text>
+<text x="527.0" y="199.0" text-anchor="middle" font-size="11" fill="#1b2631">處理後 --ack</text>
+<line x1="593" y1="186" x2="608" y2="186" stroke="#34495e" stroke-width="1.8" marker-end="url(#ah-orch)" />
+<rect x="608" y="156" width="132" height="60" rx="10" fill="#e3f5e1" stroke="#2e7d32" stroke-width="2" />
+<text x="674.0" y="182.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">審查</text>
+<text x="674.0" y="199.0" text-anchor="middle" font-size="11" fill="#1b2631">再 worker-release</text>
+<text x="20" y="252" font-size="11" text-anchor="start" fill="#5d6d7e" font-weight="700">紀錄與陷阱</text>
+<rect x="20" y="262" width="350" height="58" rx="10" fill="#ffffff" stroke="#5d6d7e" stroke-width="2" />
+<text x="195.0" y="287.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">私人帳本任務</text>
+<text x="195.0" y="304.0" text-anchor="middle" font-size="11" fill="#1b2631">evidence：報告＋run:/task:/dispatch: ID</text>
+<rect x="390" y="262" width="350" height="58" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2" />
+<text x="565.0" y="287.0" text-anchor="middle" font-size="13" fill="#1b2631" font-weight="700">陷阱：綁第二個 Run</text>
+<text x="565.0" y="304.0" text-anchor="middle" font-size="11" fill="#1b2631">未 ack 的投遞會被 fence</text>
+<line x1="380" y1="216" x2="260" y2="262" stroke="#34495e" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#ah-orch)" />
+<text x="380" y="350" font-size="12" text-anchor="middle" fill="#34495e">未 ack 的一批信每次 check 都會重播（至少投遞一次）。</text>
+<text x="380" y="372" font-size="12" text-anchor="middle" fill="#34495e">unverifiable 不等於卡住；live 狀態 30 分鐘毫無訊號 → 記 blocker 並告知 User。</text>
+<text x="380" y="394" font-size="12" text-anchor="middle" fill="#34495e">worker_done 只是結算一次嘗試，不是驗收。規則同步走 mailbox。</text>
+</svg>

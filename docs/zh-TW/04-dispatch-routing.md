@@ -113,6 +113,8 @@ User 看到後可以直接改判（例如「改成 ④，開新 worktree」）�
 4. **交付時要附自測證據**
 5. **完成後回報自己的站台**
 
+2026-10 版參考部署中，②–⑤ 都把這則訊息當作原生受監督 worker 的 `--spec` 送出；第 5 項另外要求 `worker_done` 帶 `--report-path`（有改檔再加 `--files-modified`）〔規約；第 14 章〕。只有該領域的督導可以啟動這個 worker。
+
 審查類派工另有格式（第 6 章、`templates/zh-TW/review-request.md`）。
 
 ## 4.7 記錄判斷
@@ -123,7 +125,7 @@ User 看到後可以直接改判（例如「改成 ④，開新 worktree」）�
 <路由CLI> triage --text "<User 的請求>" --record --decision <1-5> --target <handle 或路徑> --by <A|B>
 ```
 
-如果你沒有自製工具，最簡單的替代是在 `HUB_ROOT/receipts/dispatch-log.md` 每次加一行：時間、請求摘要、判斷編號、對象、誰判斷。重點是**可以事後統計**。
+如果你沒有自製工具，最簡單的替代是在 `HUB_ROOT/receipts/dispatch-log.md` 每次加一行：時間、請求摘要、判斷編號、對象、誰判斷。重點是**可以事後統計**。參考部署寫成 JSON lines；每日唯讀巡檢會統計判斷，並點名「行動型請求卻由總控自己做」的情況〔程式・自製〕。
 
 ## 4.8 調整分工
 
