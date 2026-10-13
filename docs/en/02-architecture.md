@@ -53,8 +53,12 @@ Orca's public artifact publishing is separately disabled by default and can be e
 | Written conventions | Agent rules, dispatch, review and handoff formats | Yes, in `templates/` |
 | Adoption utilities | Safe template copying and handbook build/check scripts | Yes; they do not run your agents |
 | Client intake gateway (optional) | Allowlisted messaging intake, tool-less replies, preview-only proposals, private review channel (chapter 15) | No; architecture only |
-| External agent products under evaluation | Desktop agents considered for non-sensitive work only (§5.8) | No; not in production |
+| External agent products under evaluation | Desktop agents considered for non-sensitive work only (§5.8) | No; restricted trials, production readiness unproven |
 
 Since 2026-10 the reference dispatches writers as native supervised workers: each coordinator keeps one resident Run and each case is a Task inside it (chapter 14). The private ledger still records what the user asked for and whether it was accepted; Orca records who is executing and whether that attempt settled.
 
 Start with the document workflow. Add private automation only when it solves a concrete tracking problem.
+
+## 2.6 Multiple inputs, shared execution
+
+Owner Discord course/project channels ([chapter 16](16-dedicated-project-intake.md)) and client LINE intake retain separate identities, registries and profiles. The former binds a fixed project; client intent in the latter is not user authorization. The optional voice bridge in the diagram marks an integration point only, not supported or verified voice platforms. These custom inputs can hand off to supervisor routing and a native mailbox; native Run/Task/Dispatch execution follows only after the supervisor chooses a writer. Direct requests in Orca remain available.

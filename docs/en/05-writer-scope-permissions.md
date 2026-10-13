@@ -64,7 +64,7 @@ An authorized writer may perform the **specific** external action named in its d
 
 ## 5.7 Hard safety boundaries
 
-These hold in every domain and no dispatch can relax them [Convention]:
+These are **reference-deployment policies**, applicable in its domains and not relaxable by a dispatch [Convention]. They are not Orca-wide technical restrictions on every user. Scoped authorization in §5.6 still has to respect these deployment limits:
 
 - **Secrets stay in the OS keychain or arrive through stdin.** The user creates tokens personally and stores them in the system keychain; a program reads them into process memory at run time. Never paste a secret into chat, files, command arguments, shell history, reports, configs or logs, and never read `.env` or credential stores to “check” them.
 - **Agents never fill in payment card numbers** or complete a purchase. They may prepare a comparison or draft; the user pays.
@@ -74,4 +74,4 @@ These hold in every domain and no dispatch can relax them [Convention]:
 
 ## 5.8 External agent products under evaluation
 
-The reference is evaluating a desktop agent product (“dots”) as a helper for **non-sensitive work only**, such as monitoring public information or reminders that contain no personal data [Convention]. It is **not in production**: the pilot waits on a written evaluation and the user's decision. Applications, accounts, grades, identity documents, insurance and unreleased product data are excluded regardless of the outcome. Treat any similar tool the same way: evaluation first, a data boundary in writing, and no access to the private categories in §5.4.
+The reference is evaluating a desktop agent product (“dots”) as a helper for **non-sensitive work only**, such as monitoring public information or reminders that contain no personal data [Convention]. The policy limits permitted use; it is not a claim that no trials have occurred. The cited reference observations include restricted evaluation and bridge trials, but **reliable end-to-end voice control is not established**. These observations do not establish production readiness. Applications, accounts, grades, identity documents, insurance and unreleased product data are excluded regardless of the outcome. Treat any similar tool the same way: evaluation first, a data boundary in writing, and no access to the private categories in §5.4.

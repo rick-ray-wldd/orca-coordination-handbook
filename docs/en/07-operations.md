@@ -99,3 +99,7 @@ Running sessions do not automatically reread their instruction files. Since 2026
 | Stale worker heartbeat alert | Partial | Native alert exists only in the retired loop; reference uses a 30-minute checklist (§14.5) |
 | Unaccepted assignments, missing owners, overdue decisions | Partial | General stale/waiting/blocker lists exist, not comprehensive detectors for each category |
 | “Subscription” means “data stays local” | False | Existing agents may use cloud services |
+
+## 7.8 Dedicated intake recovery
+
+Follow [chapter 16](16-dedicated-project-intake.md): distinguish pending from unknown and never blindly resend an ambiguous delivery. Reuse the receipt/key without recreating the request or task. Reverify terminal/mailbox bindings after coordinator session replacement. Isolate the default Discord profile from client LINE; reload only after active-work, pending-spool and lock checks, then verify loaded hashes, connection and preservation of unrelated services.

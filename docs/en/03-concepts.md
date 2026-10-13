@@ -10,7 +10,7 @@ Do not treat a workspace as a reporter, or an assistant task as an Orca orchestr
 
 | Term | Meaning | Identifier / source |
 |---|---|---|
-| Project | Logical product, course or research topic, possibly with multiple workspaces | Orca has project objects; reference assistant IDs such as `P-EXAMPLE-WEB-A` are separate. Mapping is [Unknown] |
+| Project | Logical product, course or research topic, possibly with multiple workspaces | Orca has project objects; reference assistant IDs such as `P-EXAMPLE-WEB-A` are separate. Dedicated channels explicitly map both in their registry (chapter 16); general mapping remains [Unknown] |
 | Workspace | Orca's tracked worktree or folder, terminals, browser tabs and board card | `id:<repoId>::<path>`, `path:<path>`, `active` [Native] |
 | Terminal | Managed pane containing a shell or agent TUI | Runtime handle `term_EXAMPLE01` [Native] |
 | Session | An agent CLI conversation, resumable using its original UUID | `SESSION-EXAMPLE-A` [Agent-native] |
@@ -39,7 +39,7 @@ Until early 2026-10 the reference often assigned work with `terminal send` and t
 1. One workspace normally appears as one board card, even with multiple sessions [Native observation; version-dependent]. Per-agent dashboard availability is [Unknown].
 2. One session UUID has at most one active writer. Never resume it in two terminals [Convention].
 3. Each station reports only its own row [Custom]. Two sessions in a project remain separate reporters.
-4. Project, workspace, station and task IDs are not interchangeable. If supplied, a task owner must belong to that project [Custom]. The owner field can be omitted; requiring every task to have an owner is [Convention].
+4. Project, workspace, station and task IDs are not interchangeable. If supplied, a task owner must belong to that project [Custom]. The owner field can be omitted; requiring an execution task to have an owner is [Convention]. Initial dedicated-channel intake may remain unassigned, with supervisor routing tracked separately (chapter 16).
 5. Terminal handles can become stale after restart. Re-list, use the replacement, and never send to both [Native + Convention].
 6. Station checks establish attribution, **not secure authentication**. Workspace/provider matching reduces mistakes, but another sufficiently privileged local process can supply someone else's session or station ID [Custom limitation].
 

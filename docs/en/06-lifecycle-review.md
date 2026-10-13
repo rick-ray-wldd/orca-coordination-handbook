@@ -30,7 +30,7 @@ Not every item is a field on the task row. The reference distributes them across
 
 | Information | Meaning and storage |
 |---|---|
-| Owner | Station on task; validated if provided, optional in code, required by convention |
+| Owner | Station on task; membership validated if provided; execution ownership by convention; initial intake may be unassigned (§16.3) |
 | Next | A concrete executable action, not “continue” |
 | Priority | 1, 2 or 3 |
 | Due / due-kind | `target`, `confirmed_deadline`, `source_unverified`; preserve a date-only deadline as a local calendar date, do not invent a time |
@@ -109,3 +109,7 @@ A wrong result that is labeled honestly gets caught in review. A result that *so
 5. **Never invent confirmation.** `user_confirmed` requires the user's actual words, time and channel.
 
 Client-facing replies apply the same rule through an output guard (§15.5).
+
+## 6.10 Intake status is not completion
+
+[Chapter 16](16-dedicated-project-intake.md) separates receipt, task registration, enqueue, read, acceptance, dispatch, completion and review. A mailbox receipt cannot collapse these states. Preserve holds; initial intake may have no writer owner, but a cross-project supervisor station is not a substitute.

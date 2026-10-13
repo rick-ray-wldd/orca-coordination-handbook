@@ -67,6 +67,7 @@ The source edition checked native behavior against Orca CLI 1.4.220 help and ins
 | 59 | One resident Run per coordinator, one Task per case | Convention | Reference rule since 2026-10 |
 | 60 | Secrets only via keychain or stdin; no card entry, account creation or permission bypass | Convention | Agents can still be misused; keep credentials out of reach |
 | 61 | Intake gateway: signed allowlisted identity, zero-tool replies, one preview-only proposal tool | Custom | Private; offline suite asserts zero external sends; not shipped |
-| 62 | External desktop agent (“dots”) for non-sensitive work | Unknown | Under evaluation; pilot not started; not in production |
+| 62 | External desktop agent (“dots”) for non-sensitive work | Unknown | Restricted evaluation/trials; reliable end-to-end voice control not established by cited evidence; production readiness unproven (§5.8) |
+| 63 | Owner-only dedicated Discord course/project intake | Custom | Fixed registry and sources, tool-less Q&A, stable receipts and ledger task → native mailbox; no automatic writer; fresh post-fix action unobserved (chapter 16) |
 
-Publication utilities (`init_workspace.py`, validation, document building and release packaging) are separate from these 62 reference-deployment capabilities. They are included and tested in this repository; they do not implement the private assistant layer.
+Publication utilities (`init_workspace.py`, validation, document building and release packaging) are separate from these 63 reference-deployment capabilities. They are included and tested in this repository; they do not implement the private assistant layer.

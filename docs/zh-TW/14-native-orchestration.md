@@ -16,7 +16,7 @@
 | Orca Run／Task／Dispatch（原生） | 現在誰在執行、存活狀態、訊息、具權威的那次嘗試 | `run_xxx`、`task_xxx`、`ctx_xxx` |
 | 專案檔案（正本） | 產物本身與專案自己的狀態 | `PROJECT_ROOT/STATUS.md` |
 
-帳本仍是 User 唯一要看的待辦清單；原生 Task 是「一次受監督嘗試」的執行紀錄。兩者互補、不重複，也都不取代專案自己的狀態檔〔規約〕。
+帳本仍是 User 唯一要看的待辦清單；原生 Task 代表工作；Dispatch 才是其中一次具權威的嘗試。兩者互補、不重複，也都不取代專案自己的狀態檔〔規約〕。
 
 ## 14.2 每位總控一個長駐 Run
 
@@ -24,9 +24,9 @@
 
 所以早期「一案一 Run」的習慣，在總控同時督導多案時就會出事：在 B Run 上等待時看不到 A Run 的 `worker_done`；切回 A 又會把 B 還沒處理的那批信 fence 掉。參考部署因此改規則〔規約〕：
 
-1. 每位總控保持**一個長駐 Run**，例如每位總控每天一個。
+1. 每位總控保持**一個長駐 Run**，有未結算工作時跨日保留。
 2. 每個案子是這個 Run 底下的一個 **Task**，用 `worker-start --task-title "<案名>"` 建立（子步驟加 `--parent`）。
-3. 只有換日，或舊 Run 已經沒有活著的 worker 時才開新 Run。先用 `worker-list` 確認，再明確 `run-use` 新 Run。
+3. 換日不會自動允許切換 Run。先用 `worker-list` 核對所有 active Dispatch；保留它們的可收件路徑，處理並 ack 舊批次，完成結算與回收決策後，才明確切換。不能把未知存活當成已結束。
 4. 寫信給另一位總控時，定址到**對方的**長駐 Run（`--run <對方 Run> --to <對方 handle>`）。
 
 ## 14.3 受監督的生命週期
@@ -39,8 +39,9 @@ orca orchestration worker-start --run <run> --from <總控 handle> \
   --task-title "<案名>" --spec "<派工單全文或路徑>" --json
 orca orchestration check --run <run> --terminal <總控 handle> --wait \
   --types worker_done,escalation,question --timeout-ms <ms> --json
-orca orchestration check --run <run> --terminal <總控 handle> --ack <deliveryId> --json
+# 先處理每則訊息、核對完成證據並決定終端歸屬；此例選擇回收。
 orca orchestration worker-release --dispatch <dispatchId>
+orca orchestration check --run <run> --terminal <總控 handle> --ack <deliveryId> --json
 orca orchestration worker-read --dispatch <dispatchId>
 ```
 
@@ -101,3 +102,7 @@ orca orchestration send --run <對方長駐 Run> --to <對方 handle> \
 - **要有正面證據，否則就是「未知」。** `ready` 需要觀察到這一輪開始；`exited` 需要擁有者的證明。不要把安靜升級成成功或失敗。
 - **身份綁在「那一次嘗試」。** 每則訊息都帶 Dispatch ID，舊嘗試不能結算新嘗試。
 - **指南跟著 binary 發佈。** `orca skills get` 回傳的是你已安裝版本的指南；引用它，不要抄過時的筆記。
+
+## 14.11 專屬頻道通知不是派工
+
+[第 16 章](16-dedicated-project-intake.md)的自製入口建立私人專案任務後送原生 mailbox 通知，不直接啟動 worker，也不自動綁定原生執行 ID。總控接單、核對暫停與權限、選定 writer 後才進入本章生命週期。session 替換後須核實新收件綁定；成功 enqueue 仍不等於已讀。

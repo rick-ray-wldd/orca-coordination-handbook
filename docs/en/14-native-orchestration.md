@@ -16,7 +16,7 @@ Native facts below were checked against Orca CLI **1.4.220** help and the MIT-li
 | Orca Run / Task / Dispatch (native) | Who is executing it now, liveness, messages, the authoritative attempt | `run_xxx`, `task_xxx`, `ctx_xxx` |
 | Project files (canonical) | The deliverable and the project's own status | `PROJECT_ROOT/STATUS.md` |
 
-The ledger stays the user's single to-do list. A native Task is the execution record of one supervised attempt. They are complementary, not duplicates, and neither replaces project-owned status files [Convention].
+The ledger stays the user's single to-do list. A native Task represents work; a Dispatch is one authoritative attempt at that work. They are complementary, not duplicates, and neither replaces project-owned status files [Convention].
 
 ## 14.2 One resident Run per coordinator
 
@@ -24,9 +24,9 @@ A coordinator terminal is bound to **at most one Run at a time** [Native]. Bindi
 
 The earlier “one Run per case” habit therefore broke as soon as a coordinator supervised several cases: while waiting on Run B, Run A's `worker_done` was invisible, and switching back fenced B's pending batch. The reference changed the rule [Convention]:
 
-1. Each coordinator keeps **one resident Run**, for example one per coordinator per day.
+1. Each coordinator keeps **one resident Run**, retained across dates while work remains active.
 2. Each case is a **Task** inside that Run, created by `worker-start --task-title "<case>"` (add `--parent` for sub-steps).
-3. Open a new Run only on a new day or when the old Run has no live worker. Check `worker-list` first, then `run-use` the new Run explicitly.
+3. A date change does not authorize switching Runs. Check every active Dispatch with `worker-list`, preserve its reachable mailbox, process and acknowledge old deliveries, and settle work with terminal cleanup decisions before explicitly switching. Unknown liveness does not mean settled.
 4. When writing to the other coordinator, address **their** resident Run (`--run <their run> --to <their handle>`).
 
 ## 14.3 The supervised lifecycle
@@ -39,8 +39,9 @@ orca orchestration worker-start --run <run> --from <coordinator-handle> \
   --task-title "<case>" --spec "<full dispatch message or its path>" --json
 orca orchestration check --run <run> --terminal <coordinator-handle> --wait \
   --types worker_done,escalation,question --timeout-ms <ms> --json
-orca orchestration check --run <run> --terminal <coordinator-handle> --ack <deliveryId> --json
+# Process every message, review completion evidence and decide terminal ownership; this example releases it.
 orca orchestration worker-release --dispatch <dispatchId>
+orca orchestration check --run <run> --terminal <coordinator-handle> --ack <deliveryId> --json
 orca orchestration worker-read --dispatch <dispatchId>
 ```
 
@@ -101,3 +102,7 @@ When a coordinator moves a ledger task to `review` or `done`, its evidence cites
 - **Positive evidence or “unknown”.** `ready` requires an observed turn start; `exited` requires proof from the owner. Never upgrade silence to success or failure.
 - **Attempt-scoped identity.** Every message carries the Dispatch ID so old attempts cannot settle new ones.
 - **Guides ship with the binary.** `orca skills get` returns the guide for your installed version; quote it instead of copying stale notes.
+
+## 14.11 Dedicated-channel notice is not dispatch
+
+The custom intake in [chapter 16](16-dedicated-project-intake.md) creates a private project task and sends a native mailbox notice; it neither starts a worker nor automatically binds native execution IDs. The coordinator accepts scope, checks holds and permissions, and selects a writer before entering this lifecycle. Reverify recipient bindings after session replacement; successful enqueue still does not mean read.

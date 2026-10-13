@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="925" viewBox="0 0 1000 925" role="img" aria-labelledby="dedicated-intake-title" font-family="Arial, PingFang TC, Microsoft JhengHei, sans-serif">
+<title id="dedicated-intake-title">Dedicated channel: intake, evidence states and recovery</title>
+<defs><marker id="dedicated-intake-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#49636a"/></marker></defs>
+<rect width="1000" height="925" fill="#fcfdfb"/>
+<text x="500" y="35" text-anchor="middle" font-size="23" fill="#16353d" font-weight="700">ONE CHANNEL → ONE BOUND PROJECT</text>
+<rect x="160" y="60" width="680" height="100" rx="12" fill="#fff2d9" stroke="#b88830" stroke-width="2"/>
+<text x="500.0" y="89" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Authenticated owner · direct server-channel message</text>
+<text x="500.0" y="115" text-anchor="middle" font-size="16" fill="#16353d">No mention · fixed registry · reject bots / webhooks / system</text>
+<text x="500.0" y="141" text-anchor="middle" font-size="16" fill="#16353d">Other members / threads / slash commands: no execution</text>
+<path d="M500 160 L500 195" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#dedicated-intake-arrow)"/>
+<rect x="160" y="195" width="680" height="80" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="500.0" y="224" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Custom durable receipt + stable channel/message key</text>
+<text x="500.0" y="250" text-anchor="middle" font-size="16" fill="#16353d">Deduplicate · safe attachment metadata only · rules/keywords</text>
+<path d="M340 275 L250 315" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#dedicated-intake-arrow)"/>
+<path d="M660 275 L750 315" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#dedicated-intake-arrow)"/>
+<rect x="40" y="315" width="420" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="250.0" y="344" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Question → tool-less subscribed model</text>
+<text x="250.0" y="370" text-anchor="middle" font-size="16" fill="#16353d">Fixed sources · bounded excerpts</text>
+<text x="250.0" y="396" text-anchor="middle" font-size="16" fill="#16353d">Stale / missing → unknown</text>
+<text x="250.0" y="422" text-anchor="middle" font-size="16" fill="#16353d">No portal refresh or course execution</text>
+<rect x="540" y="315" width="420" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="750.0" y="344" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Explicit action → formal ledger task</text>
+<text x="750.0" y="370" text-anchor="middle" font-size="16" fill="#16353d">Bound project · same receipt/task key</text>
+<text x="750.0" y="396" text-anchor="middle" font-size="16" fill="#16353d">Writer may be unassigned initially</text>
+<text x="750.0" y="422" text-anchor="middle" font-size="16" fill="#16353d">Supervisor route ≠ project writer owner</text>
+<path d="M750 447 L750 485" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#dedicated-intake-arrow)"/>
+<rect x="540" y="485" width="420" height="106" rx="12" fill="#eaf0fb" stroke="#426bb0" stroke-width="2"/>
+<text x="750.0" y="514" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Real native coordinator mailbox</text>
+<text x="750.0" y="540" text-anchor="middle" font-size="16" fill="#16353d">Enqueued ≠ read ≠ accepted</text>
+<text x="750.0" y="566" text-anchor="middle" font-size="16" fill="#16353d">Verify current recipient binding</text>
+<rect x="40" y="485" width="420" height="106" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="250.0" y="514" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Delivery uncertain? Preserve evidence</text>
+<text x="250.0" y="540" text-anchor="middle" font-size="16" fill="#16353d">Pending ≠ unknown · no blind resend</text>
+<text x="250.0" y="566" text-anchor="middle" font-size="16" fill="#16353d">Operator reconciles same receipt/key</text>
+<path d="M750 591 L750 630" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#dedicated-intake-arrow)"/>
+<rect x="540" y="630" width="420" height="106" rx="12" fill="#eaf0fb" stroke="#426bb0" stroke-width="2"/>
+<text x="750.0" y="659" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Coordinator decision before execution</text>
+<text x="750.0" y="685" text-anchor="middle" font-size="16" fill="#16353d">Hold stays held · one project writer</text>
+<text x="750.0" y="711" text-anchor="middle" font-size="16" fill="#16353d">Native dispatch → result → review</text>
+<rect x="40" y="630" width="420" height="106" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="250.0" y="659" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Separate conversational reply receipt</text>
+<text x="250.0" y="685" text-anchor="middle" font-size="16" fill="#16353d">Do not claim work was completed</text>
+<text x="250.0" y="711" text-anchor="middle" font-size="16" fill="#16353d">Intake starts no worker itself</text>
+<rect x="40" y="780" width="920" height="110" rx="12" fill="#f2eafb" stroke="#82649c" stroke-width="2"/>
+<text x="500.0" y="809" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Evidence tiers are not interchangeable</text>
+<text x="500.0" y="835" text-anchor="middle" font-size="16" fill="#16353d">Synthetic tests → model call → human Q&amp;A → operator-recovered action</text>
+<text x="500.0" y="861" text-anchor="middle" font-size="16" fill="#16353d">Fresh automatic action after the fix: NOT YET OBSERVED</text>
+</svg>

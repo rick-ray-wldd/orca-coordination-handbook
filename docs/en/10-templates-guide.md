@@ -23,3 +23,5 @@ Templates are plain text. Replace `<placeholders>` before use. English is in `te
 ## Practical rules
 
 Keep the exclusions field even when the task appears simple. “No external actions” records a considered boundary; a blank field does not. Evidence fields need paths and results, not just “tested.” Adapt domain assignments, model choices and limits to your own environment. Recheck privacy after personalizing templates.
+
+For dedicated-channel design, use [channel-intake-record.md](../../templates/en/channel-intake-record.md): an operator worksheet for anonymous bindings, receipt and delivery evidence. It is illustrative and non-executable, not gateway configuration (chapter 16).

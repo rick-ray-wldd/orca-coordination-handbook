@@ -51,3 +51,7 @@ For GitHub, inspect **all Git history**, commit/tag author and committer identit
 - [ ] The exact version being published is authorized.
 
 Use `templates/en/pre-share-checklist.md` for a repeatable record. Automated checks reduce risk; they cannot prove the absence of every identifying inference.
+
+## 12.6 Publishing an intake architecture
+
+Publish anonymous architecture and illustrative templates, not a private runtime. Remove real channel/server/project IDs, source indexes, receipts, messages and identifying channel counts. For a main-source update, disclose that historical release assets omit it. Separate synthetic tests, real model calls, human Q&A, operator recovery and a fresh post-fix end-to-end action; label the last unobserved when evidence is absent.

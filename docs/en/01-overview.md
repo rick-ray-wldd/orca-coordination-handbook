@@ -52,7 +52,7 @@ A convention is not enforcement. If an agent forgets a written rule, the system 
 | Diagnose problems | Chapter 11 |
 | Share your own adaptation | Chapter 12 |
 
-Number 13 belongs to Appendix A (capability matrix), which keeps its original filename so existing links stay valid; the offline reader prints it after chapter 15.
+Number 13 belongs to Appendix A (capability matrix), which keeps its original filename so existing links stay valid; the offline reader prints it after chapter 16.
 
 ## 1.5 Terms used throughout
 
@@ -63,3 +63,5 @@ Number 13 belongs to Appendix A (capability matrix), which keeps its original fi
 - `HUB_ROOT`: your private coordinator workspace; `PROJECT_ROOT`: a project directory.
 - `example.invalid`: a reserved example domain, not a real project endpoint.
 - IDs such as `T-EXAMPLE0001` and `S-EXAMPLE-A` are invented placeholders.
+
+For dedicated owner Discord course/project intake, see [chapter 16](16-dedicated-project-intake.md). This is a main-source addition; historical v1.0.0 release assets omit it.

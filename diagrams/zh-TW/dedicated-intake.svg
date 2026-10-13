@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="925" viewBox="0 0 1000 925" role="img" aria-labelledby="dedicated-intake-title" font-family="Arial, PingFang TC, Microsoft JhengHei, sans-serif">
+<title id="dedicated-intake-title">專屬頻道：收件、證據狀態與恢復</title>
+<defs><marker id="dedicated-intake-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#49636a"/></marker></defs>
+<rect width="1000" height="925" fill="#fcfdfb"/>
+<text x="500" y="35" text-anchor="middle" font-size="23" fill="#16353d" font-weight="700">一個頻道 → 一個綁定專案</text>
+<rect x="160" y="60" width="680" height="100" rx="12" fill="#fff2d9" stroke="#b88830" stroke-width="2"/>
+<text x="500.0" y="89" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">已驗證擁有者・直接在伺服器頻道發訊息</text>
+<text x="500.0" y="115" text-anchor="middle" font-size="16" fill="#16353d">不必 mention・固定 registry・拒絕 bot／webhook／系統</text>
+<text x="500.0" y="141" text-anchor="middle" font-size="16" fill="#16353d">其他成員／討論串／斜線指令：不執行</text>
+<path d="M500 160 L500 195" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#dedicated-intake-arrow)"/>
+<rect x="160" y="195" width="680" height="80" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="500.0" y="224" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">自製持久收據＋穩定頻道／訊息 key</text>
+<text x="500.0" y="250" text-anchor="middle" font-size="16" fill="#16353d">去重・僅安全附件 metadata・規則／關鍵字分流</text>
+<path d="M340 275 L250 315" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#dedicated-intake-arrow)"/>
+<path d="M660 275 L750 315" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#dedicated-intake-arrow)"/>
+<rect x="40" y="315" width="420" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="250.0" y="344" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">問題 → 無工具訂閱模型</text>
+<text x="250.0" y="370" text-anchor="middle" font-size="16" fill="#16353d">固定來源・有界節錄</text>
+<text x="250.0" y="396" text-anchor="middle" font-size="16" fill="#16353d">來源過期／缺漏 → 未知</text>
+<text x="250.0" y="422" text-anchor="middle" font-size="16" fill="#16353d">不更新課程平台或執行課務</text>
+<rect x="540" y="315" width="420" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="750.0" y="344" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">明確交辦 → 正式帳本任務</text>
+<text x="750.0" y="370" text-anchor="middle" font-size="16" fill="#16353d">綁定專案・沿用收據／任務 key</text>
+<text x="750.0" y="396" text-anchor="middle" font-size="16" fill="#16353d">初始 writer 可未指派</text>
+<text x="750.0" y="422" text-anchor="middle" font-size="16" fill="#16353d">督導路由 ≠ 專案 writer owner</text>
+<path d="M750 447 L750 485" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#dedicated-intake-arrow)"/>
+<rect x="540" y="485" width="420" height="106" rx="12" fill="#eaf0fb" stroke="#426bb0" stroke-width="2"/>
+<text x="750.0" y="514" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">真正的原生總控 mailbox</text>
+<text x="750.0" y="540" text-anchor="middle" font-size="16" fill="#16353d">入列 ≠ 已讀 ≠ 接單</text>
+<text x="750.0" y="566" text-anchor="middle" font-size="16" fill="#16353d">核對目前收件者綁定</text>
+<rect x="40" y="485" width="420" height="106" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="250.0" y="514" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">投遞不明？保留證據</text>
+<text x="250.0" y="540" text-anchor="middle" font-size="16" fill="#16353d">pending ≠ unknown・不盲目重送</text>
+<text x="250.0" y="566" text-anchor="middle" font-size="16" fill="#16353d">操作者核對同一收據／key</text>
+<path d="M750 591 L750 630" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#dedicated-intake-arrow)"/>
+<rect x="540" y="630" width="420" height="106" rx="12" fill="#eaf0fb" stroke="#426bb0" stroke-width="2"/>
+<text x="750.0" y="659" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">總控決策後才執行</text>
+<text x="750.0" y="685" text-anchor="middle" font-size="16" fill="#16353d">保留暫停・單一專案 writer</text>
+<text x="750.0" y="711" text-anchor="middle" font-size="16" fill="#16353d">原生派工 → 結果 → 審查</text>
+<rect x="40" y="630" width="420" height="106" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="250.0" y="659" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">對話回覆另有投遞回執</text>
+<text x="250.0" y="685" text-anchor="middle" font-size="16" fill="#16353d">不可宣稱工作已完成</text>
+<text x="250.0" y="711" text-anchor="middle" font-size="16" fill="#16353d">入口本身不啟動 worker</text>
+<rect x="40" y="780" width="920" height="110" rx="12" fill="#f2eafb" stroke="#82649c" stroke-width="2"/>
+<text x="500.0" y="809" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">證據層級不能互換</text>
+<text x="500.0" y="835" text-anchor="middle" font-size="16" fill="#16353d">合成測試 → 模型呼叫 → 真人問答 → 操作者恢復交辦</text>
+<text x="500.0" y="861" text-anchor="middle" font-size="16" fill="#16353d">修復後全新的自動交辦：尚未觀察到</text>
+</svg>

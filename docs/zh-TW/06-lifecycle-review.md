@@ -34,7 +34,7 @@ inbox → planned → working → review → done
 
 | 資訊 | 說明（存放位置） |
 |---|---|
-| owner | 負責站台（任務欄位；若填，必須屬於該專案；可省略，但規約要求補齊） |
+| owner | 負責站台（任務欄位；若填，必須屬於該專案；執行時依規約指定；初次收件可未指派，見 16.3） |
 | next | 下一個**可執行**的具體步驟，不是「繼續處理」 |
 | priority | 1／2／3 |
 | due 與 due-kind | `target`（內部目標）、`confirmed_deadline`（已核實的正式期限）、`source_unverified`（來源待核）。只有日期時用本地曆日，不自行捏造鐘點 |
@@ -131,3 +131,7 @@ inbox → planned → working → review → done
 5. **絕不捏造確認。** `user_confirmed` 需要 User 的原話、時間與管道。
 
 面向客戶的回覆也用輸出 guard 套用同一條規則（15.5）。
+
+## 6.10 入口狀態不是完成狀態
+
+[第 16 章](16-dedicated-project-intake.md)分開記錄收到、任務登記、入列、已讀、接單、派工、完成與審查。mailbox 回執不能把它們合併。保留暫停指示；初次收件可暫無 writer owner，但不能拿跨專案督導站台代填。

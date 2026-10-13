@@ -31,9 +31,9 @@ def validate():
         for name,d in route['domains'].items():
             if d['primary']==d['reviewer']:errors.append(f'{locale}/{name}: supervisor equals reviewer')
         cap=(ROOT/config['docs']/'13-capability-matrix.md').read_text()
-        if len(re.findall(r'^\| \d+ \|',cap,re.M))!=62:errors.append(f'{locale}: expected 62 capability rows')
-    if len(expected['docs'])!=15 or len(expected['templates'])!=13 or len(expected['diagrams'])!=8:
-        errors.append('Expected 15 chapter files, 13 templates and 8 diagrams per locale')
+        if len(re.findall(r'^\| \d+ \|',cap,re.M))!=63:errors.append(f'{locale}: expected 63 capability rows')
+    if len(expected['docs'])!=16 or len(expected['templates'])!=14 or len(expected['diagrams'])!=9:
+        errors.append('Expected 16 chapter files, 14 templates and 9 diagrams per locale')
     patterns={
         'private home path':r'/(?:Users|home)/[A-Za-z0-9_.-]+/',
         'private cloud URL':r'https?://(?:drive|mail|docs)\.google\.com/[^\s]+',

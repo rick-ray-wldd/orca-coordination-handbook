@@ -16,7 +16,7 @@ class InitializerTests(unittest.TestCase):
             with self.subTest(language=language), tempfile.TemporaryDirectory() as tmp:
                 dest = Path(tmp) / 'private assistant with spaces'
                 module.initialize(dest, language)
-                self.assertEqual(len(list((dest / 'templates').iterdir())), 13)
+                self.assertEqual(len(list((dest / 'templates').iterdir())), 14)
                 self.assertEqual((dest / 'AGENTS.md').read_bytes(), (dest / 'CLAUDE.md').read_bytes())
                 config = json.loads((dest / 'coordination/routing.json').read_text())
                 self.assertEqual(config['default_domain'], 'triage')

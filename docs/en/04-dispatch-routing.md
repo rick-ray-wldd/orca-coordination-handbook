@@ -111,3 +111,7 @@ Without that tool, append time, request summary, decision, target and deciding c
 ## 4.8 Change assignments as data
 
 A user may reassign a project or mark a coordinator unavailable. In the reference deployment, routing update commands validate and record the change. Reassigning a domain does not change the shared contract, so it does not require every station to acknowledge a new contract hash.
+
+## 4.9 Fixed channels are not semantic routing
+
+[Dedicated intake](16-dedicated-project-intake.md) first selects a project through an operator-owned channel binding, then notifies its supervisor. Text cannot change that binding; cross-project requests belong in the correct channel and are not automatically forwarded. Question/action separation uses simple rules, so request actions explicitly. Intake neither selects a writer nor starts a worker; the supervisor still checks scope, holds and station suitability.

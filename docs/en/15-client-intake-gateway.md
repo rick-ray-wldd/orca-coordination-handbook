@@ -84,3 +84,7 @@ Reload the gateway only when it is idle (no active agents or replies, no pending
 - [ ] Output guard blocks internal terms and unreceipted completion, price or time claims.
 - [ ] Every external send, quote, purchase and production deploy has explicit user authorization.
 - [ ] Offline tests prove external sends are zero before any reload.
+
+## 15.9 Keep personal/course intake separate
+
+The dedicated Discord channels in [chapter 16](16-dedicated-project-intake.md) authenticate the owner and bind a course/project; they are not the client review-notification channels described here. Client LINE retains its separate profile, registry and authority rules. A client approval never becomes owner authorization. Both inputs leave execution to supervision and authorized executors; a sent notice alone starts no work.
