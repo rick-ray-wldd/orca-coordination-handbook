@@ -11,7 +11,7 @@
 ![Architecture overview](diagrams/en/architecture.svg)
 
 
-**Main-source updates:** [Chapter 16](docs/en/16-dedicated-project-intake.md) adds owner-only Discord course/project intake: fixed bindings, bounded Q&A, receipts and coordinator mailbox handoff. [Chapter 17](docs/en/17-entry-channels.md) adds multi-bot entry channels: a channel registry, per-channel desks and outboxes, and why a channel label is not authentication. The historical **v1.0.0** release ZIP/HTML/PDF does not include these updates; read or build from current `main` sources. No new release is created for these updates.
+**Main-source updates:** [Chapter 16](docs/en/16-dedicated-project-intake.md) adds owner-only Discord course/project intake: fixed bindings, bounded Q&A, receipts and coordinator mailbox handoff. [Chapter 17](docs/en/17-entry-channels.md) adds multi-bot entry channels: a channel registry, per-channel desks and outboxes, and why a channel label is not authentication. [Chapter 18](docs/en/18-responsive-coordinators.md) adds keeping coordinators responsive: mailbox read discipline, a session guard, a desk escalation ladder, responsiveness health, voice-fragment merging and a “remind me” pattern. The historical **v1.0.0** release ZIP/HTML/PDF does not include these updates; read or build from current `main` sources. No new release is created for these updates.
 
 ## What you can reuse
 
@@ -65,7 +65,7 @@ Declare the choice → identify the domain supervisor → assign one writer with
 - **Assign work consistently:** [4. Dispatch/routing](docs/en/04-dispatch-routing.md), [5. Scope/permissions](docs/en/05-writer-scope-permissions.md).
 - **Track real completion:** [6. Evidence/review](docs/en/06-lifecycle-review.md), [7. Operations](docs/en/07-operations.md).
 - **Adopt it:** [8. Getting started](docs/en/08-adoption.md), [9. Worked examples](docs/en/09-examples.md), [10. Templates](docs/en/10-templates-guide.md).
-- **Go further:** [14. Native orchestration](docs/en/14-native-orchestration.md) (one resident Run per coordinator, supervised workers, mailbox rule sync), [15. Client intake gateway](docs/en/15-client-intake-gateway.md) (allowlist, tool-less replies, preview-only edits), [17. Multi-bot entry channels](docs/en/17-entry-channels.md) (channel registry, desks, one writer per outbox).
+- **Go further:** [14. Native orchestration](docs/en/14-native-orchestration.md) (one resident Run per coordinator, supervised workers, mailbox rule sync), [15. Client intake gateway](docs/en/15-client-intake-gateway.md) (allowlist, tool-less replies, preview-only edits), [17. Multi-bot entry channels](docs/en/17-entry-channels.md) (channel registry, desks, one writer per outbox), [18. Responsive coordinators](docs/en/18-responsive-coordinators.md) (inbox delivery, escalation ladder, reminders).
 - **Maintain it:** [11. Troubleshooting](docs/en/11-troubleshooting.md), [12. Privacy](docs/en/12-pre-share-checklist.md), [Capability matrix](docs/en/13-capability-matrix.md).
 
 ## Repository layout
