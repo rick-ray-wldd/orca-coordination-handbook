@@ -69,5 +69,12 @@ The source edition checked native behavior against Orca CLI 1.4.220 help and ins
 | 61 | Intake gateway: signed allowlisted identity, zero-tool replies, one preview-only proposal tool | Custom | Private; offline suite asserts zero external sends; not shipped |
 | 62 | External desktop agent (“dots”) for non-sensitive work | Unknown | Restricted evaluation/trials; reliable end-to-end voice control not established by cited evidence; production readiness unproven (§5.8) |
 | 63 | Owner-only dedicated Discord course/project intake | Custom | Fixed registry and sources, tool-less Q&A, stable receipts and ledger task → native mailbox; no automatic writer; fresh post-fix action unobserved (chapter 16) |
+| 64 | Entry-channel registry: channel → desk, outbox folder, ID prefix, ordered fallback, sensitivity | Custom | Edited only by the operator; offline-tested; a channel label is routing, not authentication (chapter 17) |
+| 65 | Sensitive channels never fall back to the general desk; a coordinator mailbox is the last stop | Custom | Offline-tested routing order |
+| 66 | Per-channel 30-minute deduplication; supplements only within the same channel | Custom | Offline-tested |
+| 67 | One writer per outbox file; others write reply files | Convention + custom guard | The entry command replaces only its own placeholder (offline-tested); the rest is a written rule |
+| 68 | Entry health probe: per-step latency, one retry, slow = uncertain, alert on the third consecutive failure | Custom | Offline-tested; in use |
+| 69 | Per-desk delivery queue that waits for an idle desk | Custom gap | Planned; busy desks can still be interrupted |
+| 70 | Bots sending their own channel labels in production | Custom (partial evidence) | One production (non-test) labelled request observed on one channel; none yet from the other bots; a label does not prove the sender |
 
-Publication utilities (`init_workspace.py`, validation, document building and release packaging) are separate from these 63 reference-deployment capabilities. They are included and tested in this repository; they do not implement the private assistant layer.
+Publication utilities (`init_workspace.py`, validation, document building and release packaging) are separate from these 70 reference-deployment capabilities. They are included and tested in this repository; they do not implement the private assistant layer.

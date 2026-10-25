@@ -49,10 +49,11 @@ A convention is not enforcement. If an agent forgets a written rule, the system 
 | Follow worked examples | Chapter 9 |
 | Run supervised workers in Orca | Chapter 14 |
 | Take client requests through a messaging gateway | Chapter 15 |
+| Route requests from several assistant bots | Chapter 17 |
 | Diagnose problems | Chapter 11 |
 | Share your own adaptation | Chapter 12 |
 
-Number 13 belongs to Appendix A (capability matrix), which keeps its original filename so existing links stay valid; the offline reader prints it after chapter 16.
+Number 13 belongs to Appendix A (capability matrix), which keeps its original filename so existing links stay valid; the offline reader prints it after chapter 17.
 
 ## 1.5 Terms used throughout
 
@@ -64,4 +65,4 @@ Number 13 belongs to Appendix A (capability matrix), which keeps its original fi
 - `example.invalid`: a reserved example domain, not a real project endpoint.
 - IDs such as `T-EXAMPLE0001` and `S-EXAMPLE-A` are invented placeholders.
 
-For dedicated owner Discord course/project intake, see [chapter 16](16-dedicated-project-intake.md). This is a main-source addition; historical v1.0.0 release assets omit it.
+For dedicated owner Discord course/project intake, see [chapter 16](16-dedicated-project-intake.md). This is a main-source addition; historical v1.0.0 release assets omit it. For several hosted assistant bots that share one entry, see [chapter 17](17-entry-channels.md), also a main-source addition.

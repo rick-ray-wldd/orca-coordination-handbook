@@ -11,14 +11,14 @@
 ![Architecture overview](diagrams/en/architecture.svg)
 
 
-**Main-source update:** [Chapter 16](docs/en/16-dedicated-project-intake.md) adds owner-only Discord course/project intake: fixed bindings, bounded Q&A, receipts and coordinator mailbox handoff. The historical **v1.0.0** release ZIP/HTML/PDF does not include this update; read or build from current `main` sources. No new release is created for this update.
+**Main-source updates:** [Chapter 16](docs/en/16-dedicated-project-intake.md) adds owner-only Discord course/project intake: fixed bindings, bounded Q&A, receipts and coordinator mailbox handoff. [Chapter 17](docs/en/17-entry-channels.md) adds multi-bot entry channels: a channel registry, per-channel desks and outboxes, and why a channel label is not authentication. The historical **v1.0.0** release ZIP/HTML/PDF does not include these updates; read or build from current `main` sources. No new release is created for these updates.
 
 ## What you can reuse
 
 | Understand | Put into practice | Adapt |
 |---|---|---|
-| 15 chapters + capability appendix | 14 templates per language | Four-domain starter routing |
-| Nine diagrams per language | Safe private-workspace initializer | Document-first adoption path |
+| 16 chapters + capability appendix | 14 templates per language | Four-domain starter routing |
+| Ten diagrams per language | Safe private-workspace initializer | Document-first adoption path |
 | Complete English and Traditional Chinese editions | Offline HTML and printable PDF in releases | Translation and contribution guide |
 
 The handbook separates **Orca-native features**, **private reference automation**, **written conventions**, and **unknowns**. It does not pretend a prompt rule is a security boundary.
@@ -65,7 +65,7 @@ Declare the choice → identify the domain supervisor → assign one writer with
 - **Assign work consistently:** [4. Dispatch/routing](docs/en/04-dispatch-routing.md), [5. Scope/permissions](docs/en/05-writer-scope-permissions.md).
 - **Track real completion:** [6. Evidence/review](docs/en/06-lifecycle-review.md), [7. Operations](docs/en/07-operations.md).
 - **Adopt it:** [8. Getting started](docs/en/08-adoption.md), [9. Worked examples](docs/en/09-examples.md), [10. Templates](docs/en/10-templates-guide.md).
-- **Go further:** [14. Native orchestration](docs/en/14-native-orchestration.md) (one resident Run per coordinator, supervised workers, mailbox rule sync), [15. Client intake gateway](docs/en/15-client-intake-gateway.md) (allowlist, tool-less replies, preview-only edits).
+- **Go further:** [14. Native orchestration](docs/en/14-native-orchestration.md) (one resident Run per coordinator, supervised workers, mailbox rule sync), [15. Client intake gateway](docs/en/15-client-intake-gateway.md) (allowlist, tool-less replies, preview-only edits), [17. Multi-bot entry channels](docs/en/17-entry-channels.md) (channel registry, desks, one writer per outbox).
 - **Maintain it:** [11. Troubleshooting](docs/en/11-troubleshooting.md), [12. Privacy](docs/en/12-pre-share-checklist.md), [Capability matrix](docs/en/13-capability-matrix.md).
 
 ## Repository layout
@@ -73,7 +73,7 @@ Declare the choice → identify the domain supervisor → assign one writer with
 ```text
 docs/{en,zh-TW}/       Full handbook; stable matching chapter filenames
 templates/{en,zh-TW}/  Copy-ready rules, routing, dispatch, review and handoff
-diagrams/{en,zh-TW}/   Nine accessible SVG diagrams per edition
+diagrams/{en,zh-TW}/   Ten accessible SVG diagrams per edition
 scripts/               Initializer, validation, offline build and packaging
 tests/                 Safe-copy behavior tests
 locales.json           Default language and locale directories

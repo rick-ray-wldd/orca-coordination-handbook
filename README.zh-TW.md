@@ -8,14 +8,14 @@
 
 ![雙總控架構](diagrams/zh-TW/architecture.svg)
 
-本 repo 提供完整英文與繁體中文：15 個主章節、能力對照附錄、每種語言 14 份模板及 9 張圖。內容清楚區分 Orca 原生、自製參考工具、人工規約和未知事項。
+本 repo 提供完整英文與繁體中文：16 個主章節、能力對照附錄、每種語言 14 份模板及 10 張圖。內容清楚區分 Orca 原生、自製參考工具、人工規約和未知事項。
 
 **2026-10 更新**：writer 改以 Orca 受監督 worker 執行，每位總控一個長駐 Run；規則同步改走 mailbox；新增硬性安全邊界與更嚴格的「不要講得像做完了」驗收規則；另有選用的客戶訊息入口。只做非敏感工作的桌面代理產品僅標示為評估中。
 
 這是**獨立社群教材，非 Orca 官方產品或背書**。Orca／代理 CLI 需自行安裝，私人參考部署的資料庫、`assistant.py` 與排程未附；初始化工具只會複製模板。
 
 
-**主分支來源更新**：[第 16 章](docs/zh-TW/16-dedicated-project-intake.md)新增擁有者專用的 Discord 課程／專案入口：固定綁定、有界問答、收據與總控 mailbox 交接。歷史 **v1.0.0** release 的 ZIP／HTML／PDF 不含這次更新；請讀取或從目前 `main` 來源建置。這次未建立新 release。
+**主分支來源更新**：[第 16 章](docs/zh-TW/16-dedicated-project-intake.md)新增擁有者專用的 Discord 課程／專案入口：固定綁定、有界問答、收據與總控 mailbox 交接。[第 17 章](docs/zh-TW/17-entry-channels.md)新增多 bot 入口：頻道登記表、分頻道的分機與 outbox，以及為什麼頻道標籤不是身分驗證。歷史 **v1.0.0** release 的 ZIP／HTML／PDF 不含這些更新；請讀取或從目前 `main` 來源建置。這次未建立新 release。
 
 ## 一分鐘開始
 
@@ -43,7 +43,7 @@ python3 scripts/init_workspace.py --dest ../my-assistant --language zh-TW
 | 派工分工 | [4 五種判斷與路由](docs/zh-TW/04-dispatch-routing.md)、[5 範圍權限](docs/zh-TW/05-writer-scope-permissions.md) |
 | 驗收追蹤 | [6 證據與驗收](docs/zh-TW/06-lifecycle-review.md)、[7 日常維運](docs/zh-TW/07-operations.md) |
 | 實際開始 | [8 採用](docs/zh-TW/08-adoption.md)、[9 案例](docs/zh-TW/09-examples.md)、[10 模板](docs/zh-TW/10-templates-guide.md) |
-| 進階 | [14 原生編排](docs/zh-TW/14-native-orchestration.md)（每位總控一個長駐 Run、受監督 worker、mailbox 規則同步）、[15 客戶訊息入口](docs/zh-TW/15-client-intake-gateway.md)（allowlist、無工具回覆、只出預覽的修改） |
+| 進階 | [14 原生編排](docs/zh-TW/14-native-orchestration.md)（每位總控一個長駐 Run、受監督 worker、mailbox 規則同步）、[15 客戶訊息入口](docs/zh-TW/15-client-intake-gateway.md)（allowlist、無工具回覆、只出預覽的修改）、[17 多 bot 入口](docs/zh-TW/17-entry-channels.md)（頻道登記表、分機、每份 outbox 一人寫） |
 | 維護分享 | [11 排錯](docs/zh-TW/11-troubleshooting.md)、[12 隱私](docs/zh-TW/12-pre-share-checklist.md)、[能力對照](docs/zh-TW/13-capability-matrix.md) |
 
 ## 結構與多語言

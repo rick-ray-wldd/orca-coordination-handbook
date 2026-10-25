@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="860" viewBox="0 0 1000 860" role="img" aria-labelledby="entry-channels-title" font-family="Arial, PingFang TC, Microsoft JhengHei, sans-serif">
+<title id="entry-channels-title">Entry bots, channel desks and coordinators</title>
+<defs><marker id="entry-channels-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#49636a"/></marker></defs>
+<rect width="1000" height="860" fill="#fcfdfb"/>
+<text x="500" y="35" text-anchor="middle" font-size="22" fill="#16353d" font-weight="700">SEVERAL BOTS → CHANNEL DESKS → ONE SUPERVISOR PER DOMAIN</text>
+<rect x="60" y="60" width="880" height="105" rx="12" fill="#fff2d9" stroke="#b88830" stroke-width="2"/>
+<text x="500" y="89" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Hosted assistant bots (one shared platform account)</text>
+<text x="500" y="116" text-anchor="middle" font-size="15" fill="#16353d">e.g. main entry: general (+ apps) · general assistant: general</text>
+<text x="500" y="141" text-anchor="middle" font-size="15" fill="#16353d">public-facing helper: public · insurance: ins · finance: fin · course helpers</text>
+<path d="M500 165 L500 200" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="60" y="200" width="880" height="105" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="500" y="229" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Local entry command + operator-owned channel registry</text>
+<text x="500" y="256" text-anchor="middle" font-size="15" fill="#16353d">Label = routing only · per-channel 30-min dedup · ID carries channel</text>
+<text x="500" y="281" text-anchor="middle" font-size="15" fill="#16353d">Unregistered label → general + flag · sensitive never → general desk</text>
+<path d="M500 305 L137.0 350" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="30" y="350" width="214" height="100" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="137.0" y="380" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">General desk</text>
+<text x="137.0" y="406" text-anchor="middle" font-size="14" fill="#16353d">resident</text>
+<text x="137.0" y="431" text-anchor="middle" font-size="14" fill="#16353d">general + unknown</text>
+<path d="M500 305 L379.0 350" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="272" y="350" width="214" height="100" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="379.0" y="380" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Shared desk</text>
+<text x="379.0" y="406" text-anchor="middle" font-size="14" fill="#16353d">resident · B domains</text>
+<text x="379.0" y="431" text-anchor="middle" font-size="14" fill="#16353d">apps · course channels</text>
+<path d="M500 305 L621.0 350" stroke="#49636a" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#entry-channels-arrow)"/>
+<rect x="514" y="350" width="214" height="100" rx="12" fill="#f4f6f5" stroke="#8a9a9d" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="621.0" y="380" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">On-demand desk</text>
+<text x="621.0" y="406" text-anchor="middle" font-size="14" fill="#16353d">planned</text>
+<text x="621.0" y="431" text-anchor="middle" font-size="14" fill="#16353d">public (general covers)</text>
+<path d="M500 305 L863.0 350" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="756" y="350" width="214" height="100" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="863.0" y="380" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Mailbox only</text>
+<text x="863.0" y="406" text-anchor="middle" font-size="14" fill="#16353d">no session</text>
+<text x="863.0" y="431" text-anchor="middle" font-size="14" fill="#16353d">ins · fin → B mailbox</text>
+<rect x="60" y="500" width="410" height="95" rx="12" fill="#eaf0fb" stroke="#426bb0" stroke-width="2"/>
+<rect x="530" y="500" width="410" height="95" rx="12" fill="#eaf0fb" stroke="#426bb0" stroke-width="2"/>
+<text x="265" y="535" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Coordinator A (supervisor)</text>
+<text x="735" y="535" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Coordinator B (supervisor)</text>
+<text x="265" y="566" text-anchor="middle" font-size="15" fill="#16353d">e.g. infrastructure · web · research</text>
+<text x="735" y="566" text-anchor="middle" font-size="15" fill="#16353d">e.g. applications · coursework · admin</text>
+<text x="500" y="625" text-anchor="middle" font-size="15" fill="#16353d">One writer per deliverable · cross-review by the other</text>
+<path d="M137 450 L200 500" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<path d="M379 450 L700 500" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<path d="M621 450 L265 500" stroke="#49636a" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#entry-channels-arrow)"/>
+<path d="M863 450 L800 500" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="60" y="645" width="880" height="80" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="500" y="677" text-anchor="middle" font-size="15" fill="#16353d">outbox/&lt;channel&gt;/&lt;id&gt;.md: one writer · others write &lt;id&gt;.reply-&lt;role&gt;.md</text>
+<text x="500" y="703" text-anchor="middle" font-size="14" fill="#16353d">Sensitive channels: status only · bots read only their own folder (instruction, not access control)</text>
+<path d="M265 595 L265 645" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<path d="M735 595 L735 645" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="160" y="755" width="680" height="55" rx="12" fill="#f2eafb" stroke="#82649c" stroke-width="2"/>
+<text x="500" y="789" text-anchor="middle" font-size="16" fill="#16353d" font-weight="700">Owner: direct words only · approves publish/submit · accepts results</text>
+<path d="M500 725 L500 755" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<text x="500" y="840" text-anchor="middle" font-size="13" fill="#16353d">Dashed = planned · roles and channel names are examples</text>
+</svg>

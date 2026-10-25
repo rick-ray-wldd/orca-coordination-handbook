@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="860" viewBox="0 0 1000 860" role="img" aria-labelledby="entry-channels-title" font-family="Arial, PingFang TC, Microsoft JhengHei, sans-serif">
+<title id="entry-channels-title">入口 bot、頻道分機與總控</title>
+<defs><marker id="entry-channels-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#49636a"/></marker></defs>
+<rect width="1000" height="860" fill="#fcfdfb"/>
+<text x="500" y="35" text-anchor="middle" font-size="22" fill="#16353d" font-weight="700">多個 bot → 頻道分機 → 各領域唯一督導</text>
+<rect x="60" y="60" width="880" height="105" rx="12" fill="#fff2d9" stroke="#b88830" stroke-width="2"/>
+<text x="500" y="89" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">託管助理 bot（共用同一個平台帳號）</text>
+<text x="500" y="116" text-anchor="middle" font-size="15" fill="#16353d">例：主入口：general（＋apps）· 一般用途：general</text>
+<text x="500" y="141" text-anchor="middle" font-size="15" fill="#16353d">對外互動：public · 保險：ins · 財務：fin · 課程專題助理</text>
+<path d="M500 165 L500 200" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="60" y="200" width="880" height="105" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="500" y="229" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">本機入口指令＋操作者維護的頻道登記表</text>
+<text x="500" y="256" text-anchor="middle" font-size="15" fill="#16353d">標籤只做路由 · 按頻道 30 分鐘去重 · 編號帶頻道</text>
+<text x="500" y="281" text-anchor="middle" font-size="15" fill="#16353d">未登記標籤 → general＋標記 · 敏感頻道永不退到總機</text>
+<path d="M500 305 L137.0 350" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="30" y="350" width="214" height="100" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="137.0" y="380" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">總機</text>
+<text x="137.0" y="406" text-anchor="middle" font-size="14" fill="#16353d">常駐</text>
+<text x="137.0" y="431" text-anchor="middle" font-size="14" fill="#16353d">general＋未登記</text>
+<path d="M500 305 L379.0 350" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="272" y="350" width="214" height="100" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="379.0" y="380" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">共用分機</text>
+<text x="379.0" y="406" text-anchor="middle" font-size="14" fill="#16353d">常駐 · B 的領域</text>
+<text x="379.0" y="431" text-anchor="middle" font-size="14" fill="#16353d">apps · 各課程頻道</text>
+<path d="M500 305 L621.0 350" stroke="#49636a" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#entry-channels-arrow)"/>
+<rect x="514" y="350" width="214" height="100" rx="12" fill="#f4f6f5" stroke="#8a9a9d" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="621.0" y="380" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">有請求才開</text>
+<text x="621.0" y="406" text-anchor="middle" font-size="14" fill="#16353d">規劃中</text>
+<text x="621.0" y="431" text-anchor="middle" font-size="14" fill="#16353d">public（暫由總機代接）</text>
+<path d="M500 305 L863.0 350" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="756" y="350" width="214" height="100" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="863.0" y="380" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">只進信箱</text>
+<text x="863.0" y="406" text-anchor="middle" font-size="14" fill="#16353d">不開聊天室</text>
+<text x="863.0" y="431" text-anchor="middle" font-size="14" fill="#16353d">ins · fin → B 信箱</text>
+<rect x="60" y="500" width="410" height="95" rx="12" fill="#eaf0fb" stroke="#426bb0" stroke-width="2"/>
+<rect x="530" y="500" width="410" height="95" rx="12" fill="#eaf0fb" stroke="#426bb0" stroke-width="2"/>
+<text x="265" y="535" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">總控 A（督導）</text>
+<text x="735" y="535" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">總控 B（督導）</text>
+<text x="265" y="566" text-anchor="middle" font-size="15" fill="#16353d">例：基礎設施 · 網站 · 研究</text>
+<text x="735" y="566" text-anchor="middle" font-size="15" fill="#16353d">例：申請 · 課務 · 生活行政</text>
+<text x="500" y="625" text-anchor="middle" font-size="15" fill="#16353d">每份交付一位 writer · 由另一位總控交叉審查</text>
+<path d="M137 450 L200 500" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<path d="M379 450 L700 500" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<path d="M621 450 L265 500" stroke="#49636a" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#entry-channels-arrow)"/>
+<path d="M863 450 L800 500" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="60" y="645" width="880" height="80" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="500" y="677" text-anchor="middle" font-size="15" fill="#16353d">outbox/&lt;channel&gt;/&lt;id&gt;.md：一人寫 · 其他人寫 &lt;id&gt;.reply-&lt;角色&gt;.md</text>
+<text x="500" y="703" text-anchor="middle" font-size="14" fill="#16353d">敏感頻道只寫狀態 · bot 只讀自己的資料夾（是指示，不是存取控制）</text>
+<path d="M265 595 L265 645" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<path d="M735 595 L735 645" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<rect x="160" y="755" width="680" height="55" rx="12" fill="#f2eafb" stroke="#82649c" stroke-width="2"/>
+<text x="500" y="789" text-anchor="middle" font-size="16" fill="#16353d" font-weight="700">擁有者：只執行本人的話 · 核准發布／提交 · 驗收結果</text>
+<path d="M500 725 L500 755" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#entry-channels-arrow)"/>
+<text x="500" y="840" text-anchor="middle" font-size="13" fill="#16353d">虛線＝規劃中 · 角色與頻道名稱皆為範例</text>
+</svg>

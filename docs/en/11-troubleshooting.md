@@ -30,5 +30,8 @@
 | Writer says “user approved publication” | Relayed claim | Locate original authorization and verify its scope. Use it if applicable; ask only if missing or unclear |
 | Copy helper refuses the destination | Directory already exists | Choose a new private folder. It intentionally never merges or overwrites |
 | `python3` / build dependency missing | Runtime not installed | Copy templates manually, or install the documented optional tools |
+| Health alert says a desk is offline, but its session is alive | The probe timed out while the host was busy | Record per-step latency, retry once, treat slow results as uncertain and alert only after consecutive failures (§17.7) |
+| A bot reports “done” but no result file exists | The bot treated a send receipt as progress | Sent is not delivered: read the outbox or reply file before reporting (§17.4) |
+| One bot can read another bot's replies | Shared outbox folder or shared platform account | Split outboxes by channel and keep sensitive channels status-only. A label is not access control (§17.8) |
 
 Native flags may change. Consult your installed version's guide before recovery or command retries.
