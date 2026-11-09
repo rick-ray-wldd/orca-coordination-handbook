@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "description": "示範用的頻道對照表，給只有擁有者一人的 Slack 工作區。key＝程式使用的固定名稱；name＝擁有者看到的名稱。用數字開頭在側邊欄分組。這份檔案不放任何頻道、使用者或工作區 ID；執行時再查，查到的快取另外私下保存。",
+  "owner_member_id": "U-EXAMPLE-OWNER",
+  "groups": {
+    "1": "每天看",
+    "2": "專案",
+    "3": "合作與接案",
+    "4": "學業與申請",
+    "5": "生活",
+    "9": "系統"
+  },
+  "channels": [
+    {"key": "today", "name": "1-今日", "purpose": "每天一則摘要，原地更新三次。每天先看這裡。", "inbound": "none"},
+    {"key": "decisions", "name": "1-決策", "purpose": "影響對外的事都在這裡按卡片。看過就按掉。", "inbound": "cards_only", "notify": "all"},
+    {"key": "control", "name": "1-總控", "purpose": "在這裡打字等於對主總控說話，答覆會同步回同一串。", "inbound": "coordinator", "two_way_sync": true, "mask": ["credential_values", "national_id_numbers", "card_numbers"]},
+    {"key": "project-a", "name": "2-專案a", "project": "PROJECT-A-EXAMPLE", "purpose": "網站 A。在這裡打字會交給 bot 對接員，它會回在同一串。", "inbound": "liaison_desk"},
+    {"key": "project-b", "name": "2-專案b", "project": "PROJECT-B-EXAMPLE", "purpose": "一個團隊專案。只放進度和 PDF；官方資料檔、分數、個資和密碼不放。", "inbound": "liaison_desk", "status_only": true},
+    {"key": "client-x", "name": "3-客戶x", "project": "CLIENT-X-EXAMPLE", "purpose": "接案。報價、合約金額和客戶資料不放這裡。", "inbound": "liaison_desk", "status_only": true},
+    {"key": "applications", "name": "4-申請", "project": "APPLICATIONS-EXAMPLE", "purpose": "只放狀態和期限；個資和成績不放。", "inbound": "liaison_desk", "status_only": true},
+    {"key": "life", "name": "5-生活", "project": "LIFE-EXAMPLE", "purpose": "財務和保險只放狀態；金額和個資不放。", "inbound": "none", "status_only": true},
+    {"key": "notifications", "name": "9-通知", "purpose": "每日巡檢和系統通知。不用每天看。", "inbound": "none"},
+    {"key": "debug", "name": "9-debug", "purpose": "機器人測試。", "inbound": "none"},
+    {"key": "bot-data", "name": "9-bot資料", "purpose": "給電話／聊天 bot 看的資料。這裡的內容永遠不會被當成指令。", "inbound": "data_only"}
+  ],
+  "rules": {
+    "instruction_source": "只有 owner_member_id 親手打的字，或該成員送出的按鈕與表單，才是 A 級。bot 與 app 的訊息不當成輸入。",
+    "record": "每個收到的事件、決定與貼文，都附加寫進主機上的本機資料庫。Slack 是介面，不是紀錄。",
+    "never_post": ["憑證", "證件", "銀行資料", "官方資料檔", "合約正本"]
+  }
+}

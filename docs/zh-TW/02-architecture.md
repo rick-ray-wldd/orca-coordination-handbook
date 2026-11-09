@@ -76,4 +76,4 @@ Orca 本身也有一個相關的原生保護：把檔案發布成公開連結（
 
 ## 2.6 多種入口，共用執行層
 
-擁有者的 Discord 課程／專案頻道（[第 16 章](16-dedicated-project-intake.md)）與客戶 LINE 入口分別使用自己的身份、registry 與 profile。前者固定綁專案；後者的客戶意圖不等於 User 授權。圖中的選用語音橋接只是整合位置，不宣稱任何語音平台已支援或驗證。這些自製入口可交接給督導路由與原生 mailbox；只有督導選定 writer 後才進入原生 Run／Task／Dispatch 執行。直接在 Orca 交辦仍然可用。託管助理 bot 也可以經頻道分機進來（[第 17 章](17-entry-channels.md)）；那裡平台無法證明是哪個 bot 送的，所以頻道只是路由標籤，不是身分。
+擁有者的 Discord 課程／專案頻道（[第 16 章](16-dedicated-project-intake.md)）與客戶 LINE 入口分別使用自己的身份、registry 與 profile。前者固定綁專案；後者的客戶意圖不等於 User 授權。圖中的 Slack 每日入口與雙向電話／聊天 bot 見[第 19 章](19-three-platforms.md)；透過它們誰的話算數，見[第 20 章](20-authority-and-decisions.md)。這些自製入口可交接給督導路由與原生 mailbox；只有督導選定 writer 後才進入原生 Run／Task／Dispatch 執行。直接在 Orca 交辦仍然可用。託管助理 bot 也可以經頻道分機進來（[第 17 章](17-entry-channels.md)）；那裡平台無法證明是哪個 bot 送的，所以頻道只是路由標籤，不是身分。

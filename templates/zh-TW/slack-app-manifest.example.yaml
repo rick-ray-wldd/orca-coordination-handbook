@@ -1,0 +1,63 @@
+# 示範用 Slack app manifest：給只有擁有者一人的私人助理工作區。
+# 不是安裝程式。不含任何工作區、團隊、頻道、使用者或 app 的 ID，也不含任何秘密。
+#
+# 用法（每一步都由工作區擁有者本人操作）：
+#   1. 在 Slack 的 app 設定頁「從 manifest 建立」新 app，選你自己的工作區，貼上這整份。
+#   2. 產生一個 app-level token，scope 選 connections:write（Socket Mode 需要）。
+#   3. 把 app 安裝到工作區，取得 bot token。
+#   4. 兩個 token 都由你本人存進作業系統的憑證儲存區。
+#      不要把 token 貼到聊天室、檔案、指令列或任何 agent session。
+#   5. 私下記下你自己的成員 ID；只有這個成員 ID 打的字才算指令。
+#
+# Socket Mode 由主機主動往外連線，不需要公開網址或對外開放的連接埠。
+# 逐項核對每個 scope 是否真的用得到，用不到的就刪掉。
+display_information:
+  name: 個人助理 EXAMPLE
+  description: 給一位擁有者使用的私人助理介面，不供其他成員使用。
+  background_color: "#1a2e4a"
+features:
+  bot_user:
+    display_name: 個人助理 EXAMPLE
+    always_online: true
+  app_home:
+    home_tab_enabled: true
+    messages_tab_enabled: true
+    messages_tab_read_only_enabled: false
+  slash_commands:
+    - command: /assistant
+      description: 今日、決策、授權，或一句交辦
+      usage_hint: "today | decisions | grants | <交辦的事>"
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - app_mentions:read
+      - channels:history
+      - channels:join
+      - channels:manage   # 只有在總控要替你建頻道時才需要；設定完不用就刪掉
+      - channels:read
+      - chat:write
+      - commands
+      - files:read        # 附件存到本機，並記錄大小與 SHA-256
+      - files:write       # 只有要把 PDF 等結果傳回頻道時才需要
+      - groups:history
+      - groups:read
+      - im:history
+      - im:read
+      - im:write
+      - reactions:read
+      - reactions:write   # 例如打勾代表「已寫入本機佇列」，不代表「做完了」
+      - users:read
+settings:
+  event_subscriptions:
+    bot_events:
+      - app_home_opened
+      - app_mention
+      - message.channels
+      - message.groups
+      - message.im
+  interactivity:
+    is_enabled: true      # 決策卡上的按鈕與表單
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false

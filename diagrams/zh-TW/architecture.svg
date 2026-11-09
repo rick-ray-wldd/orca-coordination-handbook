@@ -6,30 +6,38 @@
 <rect x="230" y="55" width="540" height="80" rx="12" fill="#fff2d9" stroke="#b88830" stroke-width="2"/>
 <text x="500.0" y="84" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">人類需求與決策</text>
 <text x="500.0" y="110" text-anchor="middle" font-size="16" fill="#16353d">擁有者授權 ≠ 客戶意圖</text>
-<path d="M500 135 L185 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M500 135 L500 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M500 135 L815 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<rect x="40" y="180" width="290" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
-<text x="185.0" y="209" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">個人／課程 Discord</text>
-<text x="185.0" y="235" text-anchor="middle" font-size="16" fill="#16353d">僅擁有者・不必 mention</text>
-<text x="185.0" y="261" text-anchor="middle" font-size="16" fill="#16353d">固定專案・有界問答</text>
-<text x="185.0" y="287" text-anchor="middle" font-size="16" fill="#16353d">預設 profile・自製</text>
-<rect x="355" y="180" width="290" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
-<text x="500.0" y="209" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">客戶 LINE 入口</text>
-<text x="500.0" y="235" text-anchor="middle" font-size="16" fill="#16353d">簽章身份・客戶 registry</text>
-<text x="500.0" y="261" text-anchor="middle" font-size="16" fill="#16353d">客戶意圖 ≠ 授權</text>
-<text x="500.0" y="287" text-anchor="middle" font-size="16" fill="#16353d">獨立 profile・自製</text>
-<rect x="670" y="180" width="290" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="815.0" y="209" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">選用語音橋接</text>
-<text x="815.0" y="235" text-anchor="middle" font-size="16" fill="#16353d">概念上的整合位置</text>
-<text x="815.0" y="261" text-anchor="middle" font-size="16" fill="#16353d">平台支援未驗證</text>
-<text x="815.0" y="287" text-anchor="middle" font-size="16" fill="#16353d">不宣稱新增能力</text>
-<path d="M185 312 L185 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M185 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M500 312 L500 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M500 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M815 312 L815 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M815 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M500 135 L140 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M500 135 L380 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M500 135 L620 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M500 135 L860 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<rect x="30" y="180" width="220" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="140.0" y="209" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Slack 每日入口</text>
+<text x="140.0" y="235" text-anchor="middle" font-size="14" fill="#16353d">只認擁有者的成員 ID</text>
+<text x="140.0" y="261" text-anchor="middle" font-size="14" fill="#16353d">總控頻道雙向同步</text>
+<text x="140.0" y="287" text-anchor="middle" font-size="14" fill="#16353d">決策卡・第 19–20 章</text>
+<rect x="270" y="180" width="220" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="380.0" y="209" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">電話／聊天 bot</text>
+<text x="380.0" y="235" text-anchor="middle" font-size="14" fill="#16353d">共用一個平台帳號</text>
+<text x="380.0" y="261" text-anchor="middle" font-size="14" fill="#16353d">收件匣＋門鈴・第 17、19 章</text>
+<text x="380.0" y="287" text-anchor="middle" font-size="14" fill="#16353d">本人確認前工單是資料</text>
+<rect x="510" y="180" width="220" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="620.0" y="209" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">個人／課程 Discord</text>
+<text x="620.0" y="235" text-anchor="middle" font-size="14" fill="#16353d">僅擁有者・不必 mention</text>
+<text x="620.0" y="261" text-anchor="middle" font-size="14" fill="#16353d">固定專案・有界問答</text>
+<text x="620.0" y="287" text-anchor="middle" font-size="14" fill="#16353d">預設 profile・自製</text>
+<rect x="750" y="180" width="220" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="860.0" y="209" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">客戶 LINE 入口</text>
+<text x="860.0" y="235" text-anchor="middle" font-size="14" fill="#16353d">簽章身份・客戶 registry</text>
+<text x="860.0" y="261" text-anchor="middle" font-size="14" fill="#16353d">客戶意圖 ≠ 授權</text>
+<text x="860.0" y="287" text-anchor="middle" font-size="14" fill="#16353d">獨立 profile・自製</text>
+<path d="M140 312 L140 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M140 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M380 312 L380 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M380 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M620 312 L620 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M620 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M860 312 L860 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M860 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
 <rect x="135" y="385" width="730" height="106" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
 <text x="500.0" y="414" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">自製督導路由＋私人帳本</text>
 <text x="500.0" y="440" text-anchor="middle" font-size="16" fill="#16353d">固定綁定・原生／帳本專案 ID 分開</text>

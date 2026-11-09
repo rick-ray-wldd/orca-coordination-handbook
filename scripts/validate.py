@@ -32,8 +32,8 @@ def validate():
             if d['primary']==d['reviewer']:errors.append(f'{locale}/{name}: supervisor equals reviewer')
         cap=(ROOT/config['docs']/'13-capability-matrix.md').read_text()
         if len(re.findall(r'^\| \d+ \|',cap,re.M))!=70:errors.append(f'{locale}: expected 70 capability rows')
-    if len(expected['docs'])!=18 or len(expected['templates'])!=14 or len(expected['diagrams'])!=10:
-        errors.append('Expected 18 chapter files, 14 templates and 10 diagrams per locale')
+    if len(expected['docs'])!=21 or len(expected['templates'])!=19 or len(expected['diagrams'])!=12:
+        errors.append('Expected 21 chapter files, 19 templates and 12 diagrams per locale')
     patterns={
         'private home path':r'/(?:Users|home)/[A-Za-z0-9_.-]+/',
         'private cloud URL':r'https?://(?:drive|mail|docs)\.google\.com/[^\s]+',

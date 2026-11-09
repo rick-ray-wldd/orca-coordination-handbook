@@ -25,3 +25,13 @@ Templates are plain text. Replace `<placeholders>` before use. English is in `te
 Keep the exclusions field even when the task appears simple. “No external actions” records a considered boundary; a blank field does not. Evidence fields need paths and results, not just “tested.” Adapt domain assignments, model choices and limits to your own environment. Recheck privacy after personalizing templates.
 
 For dedicated-channel design, use [channel-intake-record.md](../../templates/en/channel-intake-record.md): an operator worksheet for anonymous bindings, receipt and delivery evidence. It is illustrative and non-executable, not gateway configuration (chapter 16).
+
+For the three-platform setup (chapters 19–21), five more examples use fictional values only:
+
+| File | Purpose | Used by / when |
+|---|---|---|
+| [slack-app-manifest.example.yaml](../../templates/en/slack-app-manifest.example.yaml) | Private single-member Slack app, Socket Mode, no IDs or tokens | The owner, when creating the app |
+| [channel-map.example.json](../../templates/en/channel-map.example.json) | Numbered channel groups, one channel per project, status-only flags | Whoever maintains the channel layout |
+| [decision-card.example.json](../../templates/en/decision-card.example.json) | Card fields, risk tiers, creation checks, ledger events, overdue reminder | Coordinators and CTOs opening cards |
+| [triage.example.json](../../templates/en/triage.example.json) | Options ①–⑤, first-line announcement, required dispatch fields, follow-up rule | Coordinators before acting |
+| [cloud-path-rules.md](../../templates/en/cloud-path-rules.md) | One address form, groups, types, what may go where | Everyone who stores or links a file |

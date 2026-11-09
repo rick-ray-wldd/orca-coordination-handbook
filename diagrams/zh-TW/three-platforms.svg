@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900" viewBox="0 0 1000 900" role="img" aria-labelledby="three-platforms-title" font-family="Arial, PingFang TC, Microsoft JhengHei, sans-serif">
+<title id="three-platforms-title">三個平台圍繞同一份本機紀錄</title>
+<defs><marker id="three-platforms-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#49636a"/></marker></defs>
+<rect width="1000" height="900" fill="#fcfdfb"/>
+<text x="500" y="36" text-anchor="middle" font-size="22" fill="#16353d" font-weight="700">三個平台 · 同一份本機紀錄</text>
+<rect x="130" y="56" width="740" height="80" rx="12" fill="#fff2d9" stroke="#b88830" stroke-width="2"/>
+<text x="500.0" y="85" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">擁有者：唯一的 A 級來源</text>
+<text x="500.0" y="111" text-anchor="middle" font-size="15" fill="#16353d">通話 · 在 Slack 或 bot 聊天室親手打字 · Orca · 卡片按鈕</text>
+<path d="M500 136 L170 176" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#three-platforms-arrow)"/>
+<rect x="30" y="176" width="280" height="200" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="170.0" y="205" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">電話／聊天 bot</text>
+<text x="170.0" y="231" text-anchor="middle" font-size="15" fill="#16353d">主 bot → 專案 bot</text>
+<text x="170.0" y="255" text-anchor="middle" font-size="15" fill="#16353d">每個專案的業務</text>
+<text x="170.0" y="279" text-anchor="middle" font-size="15" fill="#16353d">工單收件匣＋門鈴</text>
+<text x="170.0" y="303" text-anchor="middle" font-size="15" fill="#16353d">本人確認前，工單只是資料</text>
+<text x="170.0" y="327" text-anchor="middle" font-size="15" fill="#16353d">夜間靜音時段</text>
+<path d="M170 376 L170 446" stroke="#49636a" stroke-width="2" fill="none" marker-start="url(#three-platforms-arrow)" marker-end="url(#three-platforms-arrow)"/>
+<path d="M500 136 L500 176" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#three-platforms-arrow)"/>
+<rect x="360" y="176" width="280" height="200" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="500.0" y="205" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Slack：每日入口</text>
+<text x="500.0" y="231" text-anchor="middle" font-size="15" fill="#16353d">今日 · 決策 · 總控</text>
+<text x="500.0" y="255" text-anchor="middle" font-size="15" fill="#16353d">每個專案一個頻道</text>
+<text x="500.0" y="279" text-anchor="middle" font-size="15" fill="#16353d">總控頻道：雙向同步</text>
+<text x="500.0" y="303" text-anchor="middle" font-size="15" fill="#16353d">只遮憑證、身分證號、卡號</text>
+<text x="500.0" y="327" text-anchor="middle" font-size="15" fill="#16353d">是介面，不是紀錄</text>
+<path d="M500 376 L500 446" stroke="#49636a" stroke-width="2" fill="none" marker-start="url(#three-platforms-arrow)" marker-end="url(#three-platforms-arrow)"/>
+<path d="M500 136 L830 176" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#three-platforms-arrow)"/>
+<rect x="690" y="176" width="280" height="200" rx="12" fill="#eaf0fb" stroke="#426bb0" stroke-width="2"/>
+<text x="830.0" y="205" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Orca：深度工作</text>
+<text x="830.0" y="231" text-anchor="middle" font-size="15" fill="#16353d">總控只督導</text>
+<text x="830.0" y="255" text-anchor="middle" font-size="15" fill="#16353d">每個專案一位 CTO（上限、48 小時）</text>
+<text x="830.0" y="279" text-anchor="middle" font-size="15" fill="#16353d">writer · 審查 · 證據</text>
+<text x="830.0" y="303" text-anchor="middle" font-size="15" fill="#16353d">補充指令直接送進 writer</text>
+<text x="830.0" y="327" text-anchor="middle" font-size="15" fill="#16353d">Workspace board＝進度</text>
+<path d="M830 376 L830 446" stroke="#49636a" stroke-width="2" fill="none" marker-start="url(#three-platforms-arrow)" marker-end="url(#three-platforms-arrow)"/>
+<path d="M642 226 L688 226" stroke="#49636a" stroke-width="2" fill="none" marker-start="url(#three-platforms-arrow)" marker-end="url(#three-platforms-arrow)"/>
+<rect x="60" y="446" width="880" height="106" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="500.0" y="475" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">主機：唯一的紀錄</text>
+<text x="500.0" y="501" text-anchor="middle" font-size="15" fill="#16353d">共用狀態檔（過濾過、只當資料）· 決策帳本（只增不改）</text>
+<text x="500.0" y="525" text-anchor="middle" font-size="15" fill="#16353d">派工紀錄 · 路由表 · 授權表 · station 回報</text>
+<path d="M275 552 L275 602" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#three-platforms-arrow)"/>
+<path d="M725 552 L725 602" stroke="#49636a" stroke-width="2" fill="none" marker-start="url(#three-platforms-arrow)" marker-end="url(#three-platforms-arrow)"/>
+<rect x="60" y="602" width="430" height="106" rx="12" fill="#f2eafb" stroke="#82649c" stroke-width="2"/>
+<text x="275.0" y="631" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">每日巡檢 3 次，只讀</text>
+<text x="275.0" y="657" text-anchor="middle" font-size="15" fill="#16353d">摘要模型沒有任何工具</text>
+<text x="275.0" y="681" text-anchor="middle" font-size="15" fill="#16353d">→ 通知頻道＋看板</text>
+<rect x="510" y="602" width="430" height="106" rx="12" fill="#f2eafb" stroke="#82649c" stroke-width="2"/>
+<text x="725.0" y="631" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">雲端硬碟：單一路徑規則</text>
+<text x="725.0" y="657" text-anchor="middle" font-size="15" fill="#16353d">&lt;根&gt;/&lt;組&gt;/&lt;專案&gt;/&lt;類型&gt;/&lt;檔名&gt;</text>
+<text x="725.0" y="681" text-anchor="middle" font-size="15" fill="#16353d">憑證永遠不放 · 敏感資料加密才放</text>
+<rect x="130" y="750" width="740" height="80" rx="12" fill="#fff2d9" stroke="#b88830" stroke-width="2"/>
+<text x="500.0" y="779" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">影響對外 → 決策卡</text>
+<text x="500.0" y="805" text-anchor="middle" font-size="15" fill="#16353d">付款、密碼、建帳號、登入：擁有者本人</text>
+<text x="500" y="870" text-anchor="middle" font-size="13" fill="#16353d">黃：擁有者 · 綠：自製做法 · 藍：Orca 原生層 · 不是隨附的執行環境</text>
+</svg>

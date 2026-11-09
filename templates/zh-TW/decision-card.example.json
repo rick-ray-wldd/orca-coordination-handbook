@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "description": "示範用的決策卡紀錄：私人決策頻道，背後是一份只增不改的本機帳本。不是可執行的 schema；欄位名稱依參考設計，所有值都是虛構的。",
+  "card": {
+    "case": "C-EXAMPLE01",
+    "revision": 2,
+    "owner": "coordinator-a",
+    "channel": "decisions",
+    "risk": "external",
+    "target": "newsletter-list-EXAMPLE",
+    "action": "send",
+    "title": "寄出十月電子報（網站 A）",
+    "body": "簡短說明要寄什麼、寄給誰、為什麼是現在。\nA：送出這一版\nB：延到下週\n我的建議（A）：內容已經核對過。",
+    "visibility": "public",
+    "grant": "target-EXAMPLE",
+    "grant_revision": 3,
+    "hash": "sha256-of-content-and-grant-revision-EXAMPLE",
+    "created_at": "2099-01-01T10:00:00+00:00",
+    "expires_at": "2099-01-02T10:00:00+00:00",
+    "changes": ["body"],
+    "diff": [{"field": "body", "before": "上一版文字 EXAMPLE", "after": "修改後文字 EXAMPLE"}]
+  },
+  "risk_tiers": {
+    "internal_low": "不用確認（整理、草稿）",
+    "internal_decision": "按鈕＋確認視窗（選方案）",
+    "external": "表單（寄信、發文）",
+    "high_external": "表單，附重要動作提醒（公開部署、送件、刪除）"
+  },
+  "form": {
+    "choices": ["send_this_version", "revise_then_show_me"],
+    "text_box": "選填，只能改這一件事。換收件人或多一個對外動作，要另開一張卡。",
+    "rules": [
+      "選 send_this_version 但文字框有字，會被擋下並提示",
+      "選 revise_then_show_me 會產生新版本；舊版本失效",
+      "沒有「改完直接送」"
+    ]
+  },
+  "creation_checks": [
+    "owner 必須是已登錄的總控或 CTO 信箱",
+    "內容必須標為可公開並通過清理；含機密標記就拒絕",
+    "部署、送件、刪除必須用 high_external",
+    "對外動作不能標成內部",
+    "付款、密碼、建帳號的動作直接拒絕",
+    "只能發到決策或 debug 頻道",
+    "批准已用過的案件不能再加新動作",
+    "內容完全相同不能重設效期",
+    "新的對外對象自動得到模式為 confirm 的預設授權"
+  ],
+  "ledger_events": [
+    {"entity": "C-EXAMPLE01", "kind": "card", "note": "每個版本都附加記錄"},
+    {"entity": "card:C-EXAMPLE01:<hash>", "kind": "posted", "note": "頻道與訊息參照，用來產生逾期提醒的連結"},
+    {"entity": "C-EXAMPLE01", "kind": "decision", "data": {"choice": "A", "text": "", "actor": "owner"}},
+    {"entity": "C-EXAMPLE01", "kind": "consumed", "data": {"hash": "<hash>", "owner": "coordinator-a"}, "note": "只能用一次，在另外授權的動作之前一刻使用"},
+    {"entity": "C-EXAMPLE01", "kind": "retired", "data": {"hash": "<hash>", "owner": "coordinator-a", "reason": "已由 C-EXAMPLE02 取代"}, "note": "consumed 之後不能撤回"}
+  ],
+  "overdue": {
+    "after_hours": 24,
+    "post_to": "today",
+    "mention_owner": true,
+    "include_link_to_original_card": true,
+    "once_per": "每個卡片版本",
+    "skip": ["test_only 測試卡", "internal_low", "已決定", "已使用", "已撤回"]
+  },
+  "never_on_a_card": ["付款", "密碼", "建帳號", "登入"]
+}

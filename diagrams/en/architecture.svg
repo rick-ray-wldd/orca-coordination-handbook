@@ -6,30 +6,38 @@
 <rect x="230" y="55" width="540" height="80" rx="12" fill="#fff2d9" stroke="#b88830" stroke-width="2"/>
 <text x="500.0" y="84" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Human requests and decisions</text>
 <text x="500.0" y="110" text-anchor="middle" font-size="16" fill="#16353d">Owner authorization ≠ client intent</text>
-<path d="M500 135 L185 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M500 135 L500 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M500 135 L815 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<rect x="40" y="180" width="290" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
-<text x="185.0" y="209" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Personal / course Discord</text>
-<text x="185.0" y="235" text-anchor="middle" font-size="16" fill="#16353d">Owner only · no mention</text>
-<text x="185.0" y="261" text-anchor="middle" font-size="16" fill="#16353d">Fixed project · bounded Q&amp;A</text>
-<text x="185.0" y="287" text-anchor="middle" font-size="16" fill="#16353d">Default profile · custom</text>
-<rect x="355" y="180" width="290" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
-<text x="500.0" y="209" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Client LINE gateway</text>
-<text x="500.0" y="235" text-anchor="middle" font-size="16" fill="#16353d">Signed identity · client registry</text>
-<text x="500.0" y="261" text-anchor="middle" font-size="16" fill="#16353d">Client intent ≠ authorization</text>
-<text x="500.0" y="287" text-anchor="middle" font-size="16" fill="#16353d">Separate profile · custom</text>
-<rect x="670" y="180" width="290" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="815.0" y="209" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Optional voice bridge</text>
-<text x="815.0" y="235" text-anchor="middle" font-size="16" fill="#16353d">Conceptual integration point</text>
-<text x="815.0" y="261" text-anchor="middle" font-size="16" fill="#16353d">Platform support unverified</text>
-<text x="815.0" y="287" text-anchor="middle" font-size="16" fill="#16353d">No new capability claim</text>
-<path d="M185 312 L185 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M185 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M500 312 L500 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M500 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M815 312 L815 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
-<path d="M815 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M500 135 L140 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M500 135 L380 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M500 135 L620 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M500 135 L860 180" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<rect x="30" y="180" width="220" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="140.0" y="209" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Slack daily entry</text>
+<text x="140.0" y="235" text-anchor="middle" font-size="14" fill="#16353d">Owner member ID only</text>
+<text x="140.0" y="261" text-anchor="middle" font-size="14" fill="#16353d">Control channel: two-way</text>
+<text x="140.0" y="287" text-anchor="middle" font-size="14" fill="#16353d">Cards · ch. 19–20</text>
+<rect x="270" y="180" width="220" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="380.0" y="209" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Phone / chat bots</text>
+<text x="380.0" y="235" text-anchor="middle" font-size="14" fill="#16353d">One shared platform account</text>
+<text x="380.0" y="261" text-anchor="middle" font-size="14" fill="#16353d">Inbox + doorbell · ch. 17, 19</text>
+<text x="380.0" y="287" text-anchor="middle" font-size="14" fill="#16353d">Orders: data until confirmed</text>
+<rect x="510" y="180" width="220" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="620.0" y="209" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Owner Discord intake</text>
+<text x="620.0" y="235" text-anchor="middle" font-size="14" fill="#16353d">Owner only · no mention</text>
+<text x="620.0" y="261" text-anchor="middle" font-size="14" fill="#16353d">Fixed project · bounded Q&amp;A</text>
+<text x="620.0" y="287" text-anchor="middle" font-size="14" fill="#16353d">Default profile · custom</text>
+<rect x="750" y="180" width="220" height="132" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="860.0" y="209" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Client LINE gateway</text>
+<text x="860.0" y="235" text-anchor="middle" font-size="14" fill="#16353d">Signed identity · registry</text>
+<text x="860.0" y="261" text-anchor="middle" font-size="14" fill="#16353d">Client intent ≠ approval</text>
+<text x="860.0" y="287" text-anchor="middle" font-size="14" fill="#16353d">Separate profile · custom</text>
+<path d="M140 312 L140 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M140 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M380 312 L380 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M380 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M620 312 L620 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M620 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M860 312 L860 347" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
+<path d="M860 347 L500 385" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#architecture-arrow)"/>
 <rect x="135" y="385" width="730" height="106" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
 <text x="500.0" y="414" text-anchor="middle" font-size="18" fill="#16353d" font-weight="700">Custom supervisor routing + private ledger</text>
 <text x="500.0" y="440" text-anchor="middle" font-size="16" fill="#16353d">Fixed bindings · separate native / ledger project IDs</text>

@@ -11,14 +11,18 @@
 ![Architecture overview](diagrams/en/architecture.svg)
 
 
-**Main-source updates:** [Chapter 16](docs/en/16-dedicated-project-intake.md) adds owner-only Discord course/project intake: fixed bindings, bounded Q&A, receipts and coordinator mailbox handoff. [Chapter 17](docs/en/17-entry-channels.md) adds multi-bot entry channels: a channel registry, per-channel desks and outboxes, and why a channel label is not authentication. [Chapter 18](docs/en/18-responsive-coordinators.md) adds keeping coordinators responsive: mailbox read discipline, a session guard, a desk escalation ladder, responsiveness health, voice-fragment merging and a “remind me” pattern. The historical **v1.0.0** release ZIP/HTML/PDF does not include these updates; read or build from current `main` sources. No new release is created for these updates.
+**2026-11 three-platform update:** the reference now runs on Orca for deep work, a private Slack workspace as the daily entry, and a two-way phone/chat bot platform. [Chapter 19](docs/en/19-three-platforms.md) covers who does what on each platform, the Slack control channel's two-way sync, the bot work-order inbox and doorbell, quiet hours and one shared state file. [Chapter 20](docs/en/20-authority-and-decisions.md) covers source levels A–D, decision cards (one owner, append-only ledger, overdue reminders that link back, withdrawal) and where standing grants end. [Chapter 21](docs/en/21-project-operations.md) covers one CTO per project, dispatch announcements and follow-ups, the read-only daily inspection, the Orca board, the cloud-drive path rule and same-evening records. Five new copy-ready templates use fictional values only.
+
+![Three platforms around one local record](diagrams/en/three-platforms.svg)
+
+**Main-source updates:** [Chapter 16](docs/en/16-dedicated-project-intake.md) adds owner-only Discord course/project intake: fixed bindings, bounded Q&A, receipts and coordinator mailbox handoff. [Chapter 17](docs/en/17-entry-channels.md) adds multi-bot entry channels: a channel registry, per-channel desks and outboxes, and why a channel label is not authentication. [Chapter 18](docs/en/18-responsive-coordinators.md) adds keeping coordinators responsive: mailbox read discipline, a session guard, a desk escalation ladder, responsiveness health, voice-fragment merging and a “remind me” pattern. Chapters 19–21 are described above. The historical **v1.0.0** release ZIP/HTML/PDF does not include these updates; read or build from current `main` sources. No new release is created for these updates.
 
 ## What you can reuse
 
 | Understand | Put into practice | Adapt |
 |---|---|---|
-| 16 chapters + capability appendix | 14 templates per language | Four-domain starter routing |
-| Ten diagrams per language | Safe private-workspace initializer | Document-first adoption path |
+| 20 chapters + capability appendix | 19 templates per language | Four-domain starter routing |
+| Twelve diagrams per language | Safe private-workspace initializer | Document-first adoption path |
 | Complete English and Traditional Chinese editions | Offline HTML and printable PDF in releases | Translation and contribution guide |
 
 The handbook separates **Orca-native features**, **private reference automation**, **written conventions**, and **unknowns**. It does not pretend a prompt rule is a security boundary.
@@ -66,6 +70,7 @@ Declare the choice → identify the domain supervisor → assign one writer with
 - **Track real completion:** [6. Evidence/review](docs/en/06-lifecycle-review.md), [7. Operations](docs/en/07-operations.md).
 - **Adopt it:** [8. Getting started](docs/en/08-adoption.md), [9. Worked examples](docs/en/09-examples.md), [10. Templates](docs/en/10-templates-guide.md).
 - **Go further:** [14. Native orchestration](docs/en/14-native-orchestration.md) (one resident Run per coordinator, supervised workers, mailbox rule sync), [15. Client intake gateway](docs/en/15-client-intake-gateway.md) (allowlist, tool-less replies, preview-only edits), [17. Multi-bot entry channels](docs/en/17-entry-channels.md) (channel registry, desks, one writer per outbox), [18. Responsive coordinators](docs/en/18-responsive-coordinators.md) (inbox delivery, escalation ladder, reminders).
+- **Run three platforms:** [19. Orca, Slack and a phone/chat bot](docs/en/19-three-platforms.md), [20. Source levels and decision cards](docs/en/20-authority-and-decisions.md), [21. CTOs, inspection, board, cloud paths and records](docs/en/21-project-operations.md).
 - **Maintain it:** [11. Troubleshooting](docs/en/11-troubleshooting.md), [12. Privacy](docs/en/12-pre-share-checklist.md), [Capability matrix](docs/en/13-capability-matrix.md).
 
 ## Repository layout
@@ -73,7 +78,7 @@ Declare the choice → identify the domain supervisor → assign one writer with
 ```text
 docs/{en,zh-TW}/       Full handbook; stable matching chapter filenames
 templates/{en,zh-TW}/  Copy-ready rules, routing, dispatch, review and handoff
-diagrams/{en,zh-TW}/   Ten accessible SVG diagrams per edition
+diagrams/{en,zh-TW}/   Twelve accessible SVG diagrams per edition
 scripts/               Initializer, validation, offline build and packaging
 tests/                 Safe-copy behavior tests
 locales.json           Default language and locale directories

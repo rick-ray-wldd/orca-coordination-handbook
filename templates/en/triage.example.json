@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "description": "Illustrative dispatch policy and triage record for coordinators. Adapt the wording; no triage engine is included. All values are fictional.",
+  "announce": "Before acting on any request, the first line of the reply is: Decision: <N> <method> | <target> | <one-line reason>. The owner may override it.",
+  "options": {
+    "1": {"label": "Direct answer", "when": "A read-only question or lookup that takes a few minutes and writes no project file", "who": "The coordinator"},
+    "2": {"label": "Existing session", "when": "The work belongs to a project that has a healthy, idle session for this kind of work", "who": "That session, sent by the domain supervisor"},
+    "3": {"label": "New session in the project", "when": "There is a project but no suitable session, the session is busy, or parallel work is needed", "who": "A new session in the same project; never two writers on one session"},
+    "4": {"label": "New worktree", "when": "Git code changes that must be isolated from other work in progress", "who": "An agent in a new worktree"},
+    "5": {"label": "New project", "when": "A new subject that no existing project fits", "who": "A new project, registered in routing"}
+  },
+  "self_execute_only": [
+    "Option 1 quick read-only answers",
+    "System work in a domain the coordinator itself supervises",
+    "Work the owner explicitly said 'do it yourself' about"
+  ],
+  "dispatch_message_must_include": [
+    "The owner's original request and success criteria",
+    "Read-only and writable scope, and forbidden actions (submitting, paying, emailing, public sharing, creating accounts)",
+    "Whether new terminals or agents may be opened, maximum concurrency and a quota ceiling",
+    "The subject of every limit: writer, coordinator, or everyone (e.g. 'new terminals/agents = 0, including the coordinator and its subagents')",
+    "Delivery with self-test evidence",
+    "Report your own station when done"
+  ],
+  "follow_up": {
+    "channel": "Type follow-ups straight into the writer's terminal through a wrapper that records the relay; mailbox messages are for coordinator-to-coordinator mail and formal worker reports only",
+    "confirm_within_seconds": 120,
+    "confirmed_when": ["the writer started a turn", "the text is visibly queued"],
+    "otherwise": "Treat as not delivered",
+    "before_sending": "Target idle and input line empty. Grey suggestion (screen shows only the prompt symbol, draft field has text) may be replaced; a real draft (text after the prompt symbol) is never sent over or cleared; ask the owner"
+  },
+  "record_example": {
+    "at": "2099-01-01T09:30:00+00:00",
+    "by": "coordinator-a",
+    "text": "Fix the footer link on Website A",
+    "recommended": "2",
+    "decision": "2",
+    "explicit_by_owner": false,
+    "domain": "web_sites",
+    "target": "terminal:EXAMPLE-WRITER"
+  },
+  "target_forms": ["terminal:<handle>", "path:<project folder>", "bot-inbox:<bot>", "desk:<desk>"],
+  "inspection": "The daily inspection counts recorded decisions by option and names action requests that a coordinator handled itself.",
+  "review_dispatch": [
+    "Read-only: never modify what is being reviewed",
+    "Structured findings: location, severity (high/medium/low), evidence, suggestion",
+    "If nothing is found, say so; do not pad",
+    "The coordinator spot-checks findings before passing them to the owner; quality is not judged by count"
+  ]
+}

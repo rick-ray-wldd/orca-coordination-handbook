@@ -28,3 +28,13 @@
 - 改過的模板如果要分享給別人，先過第 12 章的檢查。
 
 專屬頻道設計另用 [channel-intake-record.md](../../templates/zh-TW/channel-intake-record.md)：操作者填寫匿名綁定、收件與投遞證據，不可執行、不是 gateway 設定檔（第 16 章）。
+
+三平台架構（第 19–21 章）另附五份範例，全部用虛構值：
+
+| 檔案 | 用途 | 誰／何時使用 |
+|---|---|---|
+| [slack-app-manifest.example.yaml](../../templates/zh-TW/slack-app-manifest.example.yaml) | 只有擁有者一人的私人 Slack app、Socket Mode，不含 ID 或 token | 擁有者建立 app 時 |
+| [channel-map.example.json](../../templates/zh-TW/channel-map.example.json) | 數字分組、每個專案一個頻道、只放狀態的標記 | 維護頻道配置的人 |
+| [decision-card.example.json](../../templates/zh-TW/decision-card.example.json) | 卡片欄位、風險等級、開卡檢查、帳本事件、逾期提醒 | 開卡的總控與 CTO |
+| [triage.example.json](../../templates/zh-TW/triage.example.json) | 選項 ①–⑤、第一行宣告、派工必填項目、補充指令規則 | 總控動手前 |
+| [cloud-path-rules.md](../../templates/zh-TW/cloud-path-rules.md) | 單一地址寫法、組、類型、什麼能放在哪 | 存檔或貼檔案連結的每個人 |

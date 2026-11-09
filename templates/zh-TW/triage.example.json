@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "description": "示範用的派工規則與分流紀錄，給總控使用。文字請自行調整；本包不含分流程式。所有值都是虛構的。",
+  "announce": "處理任何請求前，回覆的第一行是：判斷：<編號> <處理方式>｜<對象>｜<一句理由>。擁有者可以直接改判。",
+  "options": {
+    "1": {"label": "總控直接回答", "when": "幾分鐘內能完成的唯讀問答或查詢，不寫入任何專案檔案", "who": "總控本人"},
+    "2": {"label": "派給既有聊天室", "when": "事情屬於某專案，且該專案有負責此類工作、健康且閒置的聊天室", "who": "該聊天室，由該領域督導派送"},
+    "3": {"label": "在原專案開新聊天室", "when": "有對應專案，但沒有合適聊天室、既有聊天室忙碌，或需要並行", "who": "同專案的新聊天室；同一個 session 不能有兩位 writer"},
+    "4": {"label": "開新 worktree", "when": "要改 git repo 的程式碼，且要和其他進行中的工作隔離", "who": "新 worktree 裡的 agent"},
+    "5": {"label": "開新專案", "when": "全新主題，現有專案都對應不上", "who": "新專案，並在路由表登記"}
+  },
+  "self_execute_only": [
+    "選項 1 的快速唯讀問答",
+    "總控自己督導領域內的系統工作",
+    "擁有者明確說「你自己做」的事"
+  ],
+  "dispatch_message_must_include": [
+    "擁有者的原始需求與成功條件",
+    "只讀與可寫範圍，以及禁止事項（送件、付款、寄信、公開分享、建帳號）",
+    "能不能開新 terminal 或啟動其他 agent、最大併發數、額度上限",
+    "每一條限制的適用對象：writer、總控或全部（例如「新增 terminal／agent＝0，含總控本人和總控的子代理」）",
+    "交付附自測證據",
+    "完成後回報自己的 station"
+  ],
+  "follow_up": {
+    "channel": "補充指令用會記錄代送的包裝工具，直接打進 writer 的 terminal；信箱只用在總控之間，以及 worker 的正式回報",
+    "confirm_within_seconds": 120,
+    "confirmed_when": ["writer 開始新的一輪", "文字明顯排進佇列"],
+    "otherwise": "當作沒送到",
+    "before_sending": "對象閒置、輸入列是空的。灰色建議（畫面只有提示符號，draft 欄位有字）可以被取代；真草稿（提示符號後面真的有字）不能蓋過或清掉，要問擁有者"
+  },
+  "record_example": {
+    "at": "2099-01-01T09:30:00+00:00",
+    "by": "coordinator-a",
+    "text": "修正網站 A 頁尾的連結",
+    "recommended": "2",
+    "decision": "2",
+    "explicit_by_owner": false,
+    "domain": "web_sites",
+    "target": "terminal:EXAMPLE-WRITER"
+  },
+  "target_forms": ["terminal:<handle>", "path:<專案資料夾>", "bot-inbox:<bot>", "desk:<接線員>"],
+  "inspection": "每日巡檢依選項統計已記錄的判斷，並點名由總控自己處理的行動型請求。",
+  "review_dispatch": [
+    "只讀：不得修改被審查的東西",
+    "結構化回報：位置、嚴重度（高／中／低）、證據、建議",
+    "沒有找到問題就直說，不湊數",
+    "總控抽樣覆核問題屬實後才轉給擁有者；不以條數評品質"
+  ]
+}

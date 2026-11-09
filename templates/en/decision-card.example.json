@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "description": "Illustrative decision-card record for a private decisions channel backed by an append-only local ledger. Not an executable schema; field names follow the reference design. All values are fictional.",
+  "card": {
+    "case": "C-EXAMPLE01",
+    "revision": 2,
+    "owner": "coordinator-a",
+    "channel": "decisions",
+    "risk": "external",
+    "target": "newsletter-list-EXAMPLE",
+    "action": "send",
+    "title": "Send the October newsletter (Website A)",
+    "body": "Short summary of what will be sent, to whom, and why now.\nA: Send this version\nB: Hold until next week\nMy recommendation (A): the content is already reviewed.",
+    "visibility": "public",
+    "grant": "target-EXAMPLE",
+    "grant_revision": 3,
+    "hash": "sha256-of-content-and-grant-revision-EXAMPLE",
+    "created_at": "2099-01-01T10:00:00+00:00",
+    "expires_at": "2099-01-02T10:00:00+00:00",
+    "changes": ["body"],
+    "diff": [{"field": "body", "before": "previous wording EXAMPLE", "after": "revised wording EXAMPLE"}]
+  },
+  "risk_tiers": {
+    "internal_low": "No confirmation (tidying, drafts)",
+    "internal_decision": "Button plus a confirmation dialog (choosing an option)",
+    "external": "Form (email, a post)",
+    "high_external": "Form with an important-action reminder (public deploy, submission, deletion)"
+  },
+  "form": {
+    "choices": ["send_this_version", "revise_then_show_me"],
+    "text_box": "Optional instruction for this item only. A new recipient or an extra external action needs its own card.",
+    "rules": [
+      "send_this_version with text in the box is blocked with a hint",
+      "revise_then_show_me creates a new revision; the old revision stops working",
+      "there is no revise-and-send-directly path"
+    ]
+  },
+  "creation_checks": [
+    "owner must be a registered coordinator or CTO mailbox",
+    "content must be marked public and pass a scrub; confidential markers are refused",
+    "deploy, submit and delete require high_external",
+    "an external action cannot be labelled internal",
+    "payment, password and account-creation actions are refused",
+    "only the decisions or debug channel",
+    "a case whose approval was used cannot take a new action",
+    "identical content cannot reset the expiry",
+    "a new external target gets a default grant in mode 'confirm'"
+  ],
+  "ledger_events": [
+    {"entity": "C-EXAMPLE01", "kind": "card", "note": "every revision is appended"},
+    {"entity": "card:C-EXAMPLE01:<hash>", "kind": "posted", "note": "channel and message reference, used for the overdue link"},
+    {"entity": "C-EXAMPLE01", "kind": "decision", "data": {"choice": "A", "text": "", "actor": "owner"}},
+    {"entity": "C-EXAMPLE01", "kind": "consumed", "data": {"hash": "<hash>", "owner": "coordinator-a"}, "note": "single use, immediately before the separately authorized action"},
+    {"entity": "C-EXAMPLE01", "kind": "retired", "data": {"hash": "<hash>", "owner": "coordinator-a", "reason": "superseded by C-EXAMPLE02"}, "note": "not allowed after consumed"}
+  ],
+  "overdue": {
+    "after_hours": 24,
+    "post_to": "today",
+    "mention_owner": true,
+    "include_link_to_original_card": true,
+    "once_per": "card revision",
+    "skip": ["test_only cards", "internal_low", "decided", "consumed", "retired"]
+  },
+  "never_on_a_card": ["payments", "passwords", "creating accounts", "logging in"]
+}

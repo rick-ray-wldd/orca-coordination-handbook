@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="840" viewBox="0 0 1000 840" role="img" aria-labelledby="decision-card-title" font-family="Arial, PingFang TC, Microsoft JhengHei, sans-serif">
+<title id="decision-card-title">Decision card lifecycle: one owner, one version, one use</title>
+<defs><marker id="decision-card-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#49636a"/></marker></defs>
+<rect width="1000" height="840" fill="#fcfdfb"/>
+<text x="500" y="36" text-anchor="middle" font-size="22" fill="#16353d" font-weight="700">DECISION CARD: ONE OWNER · ONE VERSION · ONE USE</text>
+<rect x="300" y="56" width="400" height="96" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="500.0" y="85" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Card opened by its one owner</text>
+<text x="500.0" y="111" text-anchor="middle" font-size="15" fill="#16353d">Risk tier · content hash · 24 h expiry</text>
+<text x="500.0" y="135" text-anchor="middle" font-size="15" fill="#16353d">Refused: secrets, payments, accounts</text>
+<path d="M500 152 L500 202" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#decision-card-arrow)"/>
+<rect x="300" y="202" width="400" height="96" rx="12" fill="#fff2d9" stroke="#b88830" stroke-width="2"/>
+<text x="500.0" y="231" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">The owner taps in Decisions</text>
+<text x="500.0" y="257" text-anchor="middle" font-size="15" fill="#16353d">A / B / C buttons, or a form:</text>
+<text x="500.0" y="281" text-anchor="middle" font-size="15" fill="#16353d">“Send this version” | “Revise as I wrote”</text>
+<rect x="30" y="350" width="240" height="104" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="150.0" y="379" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Revise</text>
+<text x="150.0" y="405" text-anchor="middle" font-size="15" fill="#16353d">New version + diff</text>
+<text x="150.0" y="429" text-anchor="middle" font-size="15" fill="#16353d">Old version stops working</text>
+<path d="M300 270 L190 350" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#decision-card-arrow)"/>
+<text x="222" y="300" text-anchor="middle" font-size="14" fill="#16353d">revise</text>
+<path d="M80 350 L80 104 L300 104" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#decision-card-arrow)"/>
+<text x="190" y="94" text-anchor="middle" font-size="14" fill="#16353d">confirm again</text>
+<rect x="300" y="350" width="400" height="120" rx="12" fill="#edf5f0" stroke="#46836d" stroke-width="2"/>
+<text x="500.0" y="379" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Decision recorded</text>
+<text x="500.0" y="405" text-anchor="middle" font-size="15" fill="#16353d">Append-only local ledger</text>
+<text x="500.0" y="429" text-anchor="middle" font-size="15" fill="#16353d">Mailed to the card owner only</text>
+<text x="500.0" y="453" text-anchor="middle" font-size="15" fill="#16353d">The mail executes nothing</text>
+<path d="M500 298 L500 350" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#decision-card-arrow)"/>
+<text x="560" y="330" text-anchor="start" font-size="14" fill="#16353d">send / choose</text>
+<path d="M500 470 L500 520" stroke="#49636a" stroke-width="2" fill="none" marker-end="url(#decision-card-arrow)"/>
+<rect x="300" y="520" width="400" height="120" rx="12" fill="#eaf0fb" stroke="#426bb0" stroke-width="2"/>
+<text x="500.0" y="549" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Approval used once</text>
+<text x="500.0" y="575" text-anchor="middle" font-size="15" fill="#16353d">Just before the action:</text>
+<text x="500.0" y="599" text-anchor="middle" font-size="15" fill="#16353d">check case + hash + owner</text>
+<text x="500.0" y="623" text-anchor="middle" font-size="15" fill="#16353d">Withdrawn, expired, used → stop</text>
+<rect x="730" y="202" width="240" height="120" rx="12" fill="#f4f6f5" stroke="#8a9a9d" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="850.0" y="231" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Withdrawn</text>
+<text x="850.0" y="257" text-anchor="middle" font-size="15" fill="#16353d">Superseded: owner withdraws</text>
+<text x="850.0" y="281" text-anchor="middle" font-size="15" fill="#16353d">No more reminders</text>
+<text x="850.0" y="305" text-anchor="middle" font-size="15" fill="#16353d">Cannot be decided</text>
+<path d="M700 230 L730 230" stroke="#49636a" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#decision-card-arrow)"/>
+<rect x="730" y="400" width="240" height="120" rx="12" fill="#fff2d9" stroke="#b88830" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="850.0" y="429" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Overdue after 24 h</text>
+<text x="850.0" y="455" text-anchor="middle" font-size="15" fill="#16353d">One reminder in Today</text>
+<text x="850.0" y="479" text-anchor="middle" font-size="15" fill="#16353d">Mentions the owner</text>
+<text x="850.0" y="503" text-anchor="middle" font-size="15" fill="#16353d">One-tap link to the card</text>
+<path d="M700 280 L850 400" stroke="#49636a" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#decision-card-arrow)"/>
+<rect x="130" y="690" width="740" height="80" rx="12" fill="#f2eafb" stroke="#82649c" stroke-width="2"/>
+<text x="500.0" y="719" text-anchor="middle" font-size="17" fill="#16353d" font-weight="700">Standing grants: no card per action</text>
+<text x="500.0" y="745" text-anchor="middle" font-size="15" fill="#16353d">Each use is checked: scope · daily cap · expiry · off</text>
+<text x="500" y="815" text-anchor="middle" font-size="13" fill="#16353d">Dashed = side paths · field names follow the reference design · not a shipped runtime</text>
+</svg>

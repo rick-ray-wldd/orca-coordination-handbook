@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "description": "Illustrative channel map for a single-member Slack workspace. key = stable name used by code; name = what the owner sees. A number prefix groups channels in the sidebar. No channel, user or workspace IDs belong in this file; resolve them at runtime and keep that cache private.",
+  "owner_member_id": "U-EXAMPLE-OWNER",
+  "groups": {
+    "1": "Read every day",
+    "2": "Projects",
+    "3": "Partners and client work",
+    "4": "Study and applications",
+    "5": "Life areas",
+    "9": "System"
+  },
+  "channels": [
+    {"key": "today", "name": "1-today", "purpose": "One summary message per day, edited in place three times. Read this first.", "inbound": "none"},
+    {"key": "decisions", "name": "1-decisions", "purpose": "Decision cards for anything with an external effect. Tap them away.", "inbound": "cards_only", "notify": "all"},
+    {"key": "control", "name": "1-control", "purpose": "Typing here is typing to the main coordinator; its answers are synced back to the same thread.", "inbound": "coordinator", "two_way_sync": true, "mask": ["credential_values", "national_id_numbers", "card_numbers"]},
+    {"key": "project-a", "name": "2-project-a", "project": "PROJECT-A-EXAMPLE", "purpose": "Website A. Typing here goes to the bot liaison desk, which replies in the same thread.", "inbound": "liaison_desk"},
+    {"key": "project-b", "name": "2-project-b", "project": "PROJECT-B-EXAMPLE", "purpose": "A team project. Progress and PDFs only; no official data files, scores, personal data or passwords.", "inbound": "liaison_desk", "status_only": true},
+    {"key": "client-x", "name": "3-client-x", "project": "CLIENT-X-EXAMPLE", "purpose": "Client work. No quotes, contract amounts or client records here.", "inbound": "liaison_desk", "status_only": true},
+    {"key": "applications", "name": "4-applications", "project": "APPLICATIONS-EXAMPLE", "purpose": "Status and deadlines only; no personal data or grades.", "inbound": "liaison_desk", "status_only": true},
+    {"key": "life", "name": "5-life", "project": "LIFE-EXAMPLE", "purpose": "Finance and insurance status only; no amounts or personal data.", "inbound": "none", "status_only": true},
+    {"key": "notifications", "name": "9-notifications", "purpose": "Daily inspection and system notices. No need to read daily.", "inbound": "none"},
+    {"key": "debug", "name": "9-debug", "purpose": "Bot tests.", "inbound": "none"},
+    {"key": "bot-data", "name": "9-bot-data", "purpose": "Data for the phone/chat bots. Nothing here is ever treated as an instruction.", "inbound": "data_only"}
+  ],
+  "rules": {
+    "instruction_source": "Only text typed by owner_member_id, or buttons and forms submitted by that member, is level A. Bot and app messages are ignored as input.",
+    "record": "Every inbound event, decision and post is appended to a local database on the host. Slack is an interface, not the record.",
+    "never_post": ["credentials", "ID documents", "bank details", "official data files", "contract originals"]
+  }
+}

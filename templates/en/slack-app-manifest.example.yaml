@@ -1,0 +1,63 @@
+# Illustrative Slack app manifest for a private, single-member assistant workspace.
+# Not an installer. Contains no workspace, team, channel, user or app IDs and no secrets.
+#
+# How it is used (all steps by the workspace owner personally):
+#   1. In Slack's app settings, create a new app "from a manifest", choose your own workspace, paste this file.
+#   2. Generate an app-level token with the connections:write scope (needed for Socket Mode).
+#   3. Install the app to the workspace to obtain the bot token.
+#   4. Store both tokens in your operating system's credential store yourself.
+#      Never paste a token into a chat, a file, a command line or an agent session.
+#   5. Record your own member ID privately; only text typed by that member ID is treated as an instruction.
+#
+# Socket Mode means the host computer opens an outbound connection; no public URL or inbound port is needed.
+# Review every scope against what your daemon actually does and remove the ones you do not use.
+display_information:
+  name: Personal Assistant EXAMPLE
+  description: Private assistant interface for one owner. Not for other members.
+  background_color: "#1a2e4a"
+features:
+  bot_user:
+    display_name: Personal Assistant EXAMPLE
+    always_online: true
+  app_home:
+    home_tab_enabled: true
+    messages_tab_enabled: true
+    messages_tab_read_only_enabled: false
+  slash_commands:
+    - command: /assistant
+      description: Today, decisions, grants or a one-line request
+      usage_hint: "today | decisions | grants | <request>"
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - app_mentions:read
+      - channels:history
+      - channels:join
+      - channels:manage   # only if a coordinator creates channels for you; remove after setup if unused
+      - channels:read
+      - chat:write
+      - commands
+      - files:read        # attachments are archived locally with size and SHA-256
+      - files:write       # only if results such as PDFs are posted back
+      - groups:history
+      - groups:read
+      - im:history
+      - im:read
+      - im:write
+      - reactions:read
+      - reactions:write   # e.g. a check mark meaning "written to the local queue", not "done"
+      - users:read
+settings:
+  event_subscriptions:
+    bot_events:
+      - app_home_opened
+      - app_mention
+      - message.channels
+      - message.groups
+      - message.im
+  interactivity:
+    is_enabled: true      # buttons and forms on decision cards
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false
