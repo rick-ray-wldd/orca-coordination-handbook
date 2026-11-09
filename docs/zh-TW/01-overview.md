@@ -68,4 +68,4 @@
 - `example.invalid`：所有範例網址使用的保留網域，不會連到任何真實網站。
 - `T-EXAMPLE0001`、`S-EXAMPLE-A` 這類 ID 都是人造的。
 
-專屬擁有者 Discord 課程／專案入口見[第 16 章](16-dedicated-project-intake.md)。這是 main 來源增補；歷史 v1.0.0 release 資產不含此更新。多個託管助理 bot 共用一個入口時的分流方式見[第 17 章](17-entry-channels.md)，同樣是 main 來源增補。2026-11 的三平台更新（Orca 做深度工作、Slack 當每日入口、雙向的電話／聊天 bot）見[第 19](19-three-platforms.md)、[20](20-authority-and-decisions.md)、[21 章](21-project-operations.md)；歷史 release 資產同樣不含。
+專屬擁有者 Discord 課程／專案入口見[第 16 章](16-dedicated-project-intake.md)。這是 v1.0.0 之後新增的。多個託管助理 bot 共用一個入口時的分流方式見[第 17 章](17-entry-channels.md)，同樣是 v1.0.0 之後新增。2026-11 的三平台更新（Orca 做深度工作、Slack 當每日入口、雙向的電話／聊天 bot）見[第 19](19-three-platforms.md)、[20](20-authority-and-decisions.md)、[21 章](21-project-operations.md)。v1.1.0 是第一個包含第 14–21 章的 release。

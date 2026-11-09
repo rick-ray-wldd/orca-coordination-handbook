@@ -15,7 +15,7 @@
 
 ![Three platforms around one local record](diagrams/en/three-platforms.svg)
 
-**Main-source updates:** [Chapter 16](docs/en/16-dedicated-project-intake.md) adds owner-only Discord course/project intake: fixed bindings, bounded Q&A, receipts and coordinator mailbox handoff. [Chapter 17](docs/en/17-entry-channels.md) adds multi-bot entry channels: a channel registry, per-channel desks and outboxes, and why a channel label is not authentication. [Chapter 18](docs/en/18-responsive-coordinators.md) adds keeping coordinators responsive: mailbox read discipline, a session guard, a desk escalation ladder, responsiveness health, voice-fragment merging and a “remind me” pattern. Chapters 19–21 are described above. The historical **v1.0.0** release ZIP/HTML/PDF does not include these updates; read or build from current `main` sources. No new release is created for these updates.
+**Also new since v1.0.0:** [Chapter 16](docs/en/16-dedicated-project-intake.md) adds owner-only Discord course/project intake: fixed bindings, bounded Q&A, receipts and coordinator mailbox handoff. [Chapter 17](docs/en/17-entry-channels.md) adds multi-bot entry channels: a channel registry, per-channel desks and outboxes, and why a channel label is not authentication. [Chapter 18](docs/en/18-responsive-coordinators.md) adds keeping coordinators responsive: mailbox read discipline, a session guard, a desk escalation ladder, responsiveness health, voice-fragment merging and a “remind me” pattern. Chapters 19–21 are described above. Release **v1.1.0** includes everything added since v1.0.0: new chapters 14–21, revisions to chapters 1–12, the capability appendix (52 → 70 entries), templates (13 → 19 per language) and diagrams (6 → 12 per language). The v1.0.0 assets do not include these updates.
 
 ## What you can reuse
 
@@ -105,7 +105,7 @@ python3 -m pip install -r requirements-build.txt
 python3 scripts/build.py
 # PDF also needs Chrome/Chromium installed; pass its executable explicitly:
 python3 scripts/build.py --pdf --browser "/path/to/chrome-or-chromium"
-python3 scripts/package.py --version v1.0.0
+python3 scripts/package.py --version v1.1.0
 ```
 
 Open `dist/handbook-en.html` or `dist/handbook-zh-TW.html` directly in a browser. The language switch works when both files are kept together. HTML embeds its diagrams and styles and needs no network assets. PDF rendering uses a temporary, isolated browser profile, not your signed-in profile. Outputs and caches are ignored by Git; releases contain ready-built files.

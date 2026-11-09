@@ -19,7 +19,7 @@
 
 ![三個平台圍繞同一份本機紀錄](diagrams/zh-TW/three-platforms.svg)
 
-**主分支來源更新**：[第 16 章](docs/zh-TW/16-dedicated-project-intake.md)新增擁有者專用的 Discord 課程／專案入口：固定綁定、有界問答、收據與總控 mailbox 交接。[第 17 章](docs/zh-TW/17-entry-channels.md)新增多 bot 入口：頻道登記表、分頻道的分機與 outbox，以及為什麼頻道標籤不是身分驗證。[第 18 章](docs/zh-TW/18-responsive-coordinators.md)新增讓總控保持即時回應：讀信紀律、session 守門、分機升級階梯、回應延遲健康檢查、合併語音碎片，以及「提醒我」模式。第 19–21 章見上方。歷史 **v1.0.0** release 的 ZIP／HTML／PDF 不含這些更新；請讀取或從目前 `main` 來源建置。這次未建立新 release。
+**v1.0.0 之後另外新增**：[第 16 章](docs/zh-TW/16-dedicated-project-intake.md)新增擁有者專用的 Discord 課程／專案入口：固定綁定、有界問答、收據與總控 mailbox 交接。[第 17 章](docs/zh-TW/17-entry-channels.md)新增多 bot 入口：頻道登記表、分頻道的分機與 outbox，以及為什麼頻道標籤不是身分驗證。[第 18 章](docs/zh-TW/18-responsive-coordinators.md)新增讓總控保持即時回應：讀信紀律、session 守門、分機升級階梯、回應延遲健康檢查、合併語音碎片，以及「提醒我」模式。第 19–21 章見上方。**v1.1.0** release 已包含 v1.0.0 之後的全部更新：新增的第 14–21 章、第 1–12 章的修訂、能力對照附錄（52 → 70 項），以及每種語言的模板（13 → 19 份）與圖（6 → 12 張）。v1.0.0 的資產不含這些更新。
 
 ## 一分鐘開始
 
