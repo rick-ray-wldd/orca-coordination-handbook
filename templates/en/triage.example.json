@@ -23,7 +23,7 @@
     "Report your own station when done"
   ],
   "follow_up": {
-    "channel": "Type follow-ups straight into the writer's terminal through a wrapper that records the relay; mailbox messages are for coordinator-to-coordinator mail and formal worker reports only",
+    "channel": "Local choice: type follow-ups straight into the writer's terminal through a wrapper that records the relay; mailbox messages are for coordinator-to-coordinator mail and formal worker reports. For supervised workers, Orca's native send --to dispatch:<id> follow-up is an alternative",
     "confirm_within_seconds": 120,
     "confirmed_when": ["the writer started a turn", "the text is visibly queued"],
     "otherwise": "Treat as not delivered",

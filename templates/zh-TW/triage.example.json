@@ -23,7 +23,7 @@
     "完成後回報自己的 station"
   ],
   "follow_up": {
-    "channel": "補充指令用會記錄代送的包裝工具，直接打進 writer 的 terminal；信箱只用在總控之間，以及 worker 的正式回報",
+    "channel": "本機選擇：補充指令用會記錄代送的包裝工具，直接打進 writer 的 terminal；信箱用在總控之間，以及 worker 的正式回報。writer 是受監督 worker 時，Orca 原生的 send --to dispatch:<id> 補充指令也是一種做法",
     "confirm_within_seconds": 120,
     "confirmed_when": ["writer 開始新的一輪", "文字明顯排進佇列"],
     "otherwise": "當作沒送到",

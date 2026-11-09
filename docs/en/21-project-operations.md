@@ -59,10 +59,10 @@ A [triage example](../../templates/en/triage.example.json) contains the options,
 
 ## 21.3 Follow-ups after dispatch
 
-Once a writer is working, further instructions do not go through the mailbox. The reason was observed: a follow-up mailed to an idle writer was never read, and the writer sat idle for 50 minutes, because mailbox messages do not wake an idle terminal (chapter 18).
+In the reference, once a writer is working, further instructions do not go through the mailbox. The reason was one observation: a follow-up sent through the mailbox route the reference used at the time reached an idle writer's terminal but was never read, and the writer sat idle for 50 minutes. That says something about that terminal and that route, **not about Orca in general**: the installed Orca 1.4.253 orchestration guide says a message sent with `orca orchestration send --to dispatch:<id>` reaches a supervised worker in any state, after its current turn if it is working, or as a follow-up Task if it has finished. The direct-to-terminal rule below is the reference's own local choice.
 
 - **Send follow-ups and replies straight into the writer's terminal** [Convention], through a small wrapper [Custom]. The send counts only once the writer has **started a turn or the text is visibly queued, within two minutes**; otherwise the wrapper reports "not confirmed" and the message is treated as not delivered. Every attempt is appended to a local log.
-- `orca orchestration send` is used only between coordinators and for a worker's formal reports.
+- In the reference, `orca orchestration send` is used only between coordinators and for a worker's formal reports [Convention: local choice]. If your writers run as supervised workers, the native Dispatch follow-up above is an alternative.
 - **Before sending, the target must be idle with an empty input line.**
 
 **Draft or grey suggestion?** After each turn, the reference coding agent places a grey "next step" suggestion in the input line; it becomes real text only if Tab is pressed. Orca's `terminal read --json` returns it in the `draft` field, which cannot tell the two apart [Native: observed; the 1.4.253 help describes `draft` as UI-only composer text]. The owner confirmed this rule:

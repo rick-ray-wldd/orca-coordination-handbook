@@ -46,13 +46,21 @@
     "內容完全相同不能重設效期",
     "新的對外對象自動得到模式為 confirm 的預設授權"
   ],
+  "ledger_events_note": "每個案件版本共同的開頭；兩種可能的結局見 ledger_branches。",
   "ledger_events": [
     {"entity": "C-EXAMPLE01", "kind": "card", "note": "每個版本都附加記錄"},
-    {"entity": "card:C-EXAMPLE01:<hash>", "kind": "posted", "note": "頻道與訊息參照，用來產生逾期提醒的連結"},
-    {"entity": "C-EXAMPLE01", "kind": "decision", "data": {"choice": "A", "text": "", "actor": "owner"}},
-    {"entity": "C-EXAMPLE01", "kind": "consumed", "data": {"hash": "<hash>", "owner": "coordinator-a"}, "note": "只能用一次，在另外授權的動作之前一刻使用"},
-    {"entity": "C-EXAMPLE01", "kind": "retired", "data": {"hash": "<hash>", "owner": "coordinator-a", "reason": "已由 C-EXAMPLE02 取代"}, "note": "consumed 之後不能撤回"}
+    {"entity": "card:C-EXAMPLE01:<hash>", "kind": "posted", "note": "頻道與訊息參照，用來產生逾期提醒的連結"}
   ],
+  "ledger_branches": {
+    "note": "同一個案件版本的兩種結局，互斥：已經 consumed 的批准不能撤回；已撤回的卡不能再被決定或使用。",
+    "approved_and_used": [
+      {"entity": "C-EXAMPLE01", "kind": "decision", "data": {"choice": "A", "text": "", "actor": "owner"}},
+      {"entity": "C-EXAMPLE01", "kind": "consumed", "data": {"hash": "<hash>", "owner": "coordinator-a"}, "note": "只能用一次，在另外授權的動作之前一刻使用"}
+    ],
+    "withdrawn_before_use": [
+      {"entity": "C-EXAMPLE01", "kind": "retired", "data": {"hash": "<hash>", "owner": "coordinator-a", "reason": "已由 C-EXAMPLE02 取代"}, "note": "consumed 之後不能撤回"}
+    ]
+  },
   "overdue": {
     "after_hours": 24,
     "post_to": "today",

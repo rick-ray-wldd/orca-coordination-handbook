@@ -13,7 +13,7 @@ Chapters 20 and 21 continue the same update: [20](20-authority-and-decisions.md)
 - **A daily entry that is not a terminal.** The owner reads a short summary, taps decision cards and types requests from the phone in Slack. Deep discussion still happens in Orca.
 - **One channel per project.** Each active project has its own Slack channel and, for most projects, its own Orca coordinator session, called the project CTO (chapter 21).
 - **The bot platform became two-way.** Coordinators can now leave work orders for a bot and ring it, instead of only receiving requests from it (§19.6).
-- **Every entry writes to the same local record.** Slack, the bots and Orca each add one line per action to a shared state file, so no entry re-dispatches work another entry already started (§19.8).
+- **One shared state summary.** A background job builds a short, bounded summary from what Slack, the bots and Orca have already recorded. Entries are told to read it first, which reduces duplicate dispatch but does not prevent it (§19.8).
 - **Who may instruct what** is now graded A–D per source, with a rule for each entry (chapter 20).
 
 ## 19.2 Who does what
@@ -102,7 +102,7 @@ Every command prints one line of JSON. Every post is also recorded in the dispat
 Rules for the inbox [Convention]:
 
 - An order can never widen a bot's own permissions. Orders that involve money, accounts, passwords or one-time codes, deletion, messaging someone new, prices or legal terms are answered *blocked*.
-- The sender field (one coordinator, the other, or the owner) is **a label, not authentication**. Any local program can write the inbox folder, so the boundary is the bot's own skill rules, not the inbox.
+- The sender field (one coordinator, the other, or the owner) is **a routing label, not authentication**. Any local program can write the inbox folder. The bot's skill rules are a behavioural convention: they can be swayed by injected text and provide neither source authentication nor execution isolation. **The inbox has no security boundary of its own**, and none is implied here.
 - Bots that read external content (public inboxes, social feeds) accept no level B or C orders at all (chapter 20).
 
 **Not adopted:** typing into the bot's desktop app through GUI automation would wake it at once, but it takes over the screen the owner is using. It is kept as a manual fallback that needs the owner's consent each time.
@@ -119,11 +119,13 @@ Other notifications follow the same idea: in the overnight window, items are que
 
 ## 19.8 One shared state file
 
-Every entry writes into one short "current state" file, and the bots read it before starting a conversation or answering a project question [Custom]:
+A background job builds one short "current state" summary, and the bots are instructed to read it before starting a conversation or answering a project question [Custom]. It is a summary derived from other records, not a ledger:
 
 - **Built only from what is already recorded:** the owner's requests (dispatch log), Slack decisions and open cards, bot requests and answers, and station reports.
-- **Refreshed at most once a minute** by the Slack daemon's background cycle. A failed refresh keeps the previous file and does not stop the Slack work.
-- **It leaves the machine,** because the bot platform reads it from the vendor's cloud. So lines matching a private pattern (confidential markers, credentials, ID and account numbers, amounts, prices, costs, email addresses, phone numbers) are dropped, costs never appear, sensitive projects show status only, and the file has a fixed size cap.
+- **Bounded:** at most 15 actions from the last 24 hours and 15 project status lines from the last 48 hours, each line shortened, and the whole file cut to a fixed byte cap. Older or overflowing items are simply absent.
+- **Refreshed at most once a minute** by the Slack daemon's background cycle. A failed refresh keeps the previous file and does not stop the Slack work, so the file can be stale.
+- **Not complete, not real-time and not a lock.** It does not deduplicate or claim work. A missing item does not mean nobody took the work; dispatch still checks the canonical task and its owner.
+- **It leaves the machine,** because the bot platform reads it from the vendor's cloud. Lines that match a fixed list of patterns (confidential markers, credential formats, some ID and account-number formats, a few price and cost words, email addresses, phone numbers) are dropped, and sensitive projects show status only. **This is best-effort masking, not a reliable boundary for sending data out.** A reviewer's synthetic test showed English amounts with a currency code, an amount written in Chinese numerals and an ID-number-shaped string passing through unchanged. Keep confidential content out of the sources, and have a person look at anything that matters before it can reach this file.
 - **It is data for the bots, never instructions.**
 
 ## 19.9 Evidence and current status
@@ -137,6 +139,7 @@ Every entry writes into one short "current state" file, and the bots read it bef
 | Doorbell | One end-to-end ring answered with a code word | The routine does not act on orders |
 | Bot side pulling orders on a schedule | Not observed | Whether the platform's routines can run local commands is unknown |
 | Quiet-hour exception ring | Code and offline tests only | No live observation |
+| State-file filter | A reviewer's synthetic test of the filter function alone | Some amounts and ID-shaped strings pass unchanged; best-effort only |
 
 Report the weakest evidenced state. "The daemon posted" is not "the owner read it", and "the bot replied" is not "the bot did the work".
 

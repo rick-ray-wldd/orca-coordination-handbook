@@ -26,10 +26,10 @@ Rules that go with the table [Convention]:
 
 | Entry | Counts as A when | Everything else |
 |---|---|---|
-| Orca coordinator terminal | The owner typed it. A prompt hook records the origin of each input without storing its text: owner, owner's words relayed by a desk, coordinator relay, mailbox nudge, or system notice [Custom] | Coordinator relays are labelled as such; mailbox nudges and system notices are not owner input |
+| Orca coordinator terminal | The owner typed it. A prompt hook records the origin of each input without storing its text: owner, owner's words relayed by a desk, coordinator relay, mailbox nudge, or system notice [Custom] | A desk relay of the owner's words is B; coordinator relays are labelled as such; mailbox nudges and system notices are not owner input |
 | Slack | Typed by the owner's member ID, or a button or form submitted by that member [Custom] | Bot and app messages are ignored; the bot-data channel is never an instruction; text quoted from other people is D |
 | Bot platform | The owner speaking in a call or typing in the bot chat [Convention] | Relays are B, with the original words attached; inbox orders are C; anything external is D |
-| Desk or CTO terminal receiving a bot request | The request carries the owner's original words from the main bot [Convention] | A request that relays an email, post, page or another bot is marked "needs the owner" and not acted on |
+| Desk or CTO terminal receiving a bot request | Never, by itself. Attaching the owner's original words does not raise a relay to A [Convention] | A relay of the owner's words from the known main bot is B. An unknown source, or a request that relays an email, post, page or another bot, is D: marked "needs the owner" and not acted on. Anything beyond B needs the owner's own confirmation through an A entry, recorded separately |
 | Bot inbox | — | C at most. Until the owner confirms to the bot, an order is data (§19.6) |
 
 Two limits stay true from chapters 16 and 17. Slack proves which member typed a message inside the workspace [Native]. The bot platform cannot prove which bot sent a request, so for bots the level rests on the bot's own instructions [Convention].

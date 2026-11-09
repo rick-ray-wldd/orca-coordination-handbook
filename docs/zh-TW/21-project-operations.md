@@ -59,10 +59,10 @@ bot 轉來的話是 B 或 D 級（第 20 章），**不能擴大 CTO 的權限**
 
 ## 21.3 派工後的補充指令
 
-writer 開工後，後續指令不再走信箱。原因是實際遇過：寄到信箱給一位閒置 writer 的補充指令一直沒被讀，writer 就這樣閒置了 50 分鐘，因為信箱的信不會叫醒閒置的 terminal（第 18 章）。
+在參考部署裡，writer 開工後，後續指令不再走信箱。原因是一次實際觀察：用參考部署當時的信箱投遞方式，送到一位閒置 writer terminal 的補充指令一直沒被讀，writer 就這樣閒置了 50 分鐘。這說的是那個 terminal 和那種投遞方式，**不是 Orca 的通則**：本機安裝的 Orca 1.4.253 orchestration 指引寫明，用 `orca orchestration send --to dispatch:<id>` 送給受監督 worker 的訊息在任何狀態都會送到：正在工作的，會在這一輪結束後收到；已經結束的，會變成一個後續 Task。下面「直接送進 terminal」的規則，是參考部署自己選的做法。
 
 - **補充指令和回覆直接送進 writer 的 terminal**〔規約〕，透過一支小包裝工具〔程式・自製〕。要在**兩分鐘內看到 writer 開始新的一輪，或文字明顯排進佇列**，才算送到；否則工具回報「未確認」，這則訊息就當作沒送到。每次嘗試都記進本機 log。
-- `orca orchestration send` 只用在總控之間，以及 worker 的正式回報。
+- 參考部署裡，`orca orchestration send` 只用在總控之間，以及 worker 的正式回報〔規約：本機選擇〕。如果你的 writer 是受監督的 worker，上面提到的原生 Dispatch 補充指令也是一種做法。
 - **送出前，對象必須閒置、輸入列是空的。**
 
 **草稿還是灰色建議？** 參考部署用的 coding agent 每一輪結束後，會在輸入列放一句灰色的「下一步建議」，要按 Tab 才會真的打上去。Orca 的 `terminal read --json` 會把它放進 `draft` 欄位，分不出兩者〔程式・原生：實測；1.4.253 的 help 寫明 `draft` 是只屬於介面的輸入框文字〕。擁有者確認過這條判斷規則：

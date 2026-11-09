@@ -46,13 +46,21 @@
     "identical content cannot reset the expiry",
     "a new external target gets a default grant in mode 'confirm'"
   ],
+  "ledger_events_note": "Shared start of every case revision; the two possible endings are in ledger_branches.",
   "ledger_events": [
     {"entity": "C-EXAMPLE01", "kind": "card", "note": "every revision is appended"},
-    {"entity": "card:C-EXAMPLE01:<hash>", "kind": "posted", "note": "channel and message reference, used for the overdue link"},
-    {"entity": "C-EXAMPLE01", "kind": "decision", "data": {"choice": "A", "text": "", "actor": "owner"}},
-    {"entity": "C-EXAMPLE01", "kind": "consumed", "data": {"hash": "<hash>", "owner": "coordinator-a"}, "note": "single use, immediately before the separately authorized action"},
-    {"entity": "C-EXAMPLE01", "kind": "retired", "data": {"hash": "<hash>", "owner": "coordinator-a", "reason": "superseded by C-EXAMPLE02"}, "note": "not allowed after consumed"}
+    {"entity": "card:C-EXAMPLE01:<hash>", "kind": "posted", "note": "channel and message reference, used for the overdue link"}
   ],
+  "ledger_branches": {
+    "note": "Alternative endings of one case revision. They are mutually exclusive: an approval that was consumed cannot be retired, and a retired card cannot be decided or consumed.",
+    "approved_and_used": [
+      {"entity": "C-EXAMPLE01", "kind": "decision", "data": {"choice": "A", "text": "", "actor": "owner"}},
+      {"entity": "C-EXAMPLE01", "kind": "consumed", "data": {"hash": "<hash>", "owner": "coordinator-a"}, "note": "single use, immediately before the separately authorized action"}
+    ],
+    "withdrawn_before_use": [
+      {"entity": "C-EXAMPLE01", "kind": "retired", "data": {"hash": "<hash>", "owner": "coordinator-a", "reason": "superseded by C-EXAMPLE02"}, "note": "not allowed after consumed"}
+    ]
+  },
   "overdue": {
     "after_hours": 24,
     "post_to": "today",
