@@ -1,6 +1,6 @@
 # 18. 讓總控保持即時回應：信箱投遞、升級與提醒
 
-[English](../en/18-responsive-coordinators.md) | [繁體中文](../zh-TW/18-responsive-coordinators.md) | [首頁](../../README.zh-TW.md)
+[English](../en/18-responsive-coordinators.md) | [繁體中文](../zh-TW/18-responsive-coordinators.md) | [Home](../../README.zh-TW.md)
 
 這一章記錄參考工作區的一個晚上：兩位總控都沒有反應，請求越積越多。內容包括查到了什麼，以及之後分層補上的做法。這是**私人參考架構 [Custom]，不是可以下載的工具**。關於 coding agent 工具的說法，都是當時對照官方文件確認的，之後可能會變。
 
